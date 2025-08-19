@@ -13,11 +13,6 @@
 bool GLOverlayUI_APP::OnInit(void) 
 {
    MainFrame * gframe = new MainFrame(APP_TITLE)  ; 
-   
-   //CanvasDriver  * canvasdriver = new CanvasDriver(gframe) ; 
-
-    
-
    bool initial_status = true ;  
    initial_status ^=gframe->Show(initial_status) ;
 

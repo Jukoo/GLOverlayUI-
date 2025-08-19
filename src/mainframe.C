@@ -7,7 +7,8 @@
 
 #include "mainframe.H" 
 #include <cstdio> 
-#include <iostream> 
+#include <iostream>
+#include <functional> 
 
 MainFrame::MainFrame(std::basic_string<char> app_title) : 
   wxFrame(nullptr , wxID_ANY ,  app_title , 
@@ -21,6 +22,7 @@ MainFrame::MainFrame(std::basic_string<char> app_title) :
   SetStatusText("GLOverlayUI version  0.1.0-a1") ; 
   Bind(wxEVT_MENU , &MainFrame::on_about , this ,wxID_ABOUT) ; 
   Bind(wxEVT_MENU , &MainFrame::on_exit , this ,wxID_EXIT) ;
+  Bind(wxEVT_MENU , &MainFrame::on_sidepanel_toggle ,  this , wxID_JUMP_TO) ;  
 
 }
 
@@ -34,16 +36,14 @@ void MainFrame::setup_menubar(void )
   helper->AppendSeparator() ; 
   helper->Append(wxID_ABOUT,"&About \tCtrl+a");  
 
+  wxMenu *view  = new wxMenu ; 
+  view->Append(wxID_JUMP_TO ,"&Toggle SidePanel \tCtrl+t") ; 
   wxMenu *panel_settings  = new wxMenu ; 
 
   wxMenuBar *  menu_bar = new wxMenuBar ; 
-  menu_bar->Append(helper , "&Help"); 
-
+  menu_bar->Append(helper , "&Help");
+  menu_bar->Append(view ,  "&View"); 
   SetMenuBar(menu_bar) ;
-
-   wxToolBar* tb = new  wxToolBar(this , wxID_ANY) ; //CreateToolBar();
-        //tb->Bind(wxEVT_TOOL, &MainFrame::OnTogglePanel, this);
-        tb->Realize();
 
 }
 
@@ -73,7 +73,7 @@ void MainFrame::define_layout(void)
   _slider->Bind(wxEVT_SLIDER ,  &MainFrame::on_sliding , this ) ;
   ctrl_panel_vbox->Add(_slider  , 0  , wxEXPAND| wxALL , 5 ) ;
 
-  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Object") ; 
+  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Objects") ; 
   _checkbox->Bind(wxEVT_CHECKBOX , &MainFrame::on_checking , this ) ; 
   ctrl_panel_vbox->Add(_checkbox , 0 , wxEXPAND| wxALL,10) ;  
 
@@ -131,13 +131,29 @@ void MainFrame::on_about(wxCommandEvent  & evt ) {
 
 
 void MainFrame::on_checking(wxCommandEvent  & evt)  
-{
-  _main_boxsizer->Hide(&*_panels["ctrl"]) ;  
-  Layout() ; 
+{  
+  static bool   show_state  = false ; 
+  show_state^=1 ; 
+  
+  Refresh() ; 
 }
 
 
 void  MainFrame::on_sliding(wxCommandEvent  & evt) 
 {
   puts("slid") ; 
+}
+
+
+void MainFrame::on_sidepanel_toggle(wxCommandEvent &evt) 
+{
+  static bool toggle_state =false ; 
+  toggle_state^=1 ; 
+  if (toggle_state)
+    _main_boxsizer->Hide(&*_panels["ctrl"]) ;  
+  else 
+    _main_boxsizer->Show(&*_panels["ctrl"]) ;  
+
+  Layout() ;
+  
 }

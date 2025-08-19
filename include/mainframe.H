@@ -85,8 +85,13 @@ class  MainFrame : public wxFrame
     * @brief Handle slider event 
     * */
 
-   void on_sliding (wxCommandEvent & evt) ; 
+   void on_sliding (wxCommandEvent & evt) ;
+    
+   /** 
+    * @brief  Toggle sidepanel control
+    */
 
+   void on_sidepanel_toggle(wxCommandEvent & evt) ; 
 
    public:
    /**
