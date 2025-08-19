@@ -1,0 +1,21 @@
+/** 
+ * @file  GLOverlayUI_config.H  
+ * @brief Basic Configuration 
+ * @author Umar Ba <jUmarB@protonmail.com> 
+ */
+
+#if !defined(GLOverlayUI_) 
+#define GLOverlayUI_ 
+
+#define  _STRINGIFY(_X)  #_X  
+#define  _CONCATENATE(_X , _Y) _X ## _Y 
+
+#define  GLOverlayUI_VERSION   "@PROJECT_VERSION@"
+#define  GLOverlayUI_APP_NAME  "@PROJECT_NAME@"
+
+#define  GLOverlayUI_ICON_APP  "@CMAKE_CURRENT_SOURCE_DIR@/assets/logo/gloverui-ico.bmp" 
+
+#define  _PREFIX(__prefix)\
+         GLOverlayUI_ ## __prefix 
+
+#endif /*! GLOverlayUI_ */ 
