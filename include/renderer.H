@@ -4,6 +4,9 @@
 #if !defined(GLOverlayUI_renderer_h)
 #define GLOverlayUI_renderer_h 
 
+#include <GL/gl.h> 
+#include <GL/glu.h> 
+#include <cmath> 
 
 enum { 
   TRIANGLES,  
@@ -33,13 +36,13 @@ enum {
 
 
 #define  OBJECT_POLYGON ({\
-    int segments = 50; \
+    int segments = 60; \
     float r = 0.3f;\
     float cx = 0.0f, cy = 0.5f;\
     for (int i = 0; i < segments; ++i) {\
-          float theta = 2.0f * M_PI * float(i) / float(segments);\
-          float x = r * cos(theta);\
-          float y = r * sin(theta);\
+          float t = 2.0f * M_PI * float(i) / float(segments);\
+          float x = r * std::cos(t);\
+          float y = r * std::sin(t);\
           glVertex2f(cx + x, cy + y);\
     }\
     });
@@ -52,6 +55,7 @@ enum {
   glEnd();
 
 
+
 /** 
  * @class  Renderer  
  * @brief  Dedicated for Rendering  Object using OpenGL  
@@ -62,8 +66,11 @@ class  Renderer
 {  
   
   int _form_options =  RENDERER_ALL_FORM ; 
+  float _rot = 0.0 , 
+        _scl = 1.0f; 
   public : 
-    Renderer() ; 
+    Renderer() = default  ;
+    Renderer(int) ;  
     virtual  ~Renderer()= default ; 
   
 
@@ -76,7 +83,17 @@ class  Renderer
      *  @brief retrieve bit mask for current enabling forms  
      *  @return int  - forms flags bit mask  
      */
-    int    getforms(void) ;   
+    int    getforms(void) const ; 
+
+
+    void rotate_forms(float angle) ; 
+
+    void scale_forms(float scale) ;  
+    /** 
+     * @brief  display  form shape 
+     * */
+
+    void display(void) ; 
   
 }; 
 

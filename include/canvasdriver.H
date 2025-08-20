@@ -7,17 +7,17 @@
 #if !defined(GLOverlayUI_canvasdriver_h)
 #define  GLOverlayUI_canvasdriver_h 
 
+#include <wx/wx.h> 
 #include <wx/glcanvas.h>
 #include <GL/gl.h> 
 #include <GL/glu.h>
-#include <GL/glut.h>
-#include <wx/wx.h> 
 #include <memory> 
+
+#include "renderer.H"
 
 /** 
  * @brief  memory allocation compatibility over  c++_std=11  
  * */
-
 
 #if defined(__cplusplus) && (__cplusplus >= 201402L ) 
 # define   uniq_allocator(__object)  std::unique_ptr<__object>   
@@ -46,12 +46,20 @@ class CanvasDriver : public  wxGLCanvas
   uniq_allocator(wxGLContext) _ctx  ;  
   void on_painting(wxPaintEvent & evt ) ; 
   void on_resizing(wxSizeEvent& evt) ; 
+  void on_mouse(wxMouseEvent& evt) ; 
+  void on_mouse_grab(wxMouseEvent & evt) ; 
+  void on_mouse_release(wxMouseEvent & evt); 
   
+  bool _mouse_grab_state = false ; 
+  
+  Renderer _renderer ; 
+  bool _show ; 
   public: 
     /** 
      * @brief  CanvasDriver  ctor
      * */
-    CanvasDriver(wxWindow  * mainframe_parent)  ;
+    CanvasDriver(wxWindow  * mainframe_parent);
+
     /**
      * @brief CanvasDriver dtor
      * */
@@ -60,13 +68,30 @@ class CanvasDriver : public  wxGLCanvas
     /** 
      * @brief  Initialize Gl stuff 
      * */
-    static void  CanvasDriver_init(void) ; 
+    static void  CanvasDriver_init(void); 
+
+    /**
+     * @brief apply  rotation angle  on all form 
+     * @param  rotation_angle -  float 
+     * */
+    void apply_rotation(float rotation_angle) ; 
+    
+    void apply_scaling(float   scale) ;  
    
     /** 
      * @brief Renderer OpenGL frame
      **/
-    void renderer(void) ; 
+    void renderer(int forms_bit_mask) ; 
 
+
+    /** 
+     * @brief  enable/disable renderer forms  
+     */
+
+    void toggle_renderer(void) ; 
+
+    bool get_renderer_state(void)  ; 
+    void set_renderer_state(bool state) ; 
 }; 
 
 #endif  /*! GLOverlayUI_canvasdriver_h */

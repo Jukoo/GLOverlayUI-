@@ -47,12 +47,6 @@ void MainFrame::setup_menubar(void )
 
 }
 
-
-
-
-
-
-
 void MainFrame::define_layout(void) 
 {
 
@@ -73,7 +67,8 @@ void MainFrame::define_layout(void)
   _slider->Bind(wxEVT_SLIDER ,  &MainFrame::on_sliding , this ) ;
   ctrl_panel_vbox->Add(_slider  , 0  , wxEXPAND| wxALL , 5 ) ;
 
-  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Objects") ; 
+  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Objects"); 
+  _checkbox->SetValue(true) ; 
   _checkbox->Bind(wxEVT_CHECKBOX , &MainFrame::on_checking , this ) ; 
   ctrl_panel_vbox->Add(_checkbox , 0 , wxEXPAND| wxALL,10) ;  
 
@@ -81,6 +76,7 @@ void MainFrame::define_layout(void)
 
   wxBoxSizer *canvas_panel_vbox = new wxBoxSizer(wxHORIZONTAL) ; 
   _canvas_driver=  new CanvasDriver(this) ; 
+  _canvas_driver->set_renderer_state(_checkbox->GetValue())  ;  
   canvas_panel_vbox->Add(_canvas_driver , 1 , wxEXPAND| wxALL ,1)  ; 
   _panels["canvas"]->SetSizer(canvas_panel_vbox) ; 
 
@@ -132,16 +128,15 @@ void MainFrame::on_about(wxCommandEvent  & evt ) {
 
 void MainFrame::on_checking(wxCommandEvent  & evt)  
 {  
-  static bool   show_state  = false ; 
-  show_state^=1 ; 
-  
-  Refresh() ; 
+  _canvas_driver->toggle_renderer(); 
 }
 
 
 void  MainFrame::on_sliding(wxCommandEvent  & evt) 
 {
-  puts("slid") ; 
+  float scale= static_cast<float>(evt.GetInt()) ; 
+  scale /= 100.0f  ; 
+  _canvas_driver->apply_scaling(scale) ; 
 }
 
 
@@ -149,11 +144,11 @@ void MainFrame::on_sidepanel_toggle(wxCommandEvent &evt)
 {
   static bool toggle_state =false ; 
   toggle_state^=1 ; 
+
   if (toggle_state)
     _main_boxsizer->Hide(&*_panels["ctrl"]) ;  
   else 
     _main_boxsizer->Show(&*_panels["ctrl"]) ;  
 
   Layout() ;
-  
 }

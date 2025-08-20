@@ -4,11 +4,10 @@
 
 
 #include <cstdio> 
-#include <wx/dcclient.h>
-#include <GL/glut.h> 
+#include <iostream> 
 
-#include "canvasdriver.H"
 #include "renderer.H"  
+#include "canvasdriver.H"
 
 CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) : 
   wxGLCanvas(mainframe_parent) 
@@ -23,7 +22,9 @@ CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) :
 
    Bind(wxEVT_PAINT , &CanvasDriver::on_painting , this) ; 
    Bind(wxEVT_SIZE , &CanvasDriver::on_resizing ,  this) ; 
-
+   Bind(wxEVT_MOTION, &CanvasDriver::on_mouse , this) ;
+   Bind(wxEVT_LEFT_DOWN, &CanvasDriver::on_mouse_grab , this ) ; 
+   Bind(wxEVT_LEFT_UP  , &CanvasDriver::on_mouse_release,this) ; 
 };  
 
 
@@ -37,55 +38,96 @@ CanvasDriver::~CanvasDriver()
 }
 
 
-void CanvasDriver::renderer(void) 
+void CanvasDriver::renderer(int forms) 
 {
 
   SetCurrent(*_ctx) ;
+
   
-  /*! For testing purpose  render  simple triangle 
+  _renderer.setforms(forms) ;  
+  _renderer.display()  ;
 
-
-  //* Make flags  */
-   bool m_showTriangle=1 ;
-    bool m_showSquare =1;
-    bool m_showCircle =1;
-
-        glClearColor(0.15f, 0.15f, 0.2f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Triangle
-        if (m_showTriangle) 
-        {
-           OPENGL_OBJECT(TRIANGLES) 
-        }
-
-        // Carré
-        if (m_showSquare) {
-            OPENGL_OBJECT(QUADS,glColor3f(1.0f, 1.0f, 0.0f)) ;
-        }
-
-        // Cercle
-        if (m_showCircle) {
-            OPENGL_OBJECT(POLYGON ,glColor3f(0.2f, 0.8f, 1.0f)) ; 
-        }
-
-
-  glFlush();
-  SwapBuffers() ; 
-
-
-
+  SwapBuffers() ;  
+   
 }
 
-void CanvasDriver::on_painting(wxPaintEvent& evt) 
+bool CanvasDriver::get_renderer_state(void) 
 {
-    renderer() ; 
+  return _show ;
+}
 
+void CanvasDriver::set_renderer_state(bool  state) 
+{
+   _show  = state ;  
+}
+
+void CanvasDriver::toggle_renderer(void) 
+{
+  static int   current_forms =  _renderer.getforms() ;  
+  _show^=1;    
+ 
+  if(!_show) 
+    _renderer.setforms(current_forms &~current_forms);  
+  else
+    _renderer.setforms(current_forms); 
+
+  Refresh(true) ; 
+}
+
+
+void CanvasDriver::apply_rotation(float  _angle) 
+{
+  _renderer.rotate_forms(_angle) ; 
+  Refresh(true) ; 
+}
+
+void CanvasDriver::apply_scaling(float  scale )  
+{
+  _renderer.scale_forms(scale) ;
+  Refresh(true) ; 
+}
+void CanvasDriver::on_painting(wxPaintEvent& evt) 
+{ 
+  int  forms = _renderer.getforms() ; 
+  renderer(forms) ;   
 }
 
 void CanvasDriver::on_resizing(wxSizeEvent  & evt) 
 {
-  Refresh() ; 
+
+  wxSize size =  GetClientSize() ; 
+  
+  glViewport(0, 0, size.x, size.y);
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+
+  glOrtho(size.x/2, size.x/2, size.y/2, size.y/2, -1, 1);
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+
   evt.Skip() ; 
+  Refresh(false) ; 
 }
 
+
+void CanvasDriver::on_mouse(wxMouseEvent& evt) 
+{
+  if(_mouse_grab_state) 
+  {
+    wxPoint position=  evt.GetPosition() ;
+    float angle =  (position.x * position.y)  /  360.f ; 
+    apply_rotation(static_cast<float>(angle)) ;
+
+  }
+}
+
+void CanvasDriver::on_mouse_grab(wxMouseEvent& evt ) 
+{
+   _mouse_grab_state^=1 ; 
+   (_mouse_grab_state) ?  CaptureMouse() : ReleaseMouse() ; 
+}
+
+void CanvasDriver::on_mouse_release(wxMouseEvent & evt) 
+{
+  on_mouse_grab(evt) ; 
+}
