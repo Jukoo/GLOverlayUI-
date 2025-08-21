@@ -80,7 +80,7 @@ Make sure to enable the python environment :
 ```bash 
 $  python3 -m venv dist 
 $  source dist/bin/activate 
-$  python3 -m pip install -r requirements.txt # to install  dependencies  
+$  python3 -m pip install -r /docs/requirements.txt # to install  dependencies  
 ```
 Once done , you can proceed  with the classical cmake build  above: 
 it'll compile all the sources + docs 
