@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>/home/umar/Desktop/workstation/CGui/WxWidget/include</compoundname>
+    <innerfile refid="canvasdriver_8H">canvasdriver.H</innerfile>
+    <innerfile refid="GLOverlayUI__config_8in_8H">GLOverlayUI_config.in.H</innerfile>
+    <innerfile refid="mainframe_8H">mainframe.H</innerfile>
+    <innerfile refid="renderer_8H">renderer.H</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/"/>
+  </compounddef>
+</doxygen>

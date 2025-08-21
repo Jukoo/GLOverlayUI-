@@ -1,0 +1,86 @@
+\doxysection{/home/umar/\+Desktop/workstation/\+CGui/\+Wx\+Widget/include/mainframe.H File Reference}
+\hypertarget{mainframe_8H}{}\label{mainframe_8H}\index{/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H@{/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H}}
+
+
+Handle the main frame application layout.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$wx/wx.\+h$>$}\newline
+{\ttfamily \#include $<$wx/aboutdlg.\+h$>$}\newline
+{\ttfamily \#include $<$wx/splitter.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include "{}GLOverlay\+UI\+\_\+config.\+in.\+H"{}}\newline
+{\ttfamily \#include "{}canvasdriver.\+H"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGLOverlayUI__APP}{GLOverlay\+UI\+\_\+\+APP}}
+\begin{DoxyCompactList}\small\item\em Handle Global Application state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMainFrame}{Main\+Frame}}
+\begin{DoxyCompactList}\small\item\em Responsible about main frame layout GLOverlay\+UI application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_abce3c9120e09e75fd797f72f1b4a4cfb}{APP\+\_\+\+TITLE}}~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(APP\+\_\+\+NAME)
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_a92673e33f27532767749b79edb8ef806}{APP\+\_\+\+VERSION}}~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(VERSION)
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_a0d6ecdcf79fa71c6244071915b31e3c0}{APP\+\_\+\+ICO}}~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(ICON\+\_\+\+APP)
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_a8aad34522f51f4254632370286f27c0a}{DEF\+\_\+\+BASE\+\_\+\+SIZE}}~650
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_ab6698091c06f224c058b04315666190a}{MF\+\_\+\+SIZE}}~\mbox{\hyperlink{mainframe_8H_a8aad34522f51f4254632370286f27c0a}{DEF\+\_\+\+BASE\+\_\+\+SIZE}},\mbox{\hyperlink{mainframe_8H_a8aad34522f51f4254632370286f27c0a}{DEF\+\_\+\+BASE\+\_\+\+SIZE}}
+\item 
+\#define \mbox{\hyperlink{mainframe_8H_aa94c752bbd681d9dc223733a0f9ad7bb}{DEF\+\_\+\+FRAME\+\_\+\+STYLE}}(\+\_\+\+EXCLUDE\+\_\+\+OPTION)~  wx\+DEFAULT\+\_\+\+FRAME\+\_\+\+STYLE \& \texorpdfstring{$\sim$}{\string~}(\+\_\+\+EXCLUDE\+\_\+\+OPTION)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handle the main frame application layout. 
+
+\begin{DoxyAuthor}{Author}
+Umar Ba \href{mailto:jUmarB@protonmail.com}{\texttt{ j\+Umar\+B@protonmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mainframe_8H_a0d6ecdcf79fa71c6244071915b31e3c0}\label{mainframe_8H_a0d6ecdcf79fa71c6244071915b31e3c0} 
+\index{mainframe.H@{mainframe.H}!APP\_ICO@{APP\_ICO}}
+\index{APP\_ICO@{APP\_ICO}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{APP\_ICO}{APP\_ICO}}
+{\footnotesize\ttfamily \#define APP\+\_\+\+ICO~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(ICON\+\_\+\+APP)}
+
+\Hypertarget{mainframe_8H_abce3c9120e09e75fd797f72f1b4a4cfb}\label{mainframe_8H_abce3c9120e09e75fd797f72f1b4a4cfb} 
+\index{mainframe.H@{mainframe.H}!APP\_TITLE@{APP\_TITLE}}
+\index{APP\_TITLE@{APP\_TITLE}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{APP\_TITLE}{APP\_TITLE}}
+{\footnotesize\ttfamily \#define APP\+\_\+\+TITLE~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(APP\+\_\+\+NAME)}
+
+\Hypertarget{mainframe_8H_a92673e33f27532767749b79edb8ef806}\label{mainframe_8H_a92673e33f27532767749b79edb8ef806} 
+\index{mainframe.H@{mainframe.H}!APP\_VERSION@{APP\_VERSION}}
+\index{APP\_VERSION@{APP\_VERSION}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{APP\_VERSION}{APP\_VERSION}}
+{\footnotesize\ttfamily \#define APP\+\_\+\+VERSION~\mbox{\hyperlink{GLOverlayUI__config_8in_8H_a7dc1a62b056b6a90505ab5579abdb9aa}{\+\_\+\+PREFIX}}(VERSION)}
+
+\Hypertarget{mainframe_8H_a8aad34522f51f4254632370286f27c0a}\label{mainframe_8H_a8aad34522f51f4254632370286f27c0a} 
+\index{mainframe.H@{mainframe.H}!DEF\_BASE\_SIZE@{DEF\_BASE\_SIZE}}
+\index{DEF\_BASE\_SIZE@{DEF\_BASE\_SIZE}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{DEF\_BASE\_SIZE}{DEF\_BASE\_SIZE}}
+{\footnotesize\ttfamily \#define DEF\+\_\+\+BASE\+\_\+\+SIZE~650}
+
+Define the default base size of the frame ~\newline
+ \Hypertarget{mainframe_8H_aa94c752bbd681d9dc223733a0f9ad7bb}\label{mainframe_8H_aa94c752bbd681d9dc223733a0f9ad7bb} 
+\index{mainframe.H@{mainframe.H}!DEF\_FRAME\_STYLE@{DEF\_FRAME\_STYLE}}
+\index{DEF\_FRAME\_STYLE@{DEF\_FRAME\_STYLE}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{DEF\_FRAME\_STYLE}{DEF\_FRAME\_STYLE}}
+{\footnotesize\ttfamily \#define DEF\+\_\+\+FRAME\+\_\+\+STYLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+EXCLUDE\+\_\+\+OPTION }\end{DoxyParamCaption})~  wx\+DEFAULT\+\_\+\+FRAME\+\_\+\+STYLE \& \texorpdfstring{$\sim$}{\string~}(\+\_\+\+EXCLUDE\+\_\+\+OPTION)}
+
+Desable Option or Exclude option about frame style and behavior \Hypertarget{mainframe_8H_ab6698091c06f224c058b04315666190a}\label{mainframe_8H_ab6698091c06f224c058b04315666190a} 
+\index{mainframe.H@{mainframe.H}!MF\_SIZE@{MF\_SIZE}}
+\index{MF\_SIZE@{MF\_SIZE}!mainframe.H@{mainframe.H}}
+\doxysubsubsection{\texorpdfstring{MF\_SIZE}{MF\_SIZE}}
+{\footnotesize\ttfamily \#define MF\+\_\+\+SIZE~\mbox{\hyperlink{mainframe_8H_a8aad34522f51f4254632370286f27c0a}{DEF\+\_\+\+BASE\+\_\+\+SIZE}},\mbox{\hyperlink{mainframe_8H_a8aad34522f51f4254632370286f27c0a}{DEF\+\_\+\+BASE\+\_\+\+SIZE}}}
+
+Will have a square main frame window ~\newline
+ 

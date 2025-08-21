@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="mainframe_8H" kind="file" language="C++">
+    <compoundname>mainframe.H</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">wx/wx.h</includes>
+    <includes local="no">wx/aboutdlg.h</includes>
+    <includes local="no">wx/splitter.h</includes>
+    <includes local="no">map</includes>
+    <includes refid="GLOverlayUI__config_8in_8H" local="yes">GLOverlayUI_config.in.H</includes>
+    <includes refid="canvasdriver_8H" local="yes">canvasdriver.H</includes>
+    <includedby refid="mainframe_8C" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/src/mainframe.C</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>GLOverlayUI_config.in.H</label>
+        <link refid="GLOverlayUI__config_8in_8H"/>
+      </node>
+      <node id="8">
+        <label>canvasdriver.H</label>
+        <link refid="canvasdriver_8H"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</label>
+        <link refid="mainframe_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GL/gl.h</label>
+      </node>
+      <node id="11">
+        <label>GL/glu.h</label>
+      </node>
+      <node id="12">
+        <label>GL/glut.h</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="13">
+        <label>memory</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>wx/aboutdlg.h</label>
+      </node>
+      <node id="9">
+        <label>wx/glcanvas.h</label>
+      </node>
+      <node id="5">
+        <label>wx/splitter.h</label>
+      </node>
+      <node id="3">
+        <label>wx/wx.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</label>
+        <link refid="mainframe_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/mainframe.C</label>
+        <link refid="mainframe_8C"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGLOverlayUI__APP" prot="public">GLOverlayUI_APP</innerclass>
+    <innerclass refid="classMainFrame" prot="public">MainFrame</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="mainframe_8H_1abce3c9120e09e75fd797f72f1b4a4cfb" prot="public" static="no">
+        <name>APP_TITLE</name>
+        <initializer><ref refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kindref="member">_PREFIX</ref>(APP_NAME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="19" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mainframe_8H_1a92673e33f27532767749b79edb8ef806" prot="public" static="no">
+        <name>APP_VERSION</name>
+        <initializer><ref refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kindref="member">_PREFIX</ref>(VERSION)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="20" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mainframe_8H_1a0d6ecdcf79fa71c6244071915b31e3c0" prot="public" static="no">
+        <name>APP_ICO</name>
+        <initializer><ref refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kindref="member">_PREFIX</ref>(ICON_APP)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="21" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mainframe_8H_1a8aad34522f51f4254632370286f27c0a" prot="public" static="no">
+        <name>DEF_BASE_SIZE</name>
+        <initializer>650</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define the default base size of the frame <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="24" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mainframe_8H_1ab6698091c06f224c058b04315666190a" prot="public" static="no">
+        <name>MF_SIZE</name>
+        <initializer><ref refid="mainframe_8H_1a8aad34522f51f4254632370286f27c0a" kindref="member">DEF_BASE_SIZE</ref>,<ref refid="mainframe_8H_1a8aad34522f51f4254632370286f27c0a" kindref="member">DEF_BASE_SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Will have a square main frame window <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="29" column="11" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mainframe_8H_1aa94c752bbd681d9dc223733a0f9ad7bb" prot="public" static="no">
+        <name>DEF_FRAME_STYLE</name>
+        <param><defname>_EXCLUDE_OPTION</defname></param>
+        <initializer>  wxDEFAULT_FRAME_STYLE &amp; ~(_EXCLUDE_OPTION)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Desable Option or Exclude option about frame style and behavior </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="33" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="33" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handle the main frame application layout. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(GLOverlayUI_mainframe_h)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/>GLOverlayUI_mainframe_h<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/wx.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/aboutdlg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/splitter.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GLOverlayUI__config_8in_8H" kindref="compound">GLOverlayUI_config.in.H</ref>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="canvasdriver_8H" kindref="compound">canvasdriver.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="mainframe_8H_1abce3c9120e09e75fd797f72f1b4a4cfb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>APP_TITLE<sp/><sp/><sp/>_PREFIX(APP_NAME)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="mainframe_8H_1a92673e33f27532767749b79edb8ef806" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>APP_VERSION<sp/>_PREFIX(VERSION)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="mainframe_8H_1a0d6ecdcf79fa71c6244071915b31e3c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>APP_ICO<sp/><sp/><sp/><sp/><sp/>_PREFIX(ICON_APP)<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(DEF_BASE_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="mainframe_8H_1a8aad34522f51f4254632370286f27c0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>DEF_BASE_SIZE<sp/><sp/><sp/><sp/><sp/>650<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MF_SIZE)<sp/></highlight></codeline>
+<codeline lineno="29" refid="mainframe_8H_1ab6698091c06f224c058b04315666190a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/>MF_SIZE<sp/><sp/>DEF_BASE_SIZE,DEF_BASE_SIZE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="mainframe_8H_1aa94c752bbd681d9dc223733a0f9ad7bb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>DEF_FRAME_STYLE(_EXCLUDE_OPTION)<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/>wxDEFAULT_FRAME_STYLE<sp/>&amp;<sp/>~(_EXCLUDE_OPTION)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classGLOverlayUI__APP" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal"><ref refid="classGLOverlayUI__APP" kindref="compound">GLOverlayUI_APP</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>wxApp</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>public<sp/>:<sp/></highlight></codeline>
+<codeline lineno="47" refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" kindref="member">OnInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="56" refid="classMainFrame" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal"><ref refid="classMainFrame" kindref="compound">MainFrame</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>wxFrame<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>std::basic_string&lt;char&gt;<sp/>_app_title;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>std::basic_string&lt;char&gt;<sp/>_app_status_text;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>wxBoxSizer<sp/>*<sp/>_main_boxsizer<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/>wxCheckBox<sp/>*<sp/>_checkbox<sp/>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>wxSlider<sp/><sp/><sp/>*<sp/>_slider<sp/>;<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>std::map&lt;std::basic_string&lt;char&gt;<sp/><sp/>,<sp/>wxPanel*&gt;<sp/>_panels;<sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref><sp/>*<sp/>_canvas_driver<sp/>;<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>on_exit(wxCommandEvent<sp/>&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>on_about(wxCommandEvent<sp/>&amp;<sp/>evt);<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_checking(wxCommandEvent<sp/><sp/>&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_sliding<sp/>(wxCommandEvent<sp/>&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classMainFrame" kindref="compound">MainFrame</ref>(std::basic_string&lt;char&gt;<sp/>application_title)<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1a0cfd88ece4836e0ea5430bd55370bf11" kindref="member">~MainFrame</ref>()<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" kindref="member">setup_menubar</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" kindref="member">define_layout</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1a1dfcef17988617e91424d1819c3669d2" kindref="member">panel_sizing_layout_rule</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H"/>
+  </compounddef>
+</doxygen>

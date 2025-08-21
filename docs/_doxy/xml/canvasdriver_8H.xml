@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="canvasdriver_8H" kind="file" language="C++">
+    <compoundname>canvasdriver.H</compoundname>
+    <includes local="no">wx/glcanvas.h</includes>
+    <includes local="no">GL/gl.h</includes>
+    <includes local="no">GL/glu.h</includes>
+    <includes local="no">GL/glut.h</includes>
+    <includes local="no">wx/wx.h</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="mainframe_8H" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</includedby>
+    <includedby refid="canvasdriver_8C" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H</label>
+        <link refid="canvasdriver_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GL/gl.h</label>
+      </node>
+      <node id="4">
+        <label>GL/glu.h</label>
+      </node>
+      <node id="5">
+        <label>GL/glut.h</label>
+      </node>
+      <node id="7">
+        <label>memory</label>
+      </node>
+      <node id="2">
+        <label>wx/glcanvas.h</label>
+      </node>
+      <node id="6">
+        <label>wx/wx.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H</label>
+        <link refid="canvasdriver_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</label>
+        <link refid="mainframe_8H"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C</label>
+        <link refid="canvasdriver_8C"/>
+      </node>
+      <node id="3">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/mainframe.C</label>
+        <link refid="mainframe_8C"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCanvasDriver" prot="public">CanvasDriver</innerclass>
+    <briefdescription>
+<para>Kind of bridge for layout interaction and OpenGL render. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Umar Ba <ulink url="mailto:jUmaB@protonmail.com">jUmaB@protonmail.com</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(GLOverlayUI_canvasdriver_h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GLOverlayUI_canvasdriver_h<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/glcanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/gl.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glut.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/wx.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCanvasDriver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><sp/>wxGLCanvas<sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;wxGLContext&gt;<sp/>_ctx<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_painting(wxPaintEvent<sp/>&amp;<sp/>evt<sp/>)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_resizing(wxSizeEvent&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref>(wxWindow<sp/><sp/>*<sp/>mainframe_parent)<sp/><sp/>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" kindref="member">~CanvasDriver</ref>()<sp/>;<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" kindref="member">CanvasDriver_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1abaf75087ff2e828a10036472629f91e8" kindref="member">renderer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H"/>
+  </compounddef>
+</doxygen>

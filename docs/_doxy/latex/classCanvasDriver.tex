@@ -1,0 +1,91 @@
+\doxysection{Canvas\+Driver Class Reference}
+\hypertarget{classCanvasDriver}{}\label{classCanvasDriver}\index{CanvasDriver@{CanvasDriver}}
+
+
+Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$canvasdriver.\+H$>$}
+
+Inheritance diagram for Canvas\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCanvasDriver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{Canvas\+Driver}} (wx\+Window \texorpdfstring{$\ast$}{*}mainframe\+\_\+parent)
+\begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} ctor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4}{\texorpdfstring{$\sim$}{\string~}\+Canvas\+Driver}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} dtor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanvasDriver_abaf75087ff2e828a10036472629f91e8}{renderer}} (void)
+\begin{DoxyCompactList}\small\item\em Renderer Open\+GL frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classCanvasDriver_ac73469859ecb34525364938ce67a7952}{Canvas\+Driver\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Gl stuff. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}\label{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6} 
+\index{CanvasDriver@{CanvasDriver}!CanvasDriver@{CanvasDriver}}
+\index{CanvasDriver@{CanvasDriver}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{CanvasDriver()}{CanvasDriver()}}
+{\footnotesize\ttfamily Canvas\+Driver\+::\+Canvas\+Driver (\begin{DoxyParamCaption}\item[{wx\+Window \texorpdfstring{$\ast$}{*}}]{mainframe\+\_\+parent }\end{DoxyParamCaption})}
+
+
+
+\doxylink{classCanvasDriver}{Canvas\+Driver} ctor. 
+
+\Hypertarget{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4}\label{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4} 
+\index{CanvasDriver@{CanvasDriver}!````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}}
+\index{````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CanvasDriver()}{\string~CanvasDriver()}}
+{\footnotesize\ttfamily Canvas\+Driver\+::\texorpdfstring{$\sim$}{\string~}\+Canvas\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxylink{classCanvasDriver}{Canvas\+Driver} dtor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCanvasDriver_ac73469859ecb34525364938ce67a7952}\label{classCanvasDriver_ac73469859ecb34525364938ce67a7952} 
+\index{CanvasDriver@{CanvasDriver}!CanvasDriver\_init@{CanvasDriver\_init}}
+\index{CanvasDriver\_init@{CanvasDriver\_init}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{CanvasDriver\_init()}{CanvasDriver\_init()}}
+{\footnotesize\ttfamily static void Canvas\+Driver\+::\+Canvas\+Driver\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize Gl stuff. 
+
+\Hypertarget{classCanvasDriver_abaf75087ff2e828a10036472629f91e8}\label{classCanvasDriver_abaf75087ff2e828a10036472629f91e8} 
+\index{CanvasDriver@{CanvasDriver}!renderer@{renderer}}
+\index{renderer@{renderer}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{renderer()}{renderer()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Renderer Open\+GL frame. 
+
+For testing purpose render simple triangle gl\+Clear\+Color(0.\+6,0.\+5,0.\+5,0) ; gl\+Clear(\+GL\+\_\+\+COLOR\+\_\+\+BUFFER\+\_\+\+BIT) ; ~\newline
+
+
+gl\+Begin(\+GL\+\_\+\+TRIANGLES); gl\+Vertex3f( 0, 0.\+5 , 0 ) ; gl\+Vertex3f( -\/0.\+5, -\/0.\+5 , 0 ) ; gl\+Vertex3f( 0.\+5,-\/0.\+5 , 0 ) ; gl\+End() ;
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/umar/\+Desktop/workstation/\+CGui/\+Wx\+Widget/include/\mbox{\hyperlink{canvasdriver_8H}{canvasdriver.\+H}}\item 
+/home/umar/\+Desktop/workstation/\+CGui/\+Wx\+Widget/src/\mbox{\hyperlink{canvasdriver_8C}{canvasdriver.\+C}}\end{DoxyCompactItemize}

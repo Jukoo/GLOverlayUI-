@@ -1,0 +1,35 @@
+\doxysection{canvasdriver.\+H}
+\hypertarget{canvasdriver_8H_source}{}\label{canvasdriver_8H_source}\index{/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H@{/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H}}
+\mbox{\hyperlink{canvasdriver_8H}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#if\ !defined(GLOverlayUI\_canvasdriver\_h)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \ GLOverlayUI\_canvasdriver\_h\ }}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <wx/glcanvas.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <GL/glu.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <GL/glut.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}\ :\ \textcolor{keyword}{public}\ \ wxGLCanvas\ \ }
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ std::unique\_ptr<wxGLContext>\ \_ctx\ ;\ \ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ on\_painting(wxPaintEvent\ \&\ evt\ )\ ;\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ on\_resizing(wxSizeEvent\&\ evt)\ ;\ }
+\DoxyCodeLine{00028\ \ \ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}(wxWindow\ \ *\ mainframe\_parent)\ \ ;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4}{\string~CanvasDriver}}()\ ;\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{classCanvasDriver_ac73469859ecb34525364938ce67a7952}{CanvasDriver\_init}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00043\ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_abaf75087ff2e828a10036472629f91e8}{renderer}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ \ }}
+
+\end{DoxyCode}

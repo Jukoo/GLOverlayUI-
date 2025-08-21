@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classCanvasDriver" kind="class" language="C++" prot="public">
+    <compoundname>CanvasDriver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">wxGLCanvas</basecompoundref>
+    <includes refid="canvasdriver_8H" local="no">canvasdriver.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCanvasDriver_1a7907a8a260faecec353176c890843200" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; wxGLContext &gt;</type>
+        <definition>std::unique_ptr&lt;wxGLContext&gt; CanvasDriver::_ctx</definition>
+        <argsstring></argsstring>
+        <name>_ctx</name>
+        <qualifiedname>CanvasDriver::_ctx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="25" column="19" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCanvasDriver_1acd4693f2b28595e2e194904137bbfbb5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::on_painting</definition>
+        <argsstring>(wxPaintEvent &amp;evt)</argsstring>
+        <name>on_painting</name>
+        <qualifiedname>CanvasDriver::on_painting</qualifiedname>
+        <param>
+          <type>wxPaintEvent &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="26" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1aa6517d0ddfd4bfaf0bb4f796748c726d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::on_resizing</definition>
+        <argsstring>(wxSizeEvent &amp;evt)</argsstring>
+        <name>on_resizing</name>
+        <qualifiedname>CanvasDriver::on_resizing</qualifiedname>
+        <param>
+          <type>wxSizeEvent &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="27" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C" bodystart="105" bodyend="109"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CanvasDriver::CanvasDriver</definition>
+        <argsstring>(wxWindow *mainframe_parent)</argsstring>
+        <name>CanvasDriver</name>
+        <qualifiedname>CanvasDriver::CanvasDriver</qualifiedname>
+        <param>
+          <type>wxWindow *</type>
+          <declname>mainframe_parent</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> ctor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="33" column="5" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C" bodystart="11" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CanvasDriver::~CanvasDriver</definition>
+        <argsstring>()</argsstring>
+        <name>~CanvasDriver</name>
+        <qualifiedname>CanvasDriver::~CanvasDriver</qualifiedname>
+        <briefdescription>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> dtor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="37" column="14" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C" bodystart="27" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1abaf75087ff2e828a10036472629f91e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::renderer</definition>
+        <argsstring>(void)</argsstring>
+        <name>renderer</name>
+        <qualifiedname>CanvasDriver::renderer</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Renderer OpenGL frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>For testing purpose render simple triangle glClearColor(0.6,0.5,0.5,0) ; glClear(GL_COLOR_BUFFER_BIT) ; <linebreak/>
+</para>
+<para>glBegin(GL_TRIANGLES); glVertex3f( 0, 0.5 , 0 ) ; glVertex3f( -0.5, -0.5 , 0 ) ; glVertex3f( 0.5,-0.5 , 0 ) ; glEnd() ;</para>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="47" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C" bodystart="31" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CanvasDriver::CanvasDriver_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>CanvasDriver_init</name>
+        <qualifiedname>CanvasDriver::CanvasDriver_init</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Gl stuff. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="42" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Responsable to render OpenGL stuff on Canvas Frame layout <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CanvasDriver</label>
+        <link refid="classCanvasDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wxGLCanvas</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CanvasDriver</label>
+        <link refid="classCanvasDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wxGLCanvas</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="22" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="23" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classCanvasDriver_1a7907a8a260faecec353176c890843200" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_ctx</name></member>
+      <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver</name></member>
+      <member refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver_init</name></member>
+      <member refid="classCanvasDriver_1acd4693f2b28595e2e194904137bbfbb5" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>on_painting</name></member>
+      <member refid="classCanvasDriver_1aa6517d0ddfd4bfaf0bb4f796748c726d" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>on_resizing</name></member>
+      <member refid="classCanvasDriver_1abaf75087ff2e828a10036472629f91e8" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>renderer</name></member>
+      <member refid="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" prot="public" virt="virtual"><scope>CanvasDriver</scope><name>~CanvasDriver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
