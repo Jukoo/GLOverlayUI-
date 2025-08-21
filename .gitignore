@@ -3,7 +3,6 @@ dist
 build
 bin
 note.txt 
-docs/*
 docs/_build/
 docs/_templates/
 docs/_static/
