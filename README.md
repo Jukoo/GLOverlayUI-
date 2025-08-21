@@ -1,4 +1,5 @@
-# GLOverlayUI 
+<img src="assets/logo/gloverui-ico.png" width="300"  alt="minilog-logo" align="center"/>   
+
 
 **GLOverlayUI** is a desktop application that demonstrates the integration of a real-time OpenGL rendering pipeline with a native wxWidgets GUI. It features an interactive 2D scene rendered on a `wxGLCanvas`, including a clickable OpenGL overlay and a dynamic control panel using native UI widgets.
 
