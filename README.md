@@ -68,10 +68,12 @@ From the root of the repository:
  *This will generate the GLOverlayUI executable inside the bin/ directory.*
 
  🚀 Run the Application
+ ---
  
  > $ ./bin/GLOverlayUI 
 
  📦 Dependencies
+ ---
  * wxWidgets (GUI framework)
  * OpenGL (GL/GLU for 2D rendering)
  * CMake ≥ 3.11 
@@ -79,6 +81,7 @@ From the root of the repository:
  PNG loading is handled via wxImage (no external image libraries required).
 
  🏛️ Architecture Overview
+ ---
  The application is organized into three decoupled components:
 
  Component    Description Depends on wxWidgets
@@ -89,10 +92,12 @@ From the root of the repository:
  This separation enables easy testing and reusability of the rendering logic in other contexts.
 
  📸 Screenshots
+ ---
  ([]Todo  Add a screenshot here showing the scene + overlay + control panel)
 
  📄 License
  This project is released under the GPLv3 License. See LICENSE for details.
 
  🙋‍♂️ Author
+ ---
  Made with ❤️  by  Umar Ba <jUmarB@protonmail.com> 
