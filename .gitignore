@@ -6,3 +6,5 @@ note.txt
 docs/_build/
 docs/_templates/
 docs/_static
+docs/_doxy/*
+
