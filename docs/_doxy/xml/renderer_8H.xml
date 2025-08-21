@@ -2,11 +2,310 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="renderer_8H" kind="file" language="C++">
     <compoundname>renderer.H</compoundname>
+    <includes local="no">GL/gl.h</includes>
+    <includes local="no">GL/glu.h</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="canvasdriver_8H" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H</includedby>
+    <includedby refid="canvasdriver_8C" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C</includedby>
+    <includedby refid="renderer_8C" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/src/renderer.C</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H</label>
+        <link refid="renderer_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GL/gl.h</label>
+      </node>
+      <node id="3">
+        <label>GL/glu.h</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H</label>
+        <link refid="canvasdriver_8H"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</label>
+        <link refid="mainframe_8H"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H</label>
+        <link refid="renderer_8H"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C</label>
+        <link refid="canvasdriver_8C"/>
+      </node>
+      <node id="4">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/mainframe.C</label>
+        <link refid="mainframe_8C"/>
+      </node>
+      <node id="6">
+        <label>/home/umar/Desktop/workstation/CGui/WxWidget/src/renderer.C</label>
+        <link refid="renderer_8C"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRenderer" prot="public">Renderer</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="renderer_8H_1a0bc525df1b1181b51d8a48f6da1b7422" prot="public" static="no">
+        <name>OBJECT_POLYGON</name>
+        <initializer>    ({\
+    int segments = 60; \
+    float r = 0.3f;\
+    float cx = 0.0f, cy = 0.5f;\
+    for (int i = 0; i &lt; segments; ++i) {\
+          float t = 2.0f * M_PI * float(i) / float(segments);\
+          float x = r * std::cos(t);\
+          float y = r * std::sin(t);\
+          glVertex2f(cx + x, cy + y);\
+    }\
+    });</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="52" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a45e566f60094a6ac59cb3afe37274127" prot="public" static="no">
+        <name>OBJECT_QUADS</name>
+        <initializer>  glVertex2f(0.2f, -0.5f);\
+  glVertex2f(0.7f, -0.5f);\
+  glVertex2f(0.7f,  0.0f);\
+  glVertex2f(0.2f,  0.0f);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="45" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a35cda42cddf50851da51ae4112f698d3" prot="public" static="no">
+        <name>OBJECT_TRIANGLES</name>
+        <initializer>  glColor3f(1.0f, 0.0f, 0.0f); glVertex2f(-0.8f, -0.5f);\
+  glColor3f(0.0f, 1.0f, 0.0f); glVertex2f(-0.2f, -0.5f);\
+  glColor3f(0.0f, 0.0f, 1.0f); glVertex2f(-0.5f,  0.2f);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BASIC GEOMETRICS FORM OBJECT </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="38" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a124289e60ff6220ac0f346388762c393" prot="public" static="no">
+        <name>OPENGL_OBJECT</name>
+        <param><defname>__figure</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>  __VA_ARGS__;\
+  glBegin(GL_##__figure);\
+  OBJECT_##__figure\
+  glEnd();</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="65" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1aa2aaa9b563acdbb2af4a8679f19f2426" prot="public" static="no">
+        <name>POLYGON</name>
+        <initializer>(1 &lt;&lt; POLYGON)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="31" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a5d04f8961ac904da1383d46700f0a5da" prot="public" static="no">
+        <name>QUADS</name>
+        <initializer>(1 &lt;&lt; QUADS)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="29" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a95e6177b3111783f8817c210cd34e1b8" prot="public" static="no">
+        <name>RENDERER_ALL_FORM</name>
+        <initializer>( <ref refid="renderer_8H_1a81e740affbfe277e9cf7f3f091621173" kindref="member">TRIANGLES</ref>| <ref refid="renderer_8H_1a5d04f8961ac904da1383d46700f0a5da" kindref="member">QUADS</ref> |  <ref refid="renderer_8H_1aa2aaa9b563acdbb2af4a8679f19f2426" kindref="member">POLYGON</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="34" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="renderer_8H_1a81e740affbfe277e9cf7f3f091621173" prot="public" static="no">
+        <name>TRIANGLES</name>
+        <initializer>(1 &lt;&lt; TRIANGLES)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="27" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <enumvalue id="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" prot="public">
+          <name>TRIANGLES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" prot="public">
+          <name>TRIANGLES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" prot="public">
+          <name>QUADS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" prot="public">
+          <name>QUADS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="25" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="25" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
+<para>Redering 2D using OpenGL logic. </para>
     </briefdescription>
     <detaileddescription>
+<para>Copyright (C) 2025 Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <ulink url="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</ulink>. </para>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(GLOverlayUI_renderer_h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOverlayUI_renderer_h<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/gl.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glu.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="26" refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="renderer_8H_1a81e740affbfe277e9cf7f3f091621173" kindref="member">TRIANGLES</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="renderer_8H_1a81e740affbfe277e9cf7f3f091621173" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRIANGLES<sp/>(1<sp/>&lt;&lt;<sp/>TRIANGLES)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="renderer_8H_1a5d04f8961ac904da1383d46700f0a5da" kindref="member">QUADS</ref><sp/>,</highlight></codeline>
+<codeline lineno="29" refid="renderer_8H_1a5d04f8961ac904da1383d46700f0a5da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>QUADS<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>QUADS)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="renderer_8H_1aa2aaa9b563acdbb2af4a8679f19f2426" kindref="member">POLYGON</ref></highlight></codeline>
+<codeline lineno="31" refid="renderer_8H_1aa2aaa9b563acdbb2af4a8679f19f2426" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLYGON<sp/><sp/>(1<sp/>&lt;&lt;<sp/>POLYGON)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="renderer_8H_1a95e6177b3111783f8817c210cd34e1b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>RENDERER_ALL_FORM<sp/>(<sp/>TRIANGLES|<sp/>QUADS<sp/>|<sp/><sp/>POLYGON<sp/>)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="renderer_8H_1a35cda42cddf50851da51ae4112f698d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>OBJECT_TRIANGLES\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/>glColor3f(1.0f,<sp/>0.0f,<sp/>0.0f);<sp/>glVertex2f(-0.8f,<sp/>-0.5f);\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/>glColor3f(0.0f,<sp/>1.0f,<sp/>0.0f);<sp/>glVertex2f(-0.2f,<sp/>-0.5f);\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/>glColor3f(0.0f,<sp/>0.0f,<sp/>1.0f);<sp/>glVertex2f(-0.5f,<sp/><sp/>0.2f);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="renderer_8H_1a45e566f60094a6ac59cb3afe37274127" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>OBJECT_QUADS<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/>glVertex2f(0.2f,<sp/>-0.5f);\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>glVertex2f(0.7f,<sp/>-0.5f);\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>glVertex2f(0.7f,<sp/><sp/>0.0f);\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>glVertex2f(0.2f,<sp/><sp/>0.0f);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="renderer_8H_1a0bc525df1b1181b51d8a48f6da1b7422" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>OBJECT_POLYGON<sp/>({\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>int<sp/>segments<sp/>=<sp/>60;<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>float<sp/>r<sp/>=<sp/>0.3f;\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>float<sp/>cx<sp/>=<sp/>0.0f,<sp/>cy<sp/>=<sp/>0.5f;\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>segments;<sp/>++i)<sp/>{\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>t<sp/>=<sp/>2.0f<sp/>*<sp/>M_PI<sp/>*<sp/>float(i)<sp/>/<sp/>float(segments);\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>x<sp/>=<sp/>r<sp/>*<sp/>std::cos(t);\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>y<sp/>=<sp/>r<sp/>*<sp/>std::sin(t);\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(cx<sp/>+<sp/>x,<sp/>cy<sp/>+<sp/>y);\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>});</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="renderer_8H_1a124289e60ff6220ac0f346388762c393" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>OPENGL_OBJECT(__figure<sp/>,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/>__VA_ARGS__;\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/>glBegin(GL_##__figure);\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/>OBJECT_##__figure\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/>glEnd();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classRenderer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal"><ref refid="classRenderer" kindref="compound">Renderer</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_form_options<sp/>=<sp/><sp/><ref refid="renderer_8H_1a95e6177b3111783f8817c210cd34e1b8" kindref="member">RENDERER_ALL_FORM</ref><sp/>;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_rot<sp/>=<sp/>0.0<sp/>,<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scl<sp/>=<sp/>1.0f;<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>public<sp/>:<sp/></highlight></codeline>
+<codeline lineno="86" refid="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" kindref="member">Renderer</ref>()<sp/>=<sp/>default<sp/><sp/>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" kindref="member">Renderer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="classRenderer_1add2012f269f157754034e7b5475a8927" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/><ref refid="classRenderer_1add2012f269f157754034e7b5475a8927" kindref="member">~Renderer</ref>()=<sp/>default<sp/>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classRenderer_1afc711f32933d61863420f8443cb4a632" kindref="member">setforms</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>__form_flag_options)<sp/>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" kindref="member">getforms</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderer_1a693ac5762e3d9b3317038ab111d1ef9f" kindref="member">rotate_forms</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderer_1ac7b99d2aa500e76f6d4ca0b76c4bc725" kindref="member">scale_forms</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale)<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" kindref="member">display</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>GLOverlayUI_renderer_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H"/>
   </compounddef>

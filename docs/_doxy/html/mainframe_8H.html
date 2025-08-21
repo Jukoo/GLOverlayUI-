@@ -80,16 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Handle the main frame application layout.  
+<p>Mainframe application layout Controler.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;wx/wx.h&gt;</code><br />
-<code>#include &lt;wx/aboutdlg.h&gt;</code><br />
-<code>#include &lt;wx/splitter.h&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
-<code>#include &quot;<a class="el" href="GLOverlayUI__config_8in_8H_source.html">GLOverlayUI_config.in.H</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="canvasdriver_8H_source.html">canvasdriver.H</a>&quot;</code><br />
-</div>
+
 <p><a href="mainframe_8H_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -103,22 +96,22 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a0d6ecdcf79fa71c6244071915b31e3c0" id="r_a0d6ecdcf79fa71c6244071915b31e3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#a0d6ecdcf79fa71c6244071915b31e3c0">APP_ICO</a>&#160;&#160;&#160;<a class="el" href="GLOverlayUI__config_8in_8H.html#a7dc1a62b056b6a90505ab5579abdb9aa">_PREFIX</a>(ICON_APP)</td></tr>
+<tr class="separator:a0d6ecdcf79fa71c6244071915b31e3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce3c9120e09e75fd797f72f1b4a4cfb" id="r_abce3c9120e09e75fd797f72f1b4a4cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#abce3c9120e09e75fd797f72f1b4a4cfb">APP_TITLE</a>&#160;&#160;&#160;<a class="el" href="GLOverlayUI__config_8in_8H.html#a7dc1a62b056b6a90505ab5579abdb9aa">_PREFIX</a>(APP_NAME)</td></tr>
 <tr class="separator:abce3c9120e09e75fd797f72f1b4a4cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92673e33f27532767749b79edb8ef806" id="r_a92673e33f27532767749b79edb8ef806"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#a92673e33f27532767749b79edb8ef806">APP_VERSION</a>&#160;&#160;&#160;<a class="el" href="GLOverlayUI__config_8in_8H.html#a7dc1a62b056b6a90505ab5579abdb9aa">_PREFIX</a>(VERSION)</td></tr>
 <tr class="separator:a92673e33f27532767749b79edb8ef806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6ecdcf79fa71c6244071915b31e3c0" id="r_a0d6ecdcf79fa71c6244071915b31e3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#a0d6ecdcf79fa71c6244071915b31e3c0">APP_ICO</a>&#160;&#160;&#160;<a class="el" href="GLOverlayUI__config_8in_8H.html#a7dc1a62b056b6a90505ab5579abdb9aa">_PREFIX</a>(ICON_APP)</td></tr>
-<tr class="separator:a0d6ecdcf79fa71c6244071915b31e3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aad34522f51f4254632370286f27c0a" id="r_a8aad34522f51f4254632370286f27c0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#a8aad34522f51f4254632370286f27c0a">DEF_BASE_SIZE</a>&#160;&#160;&#160;650</td></tr>
 <tr class="separator:a8aad34522f51f4254632370286f27c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6698091c06f224c058b04315666190a" id="r_ab6698091c06f224c058b04315666190a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#ab6698091c06f224c058b04315666190a">MF_SIZE</a>&#160;&#160;&#160;<a class="el" href="mainframe_8H.html#a8aad34522f51f4254632370286f27c0a">DEF_BASE_SIZE</a>,<a class="el" href="mainframe_8H.html#a8aad34522f51f4254632370286f27c0a">DEF_BASE_SIZE</a></td></tr>
-<tr class="separator:ab6698091c06f224c058b04315666190a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa94c752bbd681d9dc223733a0f9ad7bb" id="r_aa94c752bbd681d9dc223733a0f9ad7bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#aa94c752bbd681d9dc223733a0f9ad7bb">DEF_FRAME_STYLE</a>(_EXCLUDE_OPTION)&#160;&#160;&#160;  wxDEFAULT_FRAME_STYLE &amp; ~(_EXCLUDE_OPTION)</td></tr>
 <tr class="separator:aa94c752bbd681d9dc223733a0f9ad7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6698091c06f224c058b04315666190a" id="r_ab6698091c06f224c058b04315666190a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainframe_8H.html#ab6698091c06f224c058b04315666190a">MF_SIZE</a>&#160;&#160;&#160;<a class="el" href="mainframe_8H.html#a8aad34522f51f4254632370286f27c0a">DEF_BASE_SIZE</a>,<a class="el" href="mainframe_8H.html#a8aad34522f51f4254632370286f27c0a">DEF_BASE_SIZE</a></td></tr>
+<tr class="separator:ab6698091c06f224c058b04315666190a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handle the main frame application layout. </p>
-<dl class="section author"><dt>Author</dt><dd>Umar Ba <a href="#" onclick="location.href='mai'+'lto:'+'jUm'+'ar'+'B@p'+'ro'+'ton'+'ma'+'il.'+'co'+'m'; return false;">jUmar<span class="obfuscator">.nosp@m.</span>B@pr<span class="obfuscator">.nosp@m.</span>otonm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a> </dd></dl>
+<div class="textblock"><p>Mainframe application layout Controler. </p>
+<p>Copyright (C) 2025 Umar Ba <a href="#" onclick="location.href='mai'+'lto:'+'jUm'+'ar'+'B@p'+'ro'+'ton'+'ma'+'il.'+'co'+'m'; return false;">jUmar<span class="obfuscator">.nosp@m.</span>B@pr<span class="obfuscator">.nosp@m.</span>otonm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0d6ecdcf79fa71c6244071915b31e3c0" name="a0d6ecdcf79fa71c6244071915b31e3c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d6ecdcf79fa71c6244071915b31e3c0">&#9670;&#160;</a></span>APP_ICO</h2>

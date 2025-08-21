@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['define_5flayout_0',['define_layout',['../classMainFrame.html#a84b2c7aa31e7161950f78b669df18b0c',1,'MainFrame']]]
+  ['canvasdriver_0',['CanvasDriver',['../classCanvasDriver.html#a00d082182dd62773e59b9b9ba59849c6',1,'CanvasDriver']]],
+  ['canvasdriver_5finit_1',['CanvasDriver_init',['../classCanvasDriver.html#ac73469859ecb34525364938ce67a7952',1,'CanvasDriver']]]
 ];

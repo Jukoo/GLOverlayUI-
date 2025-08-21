@@ -54,7 +54,7 @@
   <option  id='TOC_INCLUDE_HEADINGS' default='yes' type='int'><value>5</value></option>
   <option  id='MARKDOWN_ID_STYLE' default='yes' type='string'><value>DOXYGEN</value></option>
   <option  id='AUTOLINK_SUPPORT' default='yes' type='bool'><value>YES</value></option>
-  <option  id='BUILTIN_STL_SUPPORT' default='yes' type='bool'><value>NO</value></option>
+  <option  id='BUILTIN_STL_SUPPORT' default='no' type='bool'><value>YES</value></option>
   <option  id='CPP_CLI_SUPPORT' default='yes' type='bool'><value>NO</value></option>
   <option  id='SIP_SUPPORT' default='yes' type='bool'><value>NO</value></option>
   <option  id='IDL_PROPERTY_SUPPORT' default='yes' type='bool'><value>YES</value></option>
@@ -76,8 +76,8 @@
   <option  id='EXTRACT_LOCAL_METHODS' default='yes' type='bool'><value>NO</value></option>
   <option  id='EXTRACT_ANON_NSPACES' default='yes' type='bool'><value>NO</value></option>
   <option  id='RESOLVE_UNNAMED_PARAMS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='HIDE_UNDOC_MEMBERS' default='yes' type='bool'><value>NO</value></option>
-  <option  id='HIDE_UNDOC_CLASSES' default='yes' type='bool'><value>NO</value></option>
+  <option  id='HIDE_UNDOC_MEMBERS' default='no' type='bool'><value>YES</value></option>
+  <option  id='HIDE_UNDOC_CLASSES' default='no' type='bool'><value>YES</value></option>
   <option  id='HIDE_FRIEND_COMPOUNDS' default='yes' type='bool'><value>NO</value></option>
   <option  id='HIDE_IN_BODY_DOCS' default='yes' type='bool'><value>NO</value></option>
   <option  id='INTERNAL_DOCS' default='yes' type='bool'><value>NO</value></option>
@@ -85,12 +85,12 @@
   <option  id='HIDE_SCOPE_NAMES' default='yes' type='bool'><value>NO</value></option>
   <option  id='HIDE_COMPOUND_REFERENCE' default='yes' type='bool'><value>NO</value></option>
   <option  id='SHOW_HEADERFILE' default='yes' type='bool'><value>YES</value></option>
-  <option  id='SHOW_INCLUDE_FILES' default='yes' type='bool'><value>YES</value></option>
+  <option  id='SHOW_INCLUDE_FILES' default='no' type='bool'><value>NO</value></option>
   <option  id='SHOW_GROUPED_MEMB_INC' default='yes' type='bool'><value>NO</value></option>
   <option  id='FORCE_LOCAL_INCLUDES' default='yes' type='bool'><value>NO</value></option>
   <option  id='INLINE_INFO' default='yes' type='bool'><value>YES</value></option>
   <option  id='SORT_MEMBER_DOCS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='SORT_BRIEF_DOCS' default='yes' type='bool'><value>NO</value></option>
+  <option  id='SORT_BRIEF_DOCS' default='no' type='bool'><value>YES</value></option>
   <option  id='SORT_MEMBERS_CTORS_1ST' default='yes' type='bool'><value>NO</value></option>
   <option  id='SORT_GROUP_NAMES' default='yes' type='bool'><value>NO</value></option>
   <option  id='SORT_BY_SCOPE_NAME' default='yes' type='bool'><value>NO</value></option>
@@ -331,8 +331,8 @@
   <option  id='PERLMOD_PRETTY' default='yes' type='bool'><value>YES</value></option>
   <option  id='PERLMOD_MAKEVAR_PREFIX' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='ENABLE_PREPROCESSING' default='yes' type='bool'><value>YES</value></option>
-  <option  id='MACRO_EXPANSION' default='yes' type='bool'><value>NO</value></option>
-  <option  id='EXPAND_ONLY_PREDEF' default='yes' type='bool'><value>NO</value></option>
+  <option  id='MACRO_EXPANSION' default='no' type='bool'><value>YES</value></option>
+  <option  id='EXPAND_ONLY_PREDEF' default='no' type='bool'><value>YES</value></option>
   <option  id='SEARCH_INCLUDES' default='yes' type='bool'><value>YES</value></option>
   <option  id='INCLUDE_PATH' default='yes' type='stringlist'>
   </option>
@@ -359,14 +359,14 @@
   <option  id='CLASS_GRAPH' default='yes' type='string'><value>YES</value></option>
   <option  id='COLLABORATION_GRAPH' default='yes' type='bool'><value>YES</value></option>
   <option  id='GROUP_GRAPHS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='UML_LOOK' default='yes' type='bool'><value>NO</value></option>
+  <option  id='UML_LOOK' default='no' type='bool'><value>YES</value></option>
   <option  id='UML_LIMIT_NUM_FIELDS' default='yes' type='int'><value>10</value></option>
   <option  id='DOT_UML_DETAILS' default='yes' type='string'><value>NO</value></option>
   <option  id='DOT_WRAP_THRESHOLD' default='yes' type='int'><value>17</value></option>
   <option  id='TEMPLATE_RELATIONS' default='yes' type='bool'><value>NO</value></option>
   <option  id='INCLUDE_GRAPH' default='yes' type='bool'><value>YES</value></option>
   <option  id='INCLUDED_BY_GRAPH' default='yes' type='bool'><value>YES</value></option>
-  <option  id='CALL_GRAPH' default='yes' type='bool'><value>NO</value></option>
+  <option  id='CALL_GRAPH' default='no' type='bool'><value>YES</value></option>
   <option  id='CALLER_GRAPH' default='yes' type='bool'><value>NO</value></option>
   <option  id='GRAPHICAL_HIERARCHY' default='yes' type='bool'><value>YES</value></option>
   <option  id='DIRECTORY_GRAPH' default='yes' type='bool'><value>YES</value></option>

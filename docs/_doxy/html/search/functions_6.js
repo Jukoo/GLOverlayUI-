@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setup_5fmenubar_0',['setup_menubar',['../classMainFrame.html#a1bd9055232235f241fe40c7ac9d35cda',1,'MainFrame']]]
+  ['panel_5fsizing_5flayout_5frule_0',['panel_sizing_layout_rule',['../classMainFrame.html#a1dfcef17988617e91424d1819c3669d2',1,'MainFrame']]]
 ];

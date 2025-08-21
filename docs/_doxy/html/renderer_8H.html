@@ -73,11 +73,228 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">renderer.H File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>Redering 2D using OpenGL logic.  
+<a href="#details">More...</a></p>
+
 <p><a href="renderer_8H_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html">Renderer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dedicated for Rendering Object using OpenGL <br  />
+  <a href="classRenderer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0bc525df1b1181b51d8a48f6da1b7422" id="r_a0bc525df1b1181b51d8a48f6da1b7422"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a0bc525df1b1181b51d8a48f6da1b7422">OBJECT_POLYGON</a></td></tr>
+<tr class="separator:a0bc525df1b1181b51d8a48f6da1b7422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e566f60094a6ac59cb3afe37274127" id="r_a45e566f60094a6ac59cb3afe37274127"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a45e566f60094a6ac59cb3afe37274127">OBJECT_QUADS</a></td></tr>
+<tr class="separator:a45e566f60094a6ac59cb3afe37274127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cda42cddf50851da51ae4112f698d3" id="r_a35cda42cddf50851da51ae4112f698d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a35cda42cddf50851da51ae4112f698d3">OBJECT_TRIANGLES</a></td></tr>
+<tr class="separator:a35cda42cddf50851da51ae4112f698d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124289e60ff6220ac0f346388762c393" id="r_a124289e60ff6220ac0f346388762c393"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a124289e60ff6220ac0f346388762c393">OPENGL_OBJECT</a>(__figure, ...)</td></tr>
+<tr class="separator:a124289e60ff6220ac0f346388762c393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2aaa9b563acdbb2af4a8679f19f2426" id="r_aa2aaa9b563acdbb2af4a8679f19f2426"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#aa2aaa9b563acdbb2af4a8679f19f2426">POLYGON</a>&#160;&#160;&#160;(1 &lt;&lt; POLYGON)</td></tr>
+<tr class="separator:aa2aaa9b563acdbb2af4a8679f19f2426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d04f8961ac904da1383d46700f0a5da" id="r_a5d04f8961ac904da1383d46700f0a5da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a5d04f8961ac904da1383d46700f0a5da">QUADS</a>&#160;&#160;&#160;(1 &lt;&lt; QUADS)</td></tr>
+<tr class="separator:a5d04f8961ac904da1383d46700f0a5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e6177b3111783f8817c210cd34e1b8" id="r_a95e6177b3111783f8817c210cd34e1b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a95e6177b3111783f8817c210cd34e1b8">RENDERER_ALL_FORM</a>&#160;&#160;&#160;( <a class="el" href="renderer_8H.html#a81e740affbfe277e9cf7f3f091621173">TRIANGLES</a>| <a class="el" href="renderer_8H.html#a5d04f8961ac904da1383d46700f0a5da">QUADS</a> |  <a class="el" href="renderer_8H.html#aa2aaa9b563acdbb2af4a8679f19f2426">POLYGON</a> )</td></tr>
+<tr class="separator:a95e6177b3111783f8817c210cd34e1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e740affbfe277e9cf7f3f091621173" id="r_a81e740affbfe277e9cf7f3f091621173"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="renderer_8H.html#a81e740affbfe277e9cf7f3f091621173">TRIANGLES</a>&#160;&#160;&#160;(1 &lt;&lt; TRIANGLES)</td></tr>
+<tr class="separator:a81e740affbfe277e9cf7f3f091621173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b" id="r_a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="renderer_8H.html#a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678">TRIANGLES</a>
+, <a class="el" href="renderer_8H.html#a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678">TRIANGLES</a>
+, <a class="el" href="renderer_8H.html#a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c">QUADS</a>
+, <a class="el" href="renderer_8H.html#a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c">QUADS</a>
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Redering 2D using OpenGL logic. </p>
+<p>Copyright (C) 2025 Umar Ba <a href="#" onclick="location.href='mai'+'lto:'+'jUm'+'ar'+'B@p'+'ro'+'ton'+'ma'+'il.'+'co'+'m'; return false;">jUmar<span class="obfuscator">.nosp@m.</span>B@pr<span class="obfuscator">.nosp@m.</span>otonm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0bc525df1b1181b51d8a48f6da1b7422" name="a0bc525df1b1181b51d8a48f6da1b7422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc525df1b1181b51d8a48f6da1b7422">&#9670;&#160;</a></span>OBJECT_POLYGON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBJECT_POLYGON</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    ({\</div>
+<div class="line">    <span class="keywordtype">int</span> segments = 60; \</div>
+<div class="line">    <span class="keywordtype">float</span> r = 0.3f;\</div>
+<div class="line">    <span class="keywordtype">float</span> cx = 0.0f, cy = 0.5f;\</div>
+<div class="line">    for (<span class="keywordtype">int</span> i = 0; i &lt; segments; ++i) {\</div>
+<div class="line">          <span class="keywordtype">float</span> t = 2.0f * M_PI * float(i) / float(segments);\</div>
+<div class="line">          <span class="keywordtype">float</span> x = r * std::cos(t);\</div>
+<div class="line">          <span class="keywordtype">float</span> y = r * std::sin(t);\</div>
+<div class="line">          glVertex2f(cx + x, cy + y);\</div>
+<div class="line">    }\</div>
+<div class="line">    });</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a45e566f60094a6ac59cb3afe37274127" name="a45e566f60094a6ac59cb3afe37274127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e566f60094a6ac59cb3afe37274127">&#9670;&#160;</a></span>OBJECT_QUADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBJECT_QUADS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  glVertex2f(0.2f, -0.5f);\</div>
+<div class="line">  glVertex2f(0.7f, -0.5f);\</div>
+<div class="line">  glVertex2f(0.7f,  0.0f);\</div>
+<div class="line">  glVertex2f(0.2f,  0.0f);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a35cda42cddf50851da51ae4112f698d3" name="a35cda42cddf50851da51ae4112f698d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cda42cddf50851da51ae4112f698d3">&#9670;&#160;</a></span>OBJECT_TRIANGLES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBJECT_TRIANGLES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  glColor3f(1.0f, 0.0f, 0.0f); glVertex2f(-0.8f, -0.5f);\</div>
+<div class="line">  glColor3f(0.0f, 1.0f, 0.0f); glVertex2f(-0.2f, -0.5f);\</div>
+<div class="line">  glColor3f(0.0f, 0.0f, 1.0f); glVertex2f(-0.5f,  0.2f);</div>
+</div><!-- fragment --><p>BASIC GEOMETRICS FORM OBJECT </p>
+
+</div>
+</div>
+<a id="a124289e60ff6220ac0f346388762c393" name="a124289e60ff6220ac0f346388762c393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124289e60ff6220ac0f346388762c393">&#9670;&#160;</a></span>OPENGL_OBJECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENGL_OBJECT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__figure, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  __VA_ARGS__;\</div>
+<div class="line">  glBegin(GL_##__figure);\</div>
+<div class="line">  OBJECT_##__figure\</div>
+<div class="line">  glEnd();</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa2aaa9b563acdbb2af4a8679f19f2426" name="aa2aaa9b563acdbb2af4a8679f19f2426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2aaa9b563acdbb2af4a8679f19f2426">&#9670;&#160;</a></span>POLYGON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POLYGON&#160;&#160;&#160;(1 &lt;&lt; POLYGON)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d04f8961ac904da1383d46700f0a5da" name="a5d04f8961ac904da1383d46700f0a5da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d04f8961ac904da1383d46700f0a5da">&#9670;&#160;</a></span>QUADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QUADS&#160;&#160;&#160;(1 &lt;&lt; QUADS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95e6177b3111783f8817c210cd34e1b8" name="a95e6177b3111783f8817c210cd34e1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e6177b3111783f8817c210cd34e1b8">&#9670;&#160;</a></span>RENDERER_ALL_FORM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RENDERER_ALL_FORM&#160;&#160;&#160;( <a class="el" href="renderer_8H.html#a81e740affbfe277e9cf7f3f091621173">TRIANGLES</a>| <a class="el" href="renderer_8H.html#a5d04f8961ac904da1383d46700f0a5da">QUADS</a> |  <a class="el" href="renderer_8H.html#aa2aaa9b563acdbb2af4a8679f19f2426">POLYGON</a> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e740affbfe277e9cf7f3f091621173" name="a81e740affbfe277e9cf7f3f091621173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e740affbfe277e9cf7f3f091621173">&#9670;&#160;</a></span>TRIANGLES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRIANGLES&#160;&#160;&#160;(1 &lt;&lt; TRIANGLES)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b" name="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" name="a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678"></a>TRIANGLES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" name="a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678"></a>TRIANGLES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" name="a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c"></a>QUADS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" name="a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c"></a>QUADS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

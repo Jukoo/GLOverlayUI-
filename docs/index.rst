@@ -11,7 +11,7 @@ GLOverlayUI documentation
    :maxdepth: 4
    :caption: Contents:
 
-   API Reference <codedocs/api>  
+   API Reference <api/index>  
 
 
 

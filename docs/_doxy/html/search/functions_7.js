@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7ecanvasdriver_0',['~CanvasDriver',['../classCanvasDriver.html#a54f5f3b395745284ed70b1c1dbc22ae4',1,'CanvasDriver']]],
-  ['_7emainframe_1',['~MainFrame',['../classMainFrame.html#a0cfd88ece4836e0ea5430bd55370bf11',1,'MainFrame']]]
+  ['renderer_0',['renderer',['../classCanvasDriver.html#af9ca95586488aaca0f8c73a0ab7c5002',1,'CanvasDriver::renderer()'],['../classRenderer.html#a4dddd75ab18573a3686f90225f3f03d4',1,'Renderer::Renderer()=default'],['../classRenderer.html#a55482d49aa42d8e2d13ebed007a25052',1,'Renderer::Renderer(int)']]],
+  ['rotate_5fforms_1',['rotate_forms',['../classRenderer.html#a693ac5762e3d9b3317038ab111d1ef9f',1,'Renderer']]]
 ];

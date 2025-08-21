@@ -2,12 +2,12 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="canvasdriver_8H" kind="file" language="C++">
     <compoundname>canvasdriver.H</compoundname>
+    <includes local="no">wx/wx.h</includes>
     <includes local="no">wx/glcanvas.h</includes>
     <includes local="no">GL/gl.h</includes>
     <includes local="no">GL/glu.h</includes>
-    <includes local="no">GL/glut.h</includes>
-    <includes local="no">wx/wx.h</includes>
     <includes local="no">memory</includes>
+    <includes refid="renderer_8H" local="yes">renderer.H</includes>
     <includedby refid="mainframe_8H" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H</includedby>
     <includedby refid="canvasdriver_8C" local="yes">/home/umar/Desktop/workstation/CGui/WxWidget/src/canvasdriver.C</includedby>
     <incdepgraph>
@@ -27,22 +27,32 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>GL/gl.h</label>
+      <node id="7">
+        <label>renderer.H</label>
+        <link refid="renderer_8H"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
       <node id="4">
-        <label>GL/glu.h</label>
+        <label>GL/gl.h</label>
       </node>
       <node id="5">
-        <label>GL/glut.h</label>
+        <label>GL/glu.h</label>
       </node>
-      <node id="7">
-        <label>memory</label>
-      </node>
-      <node id="2">
-        <label>wx/glcanvas.h</label>
+      <node id="8">
+        <label>cmath</label>
       </node>
       <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>wx/glcanvas.h</label>
+      </node>
+      <node id="2">
         <label>wx/wx.h</label>
       </node>
     </incdepgraph>
@@ -71,44 +81,130 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classCanvasDriver" prot="public">CanvasDriver</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="canvasdriver_8H_1ab86798234f8acbfe9922cc23762db81e" prot="public" static="no">
+        <name>__cpp_11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="45" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="canvasdriver_8H_1ad377aae910f57b36cc16611c4c5ca033" prot="public" static="no">
+        <name>mkptr</name>
+        <param><defname>__type</defname></param>
+        <param><defname>__object</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>new __object (__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="43" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="canvasdriver_8H_1af0a715e945fea361eb5498814f1e92e5" prot="public" static="no">
+        <name>shrd_allocator</name>
+        <param><defname>__object</defname></param>
+        <initializer>__object *</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="41" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="canvasdriver_8H_1a8ca28e9effaa9b8f1b42d2d900dde5d7" prot="public" static="no">
+        <name>uniq_allocator</name>
+        <param><defname>__object</defname></param>
+        <initializer>__object *</initializer>
+        <briefdescription>
+<para>memory allocation compatibility over c++_std=11 <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="40" column="13" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
 <para>Kind of bridge for layout interaction and OpenGL render. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Umar Ba <ulink url="mailto:jUmaB@protonmail.com">jUmaB@protonmail.com</ulink> </para>
+<para><simplesect kind="copyright"><para>(C) 2025 Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <ulink url="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</ulink>. </para>
 </simplesect>
 </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(GLOverlayUI_canvasdriver_h)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GLOverlayUI_canvasdriver_h<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/glcanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/gl.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glut.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/wx.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="classCanvasDriver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><sp/>wxGLCanvas<sp/><sp/></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;wxGLContext&gt;<sp/>_ctx<sp/>;<sp/><sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_painting(wxPaintEvent<sp/>&amp;<sp/>evt<sp/>)<sp/>;<sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_resizing(wxSizeEvent&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref>(wxWindow<sp/><sp/>*<sp/>mainframe_parent)<sp/><sp/>;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" kindref="member">~CanvasDriver</ref>()<sp/>;<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(GLOverlayUI_canvasdriver_h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GLOverlayUI_canvasdriver_h<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/wx.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/glcanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/gl.h&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="renderer_8H" kindref="compound">renderer.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)<sp/>&amp;&amp;<sp/>(__cplusplus<sp/>&gt;=<sp/>201402L<sp/>)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>uniq_allocator(__object)<sp/><sp/>std::unique_ptr&lt;__object&gt;<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>shrd_allocator(__object)<sp/><sp/>std::shared_ptr&lt;__object&gt;<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>mkptr(__type<sp/>,<sp/>__object<sp/>,<sp/>...<sp/>)<sp/><sp/>std::make_##__type&lt;__object&gt;<sp/>(__VA_ARGS__)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" kindref="member">CanvasDriver_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1abaf75087ff2e828a10036472629f91e8" kindref="member">renderer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="canvasdriver_8H_1a8ca28e9effaa9b8f1b42d2d900dde5d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>uniq_allocator(__object)<sp/><sp/><sp/>__object<sp/>*<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="canvasdriver_8H_1af0a715e945fea361eb5498814f1e92e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>shrd_allocator(__object)<sp/><sp/><sp/>__object<sp/>*<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="canvasdriver_8H_1ad377aae910f57b36cc16611c4c5ca033" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>mkptr(__type<sp/></highlight><highlight class="comment">/*<sp/>ignored<sp/>*/</highlight><highlight class="preprocessor"><sp/>,<sp/>__object<sp/>,...<sp/>)<sp/><sp/><sp/>new<sp/>__object<sp/>(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="canvasdriver_8H_1ab86798234f8acbfe9922cc23762db81e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/><sp/><sp/>__cpp_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">};<sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="classCanvasDriver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><sp/>wxGLCanvas<sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="canvasdriver_8H_1a8ca28e9effaa9b8f1b42d2d900dde5d7" kindref="member">uniq_allocator</ref>(wxGLContext)<sp/>_ctx<sp/><sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_painting(wxPaintEvent<sp/>&amp;<sp/>evt<sp/>)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_resizing(wxSizeEvent&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_mouse(wxMouseEvent&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_mouse_grab(wxMouseEvent<sp/>&amp;<sp/>evt)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_mouse_release(wxMouseEvent<sp/>&amp;<sp/>evt);<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_mouse_grab_state<sp/>=<sp/>false<sp/>;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="classRenderer" kindref="compound">Renderer</ref><sp/>_renderer<sp/>;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_show<sp/>;<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref>(wxWindow<sp/><sp/>*<sp/>mainframe_parent);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" kindref="member">~CanvasDriver</ref>()<sp/>;<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" kindref="member">CanvasDriver_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" kindref="member">apply_rotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotation_angle)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" kindref="member">apply_scaling</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>scale)<sp/>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" kindref="member">renderer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>forms_bit_mask)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" kindref="member">toggle_renderer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" kindref="member">get_renderer_state</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/>;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" kindref="member">set_renderer_state</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)<sp/>;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
     </programlisting>
     <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H"/>
   </compounddef>

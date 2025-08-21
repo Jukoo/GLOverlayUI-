@@ -1,60 +1,106 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classCanvasDriver" kind="class"><name>CanvasDriver</name>
-    <member refid="classCanvasDriver_1a7907a8a260faecec353176c890843200" kind="variable"><name>_ctx</name></member>
+    <member refid="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" kind="variable"><name>_mouse_grab_state</name></member>
+    <member refid="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" kind="variable"><name>_renderer</name></member>
+    <member refid="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" kind="variable"><name>_show</name></member>
+    <member refid="classCanvasDriver_1a4e3d472a7e66250996ad9302ad27a343" kind="function"><name>on_mouse</name></member>
+    <member refid="classCanvasDriver_1ae7540faaf3a87d333a333f1e19b2cec3" kind="function"><name>on_mouse_grab</name></member>
+    <member refid="classCanvasDriver_1ae50b58c7a8e2bf46f3aba7929ee8682e" kind="function"><name>on_mouse_release</name></member>
     <member refid="classCanvasDriver_1acd4693f2b28595e2e194904137bbfbb5" kind="function"><name>on_painting</name></member>
     <member refid="classCanvasDriver_1aa6517d0ddfd4bfaf0bb4f796748c726d" kind="function"><name>on_resizing</name></member>
+    <member refid="classCanvasDriver_1ac39716f343a0db94a1ed82f068914c7f" kind="function"><name>uniq_allocator</name></member>
+    <member refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" kind="function"><name>apply_rotation</name></member>
+    <member refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" kind="function"><name>apply_scaling</name></member>
     <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" kind="function"><name>CanvasDriver</name></member>
+    <member refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" kind="function"><name>get_renderer_state</name></member>
+    <member refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" kind="function"><name>renderer</name></member>
+    <member refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" kind="function"><name>set_renderer_state</name></member>
+    <member refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" kind="function"><name>toggle_renderer</name></member>
     <member refid="classCanvasDriver_1a54f5f3b395745284ed70b1c1dbc22ae4" kind="function"><name>~CanvasDriver</name></member>
-    <member refid="classCanvasDriver_1abaf75087ff2e828a10036472629f91e8" kind="function"><name>renderer</name></member>
     <member refid="classCanvasDriver_1ac73469859ecb34525364938ce67a7952" kind="function"><name>CanvasDriver_init</name></member>
   </compound>
   <compound refid="classGLOverlayUI__APP" kind="class"><name>GLOverlayUI_APP</name>
     <member refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" kind="function"><name>OnInit</name></member>
   </compound>
   <compound refid="classMainFrame" kind="class"><name>MainFrame</name>
-    <member refid="classMainFrame_1a45b6ad48bb0520166bd50a9c915b82e3" kind="variable"><name>_app_title</name></member>
     <member refid="classMainFrame_1a055bc506fff0fbb36efa23f0168f0e87" kind="variable"><name>_app_status_text</name></member>
-    <member refid="classMainFrame_1ac639760e392bf6a511496a023c71da98" kind="variable"><name>_main_boxsizer</name></member>
-    <member refid="classMainFrame_1a43014238db291be92074dc55f040c181" kind="variable"><name>_checkbox</name></member>
-    <member refid="classMainFrame_1a24415cfb4f17df9b50940d38fd4a1962" kind="variable"><name>_slider</name></member>
-    <member refid="classMainFrame_1afa72eb4be849cb064f04d412a7d2c074" kind="variable"><name>_panels</name></member>
+    <member refid="classMainFrame_1a45b6ad48bb0520166bd50a9c915b82e3" kind="variable"><name>_app_title</name></member>
     <member refid="classMainFrame_1a5022c6feab3e61163f94f1610eae2e30" kind="variable"><name>_canvas_driver</name></member>
-    <member refid="classMainFrame_1a087fd2ba0d4727f31ee016459f543b7e" kind="function"><name>on_exit</name></member>
+    <member refid="classMainFrame_1a43014238db291be92074dc55f040c181" kind="variable"><name>_checkbox</name></member>
+    <member refid="classMainFrame_1ac639760e392bf6a511496a023c71da98" kind="variable"><name>_main_boxsizer</name></member>
+    <member refid="classMainFrame_1afa72eb4be849cb064f04d412a7d2c074" kind="variable"><name>_panels</name></member>
+    <member refid="classMainFrame_1a24415cfb4f17df9b50940d38fd4a1962" kind="variable"><name>_slider</name></member>
     <member refid="classMainFrame_1a2b394b2a6fe65edf5f60d4df267bd3fd" kind="function"><name>on_about</name></member>
     <member refid="classMainFrame_1a40e2c7bacc0cb67f058b2bff59d87111" kind="function"><name>on_checking</name></member>
+    <member refid="classMainFrame_1a087fd2ba0d4727f31ee016459f543b7e" kind="function"><name>on_exit</name></member>
+    <member refid="classMainFrame_1a0cde6df7f41666b5f2015e7fc9172bb1" kind="function"><name>on_sidepanel_toggle</name></member>
     <member refid="classMainFrame_1a3621426379e600dfb0f921a229e6f66f" kind="function"><name>on_sliding</name></member>
-    <member refid="classMainFrame_1a2329fd01577ea2ebf4063757ec6ddf2e" kind="function"><name>MainFrame</name></member>
-    <member refid="classMainFrame_1a0cfd88ece4836e0ea5430bd55370bf11" kind="function"><name>~MainFrame</name></member>
-    <member refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" kind="function"><name>setup_menubar</name></member>
     <member refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" kind="function"><name>define_layout</name></member>
+    <member refid="classMainFrame_1a2329fd01577ea2ebf4063757ec6ddf2e" kind="function"><name>MainFrame</name></member>
     <member refid="classMainFrame_1a1dfcef17988617e91424d1819c3669d2" kind="function"><name>panel_sizing_layout_rule</name></member>
+    <member refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" kind="function"><name>setup_menubar</name></member>
+    <member refid="classMainFrame_1a0cfd88ece4836e0ea5430bd55370bf11" kind="function"><name>~MainFrame</name></member>
+  </compound>
+  <compound refid="classRenderer" kind="class"><name>Renderer</name>
+    <member refid="classRenderer_1a72a1c4233981f9faafb889953417d8f8" kind="variable"><name>_form_options</name></member>
+    <member refid="classRenderer_1aca021e8884df45198a70b589537e7997" kind="variable"><name>_rot</name></member>
+    <member refid="classRenderer_1ae41404a827d788a10a152f9820a12d01" kind="variable"><name>_scl</name></member>
+    <member refid="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" kind="function"><name>display</name></member>
+    <member refid="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" kind="function"><name>getforms</name></member>
+    <member refid="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" kind="function"><name>Renderer</name></member>
+    <member refid="classRenderer_1a55482d49aa42d8e2d13ebed007a25052" kind="function"><name>Renderer</name></member>
+    <member refid="classRenderer_1a693ac5762e3d9b3317038ab111d1ef9f" kind="function"><name>rotate_forms</name></member>
+    <member refid="classRenderer_1ac7b99d2aa500e76f6d4ca0b76c4bc725" kind="function"><name>scale_forms</name></member>
+    <member refid="classRenderer_1afc711f32933d61863420f8443cb4a632" kind="function"><name>setforms</name></member>
+    <member refid="classRenderer_1add2012f269f157754034e7b5475a8927" kind="function"><name>~Renderer</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="canvasdriver_8H" kind="file"><name>canvasdriver.H</name>
+    <member refid="canvasdriver_8H_1ab86798234f8acbfe9922cc23762db81e" kind="define"><name>__cpp_11</name></member>
+    <member refid="canvasdriver_8H_1ad377aae910f57b36cc16611c4c5ca033" kind="define"><name>mkptr</name></member>
+    <member refid="canvasdriver_8H_1af0a715e945fea361eb5498814f1e92e5" kind="define"><name>shrd_allocator</name></member>
+    <member refid="canvasdriver_8H_1a8ca28e9effaa9b8f1b42d2d900dde5d7" kind="define"><name>uniq_allocator</name></member>
   </compound>
   <compound refid="GLOverlayUI__config_8in_8H" kind="file"><name>GLOverlayUI_config.in.H</name>
-    <member refid="GLOverlayUI__config_8in_8H_1a99b8e0b8713833eda1c418a75ca16da5" kind="define"><name>_STRINGIFY</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a657e487534a7c8d9bbc4e2e2b6472cf5" kind="define"><name>_CONCATENATE</name></member>
-    <member refid="GLOverlayUI__config_8in_8H_1a1f1b5a4df0c0fc233918d7ee0fe25d3f" kind="define"><name>GLOverlayUI_VERSION</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kind="define"><name>_PREFIX</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a99b8e0b8713833eda1c418a75ca16da5" kind="define"><name>_STRINGIFY</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1afbe3a77672a4fa457248548199ef2167" kind="define"><name>GLOverlayUI_APP_NAME</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a0a887d8ad9ac484ccfc63c004fe46287" kind="define"><name>GLOverlayUI_ICON_APP</name></member>
-    <member refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kind="define"><name>_PREFIX</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a1f1b5a4df0c0fc233918d7ee0fe25d3f" kind="define"><name>GLOverlayUI_VERSION</name></member>
   </compound>
   <compound refid="mainframe_8H" kind="file"><name>mainframe.H</name>
+    <member refid="mainframe_8H_1a0d6ecdcf79fa71c6244071915b31e3c0" kind="define"><name>APP_ICO</name></member>
     <member refid="mainframe_8H_1abce3c9120e09e75fd797f72f1b4a4cfb" kind="define"><name>APP_TITLE</name></member>
     <member refid="mainframe_8H_1a92673e33f27532767749b79edb8ef806" kind="define"><name>APP_VERSION</name></member>
-    <member refid="mainframe_8H_1a0d6ecdcf79fa71c6244071915b31e3c0" kind="define"><name>APP_ICO</name></member>
     <member refid="mainframe_8H_1a8aad34522f51f4254632370286f27c0a" kind="define"><name>DEF_BASE_SIZE</name></member>
-    <member refid="mainframe_8H_1ab6698091c06f224c058b04315666190a" kind="define"><name>MF_SIZE</name></member>
     <member refid="mainframe_8H_1aa94c752bbd681d9dc223733a0f9ad7bb" kind="define"><name>DEF_FRAME_STYLE</name></member>
+    <member refid="mainframe_8H_1ab6698091c06f224c058b04315666190a" kind="define"><name>MF_SIZE</name></member>
   </compound>
   <compound refid="renderer_8H" kind="file"><name>renderer.H</name>
+    <member refid="renderer_8H_1a0bc525df1b1181b51d8a48f6da1b7422" kind="define"><name>OBJECT_POLYGON</name></member>
+    <member refid="renderer_8H_1a45e566f60094a6ac59cb3afe37274127" kind="define"><name>OBJECT_QUADS</name></member>
+    <member refid="renderer_8H_1a35cda42cddf50851da51ae4112f698d3" kind="define"><name>OBJECT_TRIANGLES</name></member>
+    <member refid="renderer_8H_1a124289e60ff6220ac0f346388762c393" kind="define"><name>OPENGL_OBJECT</name></member>
+    <member refid="renderer_8H_1aa2aaa9b563acdbb2af4a8679f19f2426" kind="define"><name>POLYGON</name></member>
+    <member refid="renderer_8H_1a5d04f8961ac904da1383d46700f0a5da" kind="define"><name>QUADS</name></member>
+    <member refid="renderer_8H_1a95e6177b3111783f8817c210cd34e1b8" kind="define"><name>RENDERER_ALL_FORM</name></member>
+    <member refid="renderer_8H_1a81e740affbfe277e9cf7f3f091621173" kind="define"><name>TRIANGLES</name></member>
+    <member refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name></name></member>
+    <member refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" kind="enumvalue"><name>TRIANGLES</name></member>
+    <member refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba9113dda3d2c5d6ffce05d54a17ed5678" kind="enumvalue"><name>TRIANGLES</name></member>
+    <member refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" kind="enumvalue"><name>QUADS</name></member>
+    <member refid="renderer_8H_1a06fc87d81c62e9abb8790b6e5713c55ba27f9590991016e795e40b58f0bfeaf4c" kind="enumvalue"><name>QUADS</name></member>
   </compound>
   <compound refid="canvasdriver_8C" kind="file"><name>canvasdriver.C</name>
   </compound>
   <compound refid="mainframe_8C" kind="file"><name>mainframe.C</name>
   </compound>
   <compound refid="renderer_8C" kind="file"><name>renderer.C</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/umar/Desktop/workstation/CGui/WxWidget/include</name>
   </compound>

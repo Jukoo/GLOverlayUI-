@@ -19,12 +19,23 @@ Inheritance diagram for Canvas\+Driver\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}{apply\+\_\+rotation}} (float rotation\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em apply rotation angle on all form \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}{apply\+\_\+scaling}} (float scale)
+\item 
 \mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{Canvas\+Driver}} (wx\+Window \texorpdfstring{$\ast$}{*}mainframe\+\_\+parent)
 \begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} ctor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}{get\+\_\+renderer\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}{renderer}} (int forms\+\_\+bit\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em \doxylink{classRenderer}{Renderer} Open\+GL frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}{set\+\_\+renderer\+\_\+state}} (bool state)
+\item 
+void \mbox{\hyperlink{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}{toggle\+\_\+renderer}} (void)
+\begin{DoxyCompactList}\small\item\em enable/disable renderer forms ~\newline
+ \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4}{\texorpdfstring{$\sim$}{\string~}\+Canvas\+Driver}} ()
-\begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} dtor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classCanvasDriver_abaf75087ff2e828a10036472629f91e8}{renderer}} (void)
-\begin{DoxyCompactList}\small\item\em Renderer Open\+GL frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} dtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,6 +58,9 @@ Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
 
 \doxylink{classCanvasDriver}{Canvas\+Driver} ctor. 
 
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]\+: detect which c++ std version is used ~\newline
+ \end{DoxyRefDesc}
 \Hypertarget{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4}\label{classCanvasDriver_a54f5f3b395745284ed70b1c1dbc22ae4} 
 \index{CanvasDriver@{CanvasDriver}!````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}}
 \index{````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}!CanvasDriver@{CanvasDriver}}
@@ -60,6 +74,27 @@ Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}\label{classCanvasDriver_a47f9f434ea2d275d2779825176f23585} 
+\index{CanvasDriver@{CanvasDriver}!apply\_rotation@{apply\_rotation}}
+\index{apply\_rotation@{apply\_rotation}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{apply\_rotation()}{apply\_rotation()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::apply\+\_\+rotation (\begin{DoxyParamCaption}\item[{float}]{rotation\+\_\+angle }\end{DoxyParamCaption})}
+
+
+
+apply rotation angle on all form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation\+\_\+angle} & -\/ float \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}\label{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041} 
+\index{CanvasDriver@{CanvasDriver}!apply\_scaling@{apply\_scaling}}
+\index{apply\_scaling@{apply\_scaling}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{apply\_scaling()}{apply\_scaling()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::apply\+\_\+scaling (\begin{DoxyParamCaption}\item[{float}]{scale }\end{DoxyParamCaption})}
+
 \Hypertarget{classCanvasDriver_ac73469859ecb34525364938ce67a7952}\label{classCanvasDriver_ac73469859ecb34525364938ce67a7952} 
 \index{CanvasDriver@{CanvasDriver}!CanvasDriver\_init@{CanvasDriver\_init}}
 \index{CanvasDriver\_init@{CanvasDriver\_init}!CanvasDriver@{CanvasDriver}}
@@ -70,20 +105,40 @@ Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
 
 Initialize Gl stuff. 
 
-\Hypertarget{classCanvasDriver_abaf75087ff2e828a10036472629f91e8}\label{classCanvasDriver_abaf75087ff2e828a10036472629f91e8} 
+\Hypertarget{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}\label{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50} 
+\index{CanvasDriver@{CanvasDriver}!get\_renderer\_state@{get\_renderer\_state}}
+\index{get\_renderer\_state@{get\_renderer\_state}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{get\_renderer\_state()}{get\_renderer\_state()}}
+{\footnotesize\ttfamily bool Canvas\+Driver\+::get\+\_\+renderer\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}\label{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002} 
 \index{CanvasDriver@{CanvasDriver}!renderer@{renderer}}
 \index{renderer@{renderer}!CanvasDriver@{CanvasDriver}}
 \doxysubsubsection{\texorpdfstring{renderer()}{renderer()}}
-{\footnotesize\ttfamily void Canvas\+Driver\+::renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Canvas\+Driver\+::renderer (\begin{DoxyParamCaption}\item[{int}]{forms\+\_\+bit\+\_\+mask }\end{DoxyParamCaption})}
 
 
 
-Renderer Open\+GL frame. 
+\doxylink{classRenderer}{Renderer} Open\+GL frame. 
 
-For testing purpose render simple triangle gl\+Clear\+Color(0.\+6,0.\+5,0.\+5,0) ; gl\+Clear(\+GL\+\_\+\+COLOR\+\_\+\+BUFFER\+\_\+\+BIT) ; ~\newline
+\Hypertarget{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}\label{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6} 
+\index{CanvasDriver@{CanvasDriver}!set\_renderer\_state@{set\_renderer\_state}}
+\index{set\_renderer\_state@{set\_renderer\_state}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{set\_renderer\_state()}{set\_renderer\_state()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::set\+\_\+renderer\+\_\+state (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\Hypertarget{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}\label{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672} 
+\index{CanvasDriver@{CanvasDriver}!toggle\_renderer@{toggle\_renderer}}
+\index{toggle\_renderer@{toggle\_renderer}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{toggle\_renderer()}{toggle\_renderer()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::toggle\+\_\+renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
-gl\+Begin(\+GL\+\_\+\+TRIANGLES); gl\+Vertex3f( 0, 0.\+5 , 0 ) ; gl\+Vertex3f( -\/0.\+5, -\/0.\+5 , 0 ) ; gl\+Vertex3f( 0.\+5,-\/0.\+5 , 0 ) ; gl\+End() ;
+
+enable/disable renderer forms ~\newline
+ 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

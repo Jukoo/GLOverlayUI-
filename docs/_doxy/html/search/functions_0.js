@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['canvasdriver_0',['CanvasDriver',['../classCanvasDriver.html#a00d082182dd62773e59b9b9ba59849c6',1,'CanvasDriver']]],
-  ['canvasdriver_5finit_1',['CanvasDriver_init',['../classCanvasDriver.html#ac73469859ecb34525364938ce67a7952',1,'CanvasDriver']]]
+  ['apply_5frotation_0',['apply_rotation',['../classCanvasDriver.html#a47f9f434ea2d275d2779825176f23585',1,'CanvasDriver']]],
+  ['apply_5fscaling_1',['apply_scaling',['../classCanvasDriver.html#aa99ed92d57e3cdc8e13596f9f42d5041',1,'CanvasDriver']]]
 ];

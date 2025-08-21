@@ -82,40 +82,82 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="canvasdriver_8H.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#if !defined(GLOverlayUI_canvasdriver_h)</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define  GLOverlayUI_canvasdriver_h </span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;wx/glcanvas.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;GL/gl.h&gt;</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;GL/glu.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;GL/glut.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;wx/wx.h&gt;</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;memory&gt;</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classCanvasDriver.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classCanvasDriver.html">CanvasDriver</a> : <span class="keyword">public</span>  wxGLCanvas  </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  std::unique_ptr&lt;wxGLContext&gt; _ctx ;  </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">void</span> on_painting(wxPaintEvent &amp; evt ) ; </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">void</span> on_resizing(wxSizeEvent&amp; evt) ; </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">public</span>: </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classCanvasDriver.html">CanvasDriver</a>(wxWindow  * mainframe_parent)  ;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">virtual</span>  <a class="code hl_function" href="classCanvasDriver.html#a54f5f3b395745284ed70b1c1dbc22ae4">~CanvasDriver</a>() ; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#if !defined(GLOverlayUI_canvasdriver_h)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define  GLOverlayUI_canvasdriver_h </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;wx/wx.h&gt;</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;wx/glcanvas.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;GL/gl.h&gt;</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;GL/glu.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;memory&gt;</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="renderer_8H.html">renderer.H</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#if defined(__cplusplus) &amp;&amp; (__cplusplus &gt;= 201402L ) </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor"># define   uniq_allocator(__object)  std::unique_ptr&lt;__object&gt;   </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor"># define   shrd_allocator(__object)  std::shared_ptr&lt;__object&gt;  </span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor"># define   mkptr(__type , __object , ... )  std::make_##__type&lt;__object&gt; (__VA_ARGS__)  </span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classCanvasDriver.html#ac73469859ecb34525364938ce67a7952">   42</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span>  <a class="code hl_function" href="classCanvasDriver.html#ac73469859ecb34525364938ce67a7952">CanvasDriver_init</a>(<span class="keywordtype">void</span>) ; </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>   </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#abaf75087ff2e828a10036472629f91e8">renderer</a>(<span class="keywordtype">void</span>) ; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#else </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="canvasdriver_8H.html#a8ca28e9effaa9b8f1b42d2d900dde5d7">   40</a></span><span class="preprocessor"># define   uniq_allocator(__object)   __object *  </span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="canvasdriver_8H.html#af0a715e945fea361eb5498814f1e92e5">   41</a></span><span class="preprocessor"># define   shrd_allocator(__object)   __object *  </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="canvasdriver_8H.html#ad377aae910f57b36cc16611c4c5ca033">   43</a></span><span class="preprocessor"># define   mkptr(__type </span><span class="comment">/* ignored */</span><span class="preprocessor"> , __object ,... )   new __object (__VA_ARGS__)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="canvasdriver_8H.html#ab86798234f8acbfe9922cc23762db81e">   45</a></span><span class="preprocessor"># define   __cpp_11</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}; </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classCanvasDriver.html">   54</a></span><span class="keyword">class </span><a class="code hl_class" href="classCanvasDriver.html">CanvasDriver</a> : <span class="keyword">public</span>  wxGLCanvas  </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="canvasdriver_8H.html#a8ca28e9effaa9b8f1b42d2d900dde5d7">uniq_allocator</a>(wxGLContext) _ctx  ;  </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> on_painting(wxPaintEvent &amp; evt ) ; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">void</span> on_resizing(wxSizeEvent&amp; evt) ; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> on_mouse(wxMouseEvent&amp; evt) ; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> on_mouse_grab(wxMouseEvent &amp; evt) ; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> on_mouse_release(wxMouseEvent &amp; evt); </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">bool</span> _mouse_grab_state = false ; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <a class="code hl_class" href="classRenderer.html">Renderer</a> _renderer ; </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">bool</span> _show ; </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">public</span>: </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classCanvasDriver.html">CanvasDriver</a>(wxWindow  * mainframe_parent);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">virtual</span>  <a class="code hl_function" href="classCanvasDriver.html#a54f5f3b395745284ed70b1c1dbc22ae4">~CanvasDriver</a>() ; </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classCanvasDriver.html#ac73469859ecb34525364938ce67a7952">   82</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span>  <a class="code hl_function" href="classCanvasDriver.html#ac73469859ecb34525364938ce67a7952">CanvasDriver_init</a>(<span class="keywordtype">void</span>); </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#a47f9f434ea2d275d2779825176f23585">apply_rotation</a>(<span class="keywordtype">float</span> rotation_angle) ; </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#aa99ed92d57e3cdc8e13596f9f42d5041">apply_scaling</a>(<span class="keywordtype">float</span>   scale) ;  </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>   </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#af9ca95586488aaca0f8c73a0ab7c5002">renderer</a>(<span class="keywordtype">int</span> forms_bit_mask) ; </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#a4807bc38743f9f93b276a82d8afd0672">toggle_renderer</a>(<span class="keywordtype">void</span>) ; </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classCanvasDriver.html#a9fa09da05f675d9f10cd945a9965dc50">get_renderer_state</a>(<span class="keywordtype">void</span>)  ; </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCanvasDriver.html#ab3396951fd4de41f87d5a79e93d6e1c6">set_renderer_state</a>(<span class="keywordtype">bool</span> state) ; </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}; </div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif  </span></div>
-<div class="ttc" id="aclassCanvasDriver_html"><div class="ttname"><a href="classCanvasDriver.html">CanvasDriver</a></div><div class="ttdoc">Responsable to render OpenGL stuff on Canvas Frame layout</div><div class="ttdef"><b>Definition</b> canvasdriver.H:23</div></div>
-<div class="ttc" id="aclassCanvasDriver_html_a54f5f3b395745284ed70b1c1dbc22ae4"><div class="ttname"><a href="classCanvasDriver.html#a54f5f3b395745284ed70b1c1dbc22ae4">CanvasDriver::~CanvasDriver</a></div><div class="ttdeci">virtual ~CanvasDriver()</div><div class="ttdoc">CanvasDriver dtor.</div><div class="ttdef"><b>Definition</b> canvasdriver.C:27</div></div>
-<div class="ttc" id="aclassCanvasDriver_html_abaf75087ff2e828a10036472629f91e8"><div class="ttname"><a href="classCanvasDriver.html#abaf75087ff2e828a10036472629f91e8">CanvasDriver::renderer</a></div><div class="ttdeci">void renderer(void)</div><div class="ttdoc">Renderer OpenGL frame.</div><div class="ttdef"><b>Definition</b> canvasdriver.C:31</div></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif  </span></div>
+<div class="ttc" id="acanvasdriver_8H_html_a8ca28e9effaa9b8f1b42d2d900dde5d7"><div class="ttname"><a href="canvasdriver_8H.html#a8ca28e9effaa9b8f1b42d2d900dde5d7">uniq_allocator</a></div><div class="ttdeci">#define uniq_allocator(__object)</div><div class="ttdoc">memory allocation compatibility over c++_std=11</div><div class="ttdef"><b>Definition</b> canvasdriver.H:40</div></div>
+<div class="ttc" id="aclassCanvasDriver_html"><div class="ttname"><a href="classCanvasDriver.html">CanvasDriver</a></div><div class="ttdoc">Responsable to render OpenGL stuff on Canvas Frame layout</div><div class="ttdef"><b>Definition</b> canvasdriver.H:55</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_a47f9f434ea2d275d2779825176f23585"><div class="ttname"><a href="classCanvasDriver.html#a47f9f434ea2d275d2779825176f23585">CanvasDriver::apply_rotation</a></div><div class="ttdeci">void apply_rotation(float rotation_angle)</div><div class="ttdoc">apply rotation angle on all form</div><div class="ttdef"><b>Definition</b> canvasdriver.C:91</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_a4807bc38743f9f93b276a82d8afd0672"><div class="ttname"><a href="classCanvasDriver.html#a4807bc38743f9f93b276a82d8afd0672">CanvasDriver::toggle_renderer</a></div><div class="ttdeci">void toggle_renderer(void)</div><div class="ttdoc">enable/disable renderer forms</div><div class="ttdef"><b>Definition</b> canvasdriver.C:77</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_a54f5f3b395745284ed70b1c1dbc22ae4"><div class="ttname"><a href="classCanvasDriver.html#a54f5f3b395745284ed70b1c1dbc22ae4">CanvasDriver::~CanvasDriver</a></div><div class="ttdeci">virtual ~CanvasDriver()</div><div class="ttdoc">CanvasDriver dtor.</div><div class="ttdef"><b>Definition</b> canvasdriver.C:44</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_a9fa09da05f675d9f10cd945a9965dc50"><div class="ttname"><a href="classCanvasDriver.html#a9fa09da05f675d9f10cd945a9965dc50">CanvasDriver::get_renderer_state</a></div><div class="ttdeci">bool get_renderer_state(void)</div><div class="ttdef"><b>Definition</b> canvasdriver.C:67</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_aa99ed92d57e3cdc8e13596f9f42d5041"><div class="ttname"><a href="classCanvasDriver.html#aa99ed92d57e3cdc8e13596f9f42d5041">CanvasDriver::apply_scaling</a></div><div class="ttdeci">void apply_scaling(float scale)</div><div class="ttdef"><b>Definition</b> canvasdriver.C:97</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_ab3396951fd4de41f87d5a79e93d6e1c6"><div class="ttname"><a href="classCanvasDriver.html#ab3396951fd4de41f87d5a79e93d6e1c6">CanvasDriver::set_renderer_state</a></div><div class="ttdeci">void set_renderer_state(bool state)</div><div class="ttdef"><b>Definition</b> canvasdriver.C:72</div></div>
 <div class="ttc" id="aclassCanvasDriver_html_ac73469859ecb34525364938ce67a7952"><div class="ttname"><a href="classCanvasDriver.html#ac73469859ecb34525364938ce67a7952">CanvasDriver::CanvasDriver_init</a></div><div class="ttdeci">static void CanvasDriver_init(void)</div><div class="ttdoc">Initialize Gl stuff.</div></div>
+<div class="ttc" id="aclassCanvasDriver_html_af9ca95586488aaca0f8c73a0ab7c5002"><div class="ttname"><a href="classCanvasDriver.html#af9ca95586488aaca0f8c73a0ab7c5002">CanvasDriver::renderer</a></div><div class="ttdeci">void renderer(int forms_bit_mask)</div><div class="ttdoc">Renderer OpenGL frame.</div><div class="ttdef"><b>Definition</b> canvasdriver.C:54</div></div>
+<div class="ttc" id="aclassRenderer_html"><div class="ttname"><a href="classRenderer.html">Renderer</a></div><div class="ttdoc">Dedicated for Rendering Object using OpenGL</div><div class="ttdef"><b>Definition</b> renderer.H:80</div></div>
+<div class="ttc" id="arenderer_8H_html"><div class="ttname"><a href="renderer_8H.html">renderer.H</a></div><div class="ttdoc">Redering 2D using OpenGL logic.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

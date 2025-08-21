@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['renderer_0',['renderer',['../classCanvasDriver.html#abaf75087ff2e828a10036472629f91e8',1,'CanvasDriver']]],
-  ['renderer_2ec_1',['renderer.C',['../renderer_8C.html',1,'']]],
-  ['renderer_2eh_2',['renderer.H',['../renderer_8H.html',1,'']]]
+  ['panel_5fsizing_5flayout_5frule_0',['panel_sizing_layout_rule',['../classMainFrame.html#a1dfcef17988617e91424d1819c3669d2',1,'MainFrame']]],
+  ['polygon_1',['POLYGON',['../renderer_8H.html#aa2aaa9b563acdbb2af4a8679f19f2426',1,'renderer.H']]]
 ];
