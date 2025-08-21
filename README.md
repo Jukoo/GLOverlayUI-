@@ -72,6 +72,20 @@ From the root of the repository:
  
  > $ ./bin/GLOverlayUI 
 
+###  Extra Build 
+
+To build the complete application  with  the documentation: 
+Make sure to enable the python environment : 
+
+```bash 
+$  python3 -m venv dist 
+$  source dist/bin/activate 
+$  python3 -m pip install -r requirements.txt # to install  dependencies  
+```
+Once done , you can proceed  with the classical cmake build  above: 
+it'll compile all the sources + docs 
+
+
  📦 Dependencies
  ---
  * wxWidgets (GUI framework)
