@@ -26,12 +26,9 @@ CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) :
   wxGLCanvas(mainframe_parent) 
 {
 
-  /*! @todo :  detect which c++ std version is used  */ 
   
    _ctx =  mkptr(unique ,  wxGLContext, this) ; 
-   
-   glEnable(GL_DEPTH_TEST);
-   glShadeModel(GL_SMOOTH); 
+   CanvasDriver_init() ;  
 
    Bind(wxEVT_PAINT , &CanvasDriver::on_painting , this) ; 
    Bind(wxEVT_SIZE , &CanvasDriver::on_resizing ,  this) ; 
@@ -40,6 +37,12 @@ CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) :
    Bind(wxEVT_LEFT_UP  , &CanvasDriver::on_mouse_release,this) ; 
 };  
 
+
+void CanvasDriver::CanvasDriver_init(void) 
+{
+   _renderer.init() ;  
+}
+ 
 
 CanvasDriver::~CanvasDriver() 
 {
@@ -55,7 +58,6 @@ void CanvasDriver::renderer(int forms)
 {
 
   SetCurrent(*_ctx) ;
-
   
   _renderer.setforms(forms) ;  
   _renderer.display()  ;
@@ -109,15 +111,7 @@ void CanvasDriver::on_resizing(wxSizeEvent  & evt)
 {
 
   wxSize size =  GetClientSize() ; 
-  
-  glViewport(0, 0, size.x, size.y);
-  glMatrixMode(GL_PROJECTION);
-  glLoadIdentity();
-
-  glOrtho(size.x/2, size.x/2, size.y/2, size.y/2, -1, 1);
-  glMatrixMode(GL_MODELVIEW);
-  glLoadIdentity();
-
+  _renderer.apply_orthogonal_projection(size.x , size.y) ; 
   evt.Skip() ; 
   Refresh(false) ; 
 }

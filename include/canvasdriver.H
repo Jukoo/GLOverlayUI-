@@ -82,7 +82,7 @@ class CanvasDriver : public  wxGLCanvas
     /** 
      * @brief  Initialize OpenGL stuff 
      * */
-    static void  CanvasDriver_init(void); 
+    void  CanvasDriver_init(void); 
 
     /**
      * @brief apply  rotation angle  on all form 

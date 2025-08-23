@@ -20,6 +20,14 @@
 
 Renderer::Renderer(int form) : _form_options {form} {}   
 
+void Renderer::init(void) 
+{
+   glEnable(GL_DEPTH_TEST);
+   glShadeModel(GL_SMOOTH); 
+
+}
+ 
+
 void Renderer::setforms(int form_flags) 
 {
   _form_options= form_flags  ; 
@@ -31,6 +39,16 @@ int Renderer::getforms(void) const
   return _form_options ; 
 }
 
+void Renderer::apply_orthogonal_projection(int x , int y) 
+{
+   glViewport(0, 0,x, y);
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+
+  glOrtho(x/2, x/2, y/2, y/2, -1, 1);
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+}
 
 void Renderer::display(void) 
 {
@@ -50,7 +68,6 @@ void Renderer::display(void)
 
   if (forms &  TRIANGLES) 
     OPENGL_OBJECT(TRIANGLES);
-
 
   if (forms &  QUADS ) 
     OPENGL_OBJECT(QUADS,glColor3f(1.0f, 1.0f, 0.0f)); 

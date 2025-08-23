@@ -90,7 +90,12 @@ class  Renderer
    * @brief  Default dtor 
    **/
   virtual  ~Renderer()= default ; 
+ 
+  /** 
+   * @brief  init openGL stuff 
+   */
   
+  void  init(void) ;   
   /** 
    * @brief  enable forms  by  specifying the  apropriate flags 
    *         Multiple Forms can be enable or  disable by ORing
@@ -103,6 +108,12 @@ class  Renderer
    **/
   int getforms(void) const ; 
 
+  /*
+   * @brief apply othogonal  projection when  the canvas layou expand  
+   * @param  coord  - the coordinate  x - y
+   **/
+  
+  void apply_orthogonal_projection(int xcoords , int ycoords)  ; 
   
   /**
    * @brief rotate by updating the _rot attribute that is responsible for the rotation
@@ -118,19 +129,21 @@ class  Renderer
 
   /*
    * @brief  increase the  scale  produce zoom in  effect 
+   * @todo   improve the scale precision 
    **/
   void upscale(void) ; 
 
   /**
-   * @brief  decrease the scale  produce zoom out  effect 
+   * @brief  decrease the scale  produce zoom out  effect
+   * @todo   improve the scale precision 
    */
   void downscale(void) ;  
 
 
-   /**
-    * @brief  display OpenGL  forms  in Canvas Area   
-    */
-    void display(void) ; 
+  /**
+   * @brief  display OpenGL  forms  in Canvas Area   
+   */
+  void display(void) ; 
   
 }; 
 

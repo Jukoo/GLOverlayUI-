@@ -193,7 +193,6 @@ void MainFrame::on_zoom_in(wxCommandEvent& evt )
   
 }
 
-
 void MainFrame::on_zoom_out(wxCommandEvent & evt) 
 {
   _canvas_driver->increase_or_decrease_scaling('-')  ;  
