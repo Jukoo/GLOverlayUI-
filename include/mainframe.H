@@ -22,6 +22,7 @@
 #include <wx/wx.h>
 #include <wx/aboutdlg.h>
 #include <wx/splitter.h>
+#include <wx/icon.h> 
 #include <map>  
 
 #include "GLOverlayUI_config.in.H" 
@@ -64,15 +65,17 @@ class  GLOverlayUI_APP: public wxApp
  *
  * @brief Responsible  about main frame layout GLOverlayUI application 
  * */
-class  MainFrame : public wxFrame 
+class  MainFrame : public wxFrame  
 {
    std::basic_string<char> _app_title; 
    std::basic_string<char> _app_status_text;
 
+   std::map<std::basic_string<char>  , wxPanel*> _panels;  
+   
+   wxIcon       _app_icon; 
    wxBoxSizer * _main_boxsizer ;  
    wxCheckBox * _checkbox ;
    wxSlider   * _slider ; 
-   std::map<std::basic_string<char>  , wxPanel*> _panels;  
    CanvasDriver * _canvas_driver ; 
 
    /**

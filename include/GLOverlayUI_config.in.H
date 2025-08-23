@@ -26,6 +26,7 @@
 
 #define  GLOverlayUI_ICON_APP  "/home/umar/Desktop/workstation/CGui/WxWidget/assets/logo/gloverui-ico.bmp" 
 
+#define  GLOverlayUI_ICO "/home/umar/Desktop/workstation/CGui/WxWidget/assets/logo/gloverui.ico"
 #define  _PREFIX(__prefix)\
          GLOverlayUI_ ## __prefix 
 

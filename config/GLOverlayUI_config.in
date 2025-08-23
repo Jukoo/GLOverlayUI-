@@ -26,6 +26,7 @@
 
 #define  GLOverlayUI_ICON_APP  "@CMAKE_CURRENT_SOURCE_DIR@/assets/logo/gloverui-ico.bmp" 
 
+#define  GLOverlayUI_ICO "@CMAKE_CURRENT_SOURCE_DIR@/assets/logo/gloverui.ico"
 #define  _PREFIX(__prefix)\
          GLOverlayUI_ ## __prefix 
 

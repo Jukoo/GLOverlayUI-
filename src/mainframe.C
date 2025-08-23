@@ -19,13 +19,14 @@
 #include "mainframe.H" 
 #include <cstdio> 
 #include <iostream>
-#include <functional> 
 
 MainFrame::MainFrame(std::basic_string<char> app_title) : 
   wxFrame(nullptr , wxID_ANY ,  app_title , 
-      wxPoint(0,0), wxSize(MF_SIZE),DEF_FRAME_STYLE(0) ), _app_title(app_title) 
+      wxPoint(0,0), wxSize(MF_SIZE),DEF_FRAME_STYLE(0) ), _app_title(app_title), 
+  _app_icon(GLOverlayUI_ICO)    
 {
 
+  SetIcon(_app_icon);    
   setup_menubar();
   define_layout() ; 
   
@@ -126,14 +127,15 @@ void MainFrame::on_exit(wxCommandEvent & evt)
 
 void MainFrame::on_about(wxCommandEvent  & evt ) {
   wxAboutDialogInfo  about ;
+  SetIcon(_app_icon); 
   about.SetName(APP_TITLE); 
   about.SetVersion("GLOverlayUI version 0.1.0-a1") ; 
   about.SetCopyright("(C) CopyRight 2025") ; 
   about.AddDeveloper("Umar Ba <jUmarB@protonmail.com> ") ; 
-  
-  wxIcon  ico(APP_ICO, wxBITMAP_TYPE_BMP , 0x64 , 0x64) ; 
-  about.SetIcon(ico) ; 
-  wxAboutBox(about) ;  
+  about.AddArtist("Umar Ba <github.com/Jukoo>") ; 
+  about.SetWebSite("https://gloverlayui.readthedocs.io/en/latest") ; 
+  about.SetIcon(_app_icon) ;  
+  wxAboutBox(about) ;    
 }
 
 
