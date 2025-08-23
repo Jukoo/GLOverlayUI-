@@ -18,7 +18,8 @@
 
 #include "mainframe.H" 
 #include <cstdio> 
-#include <iostream>
+#include <wx/bannerwindow.h>
+
 
 MainFrame::MainFrame(std::basic_string<char> app_title) : 
   wxFrame(nullptr , wxID_ANY ,  app_title , 
@@ -28,13 +29,18 @@ MainFrame::MainFrame(std::basic_string<char> app_title) :
 
   SetIcon(_app_icon);    
   setup_menubar();
-  define_layout() ; 
+  define_layout() ;
+  
   
   CreateStatusBar() ;
   SetStatusText("GLOverlayUI version  0.1.0-a1") ; 
+  
   Bind(wxEVT_MENU , &MainFrame::on_about , this ,wxID_ABOUT) ; 
   Bind(wxEVT_MENU , &MainFrame::on_exit , this ,wxID_EXIT) ;
   Bind(wxEVT_MENU , &MainFrame::on_sidepanel_toggle ,  this , wxID_JUMP_TO) ;  
+  Bind(wxEVT_MENU , &MainFrame::on_refresh , this , wxID_REFRESH) ; 
+  Bind(wxEVT_MENU , &MainFrame::on_zoom_in , this , wxID_ZOOM_IN) ; 
+  Bind(wxEVT_MENU , &MainFrame::on_zoom_out , this , wxID_ZOOM_OUT) ; 
 
 }
 
@@ -50,11 +56,17 @@ void MainFrame::setup_menubar(void )
 
   wxMenu *view  = new wxMenu ; 
   view->Append(wxID_JUMP_TO ,"&Toggle SidePanel \tCtrl+t") ; 
-  wxMenu *panel_settings  = new wxMenu ; 
-
+  helper->AppendSeparator() ; 
+  view->Append(wxID_REFRESH ,"&Refresh \tCtrl+r") ; 
+  helper->AppendSeparator() ; 
+  view->Append(wxID_ZOOM_IN ,"&Zoom In \tCtrl++") ;  
+  helper->AppendSeparator() ; 
+  view->Append(wxID_ZOOM_OUT ,"&Zoom Out \tCtrl+-") ;  
+  
+ 
   wxMenuBar *  menu_bar = new wxMenuBar ; 
-  menu_bar->Append(helper , "&Help");
   menu_bar->Append(view ,  "&View"); 
+  menu_bar->Append(helper , "&Help");
   SetMenuBar(menu_bar) ;
 
 }
@@ -62,28 +74,32 @@ void MainFrame::setup_menubar(void )
 void MainFrame::define_layout(void) 
 {
 
-  int panel_sizes =   panel_sizing_layout_rule() ; 
+  int panel_sizes = dispatch_layout() ; 
 
   _main_boxsizer = new wxBoxSizer(wxHORIZONTAL) ;
   
-  //std::vector<wxPanel *> panels  = createpanels(this, 2 , panel_sizing_layout_rule); 
   _panels["ctrl"]=  new wxPanel(this, wxID_ANY ,wxDefaultPosition , wxSize((panel_sizes & 0xffff), ~0)) ;
   _panels["ctrl"]->SetBackgroundColour(*wxLIGHT_GREY);
   _panels["canvas"] = new wxPanel(this,wxID_ANY ,wxDefaultPosition , wxSize((panel_sizes >> 0x10) , ~0)) ; 
 
   //!Append  items into ctlr panel ; 
   wxBoxSizer * ctrl_panel_vbox = new wxBoxSizer(wxVERTICAL) ;  
-  wxStaticText *slider_label = new wxStaticText(_panels["ctrl"] , wxID_ANY , "Rotation /Scale"); 
+  wxStaticText *slider_label = new wxStaticText(_panels["ctrl"] , wxID_ANY , "(-) Scale (+)"); 
   ctrl_panel_vbox->Add(slider_label , 0 ,  wxALIGN_CENTER , 5) ; 
   _slider  = new wxSlider(_panels["ctrl"] , wxID_ANY ,10 , 0 , 100, wxDefaultPosition , wxDefaultSize ,  wxSL_HORIZONTAL); 
   _slider->Bind(wxEVT_SLIDER ,  &MainFrame::on_sliding , this ) ;
   ctrl_panel_vbox->Add(_slider  , 0  , wxEXPAND| wxALL , 5 ) ;
 
-  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Objects"); 
+  _checkbox  = new wxCheckBox(_panels["ctrl"]  , wxID_ANY , "Show Objects");  
   _checkbox->SetValue(true) ; 
   _checkbox->Bind(wxEVT_CHECKBOX , &MainFrame::on_checking , this ) ; 
   ctrl_panel_vbox->Add(_checkbox , 0 , wxEXPAND| wxALL,10) ;  
 
+  wxBannerWindow *tips = new wxBannerWindow(_panels["ctrl"] ,wxID_ANY )  ; //, wxDOWN) ; // wxSOUTH) ; 
+  tips->SetText(GLOverlayUI_TIPS) ; 
+  //tips->SetGradient(*wxLIGHT_GREY, *wxWHITE) ; 
+  ctrl_panel_vbox->Add(tips , 5 , wxEXPAND | wxBOTTOM | wxRIGHT,0 ) ; 
+  
   _panels["ctrl"]->SetSizer(ctrl_panel_vbox) ; 
 
   wxBoxSizer *canvas_panel_vbox = new wxBoxSizer(wxHORIZONTAL) ; 
@@ -103,7 +119,7 @@ void MainFrame::define_layout(void)
 
 
 
-int  MainFrame::panel_sizing_layout_rule(void)
+int  MainFrame::dispatch_layout(void)
 {
   struct  { 
     int  ctlr ; 
@@ -148,7 +164,7 @@ void MainFrame::on_checking(wxCommandEvent  & evt)
 void  MainFrame::on_sliding(wxCommandEvent  & evt) 
 {
   float scale= static_cast<float>(evt.GetInt()) ; 
-  scale /= 100.0f  ; 
+  scale /= 100.0f; 
   _canvas_driver->apply_scaling(scale) ; 
 }
 
@@ -164,4 +180,21 @@ void MainFrame::on_sidepanel_toggle(wxCommandEvent &evt)
     _main_boxsizer->Show(&*_panels["ctrl"]) ;  
 
   Layout() ;
+}
+
+void MainFrame::on_refresh(wxCommandEvent &evt)  
+{
+    Layout() ; 
+}
+void MainFrame::on_zoom_in(wxCommandEvent& evt ) 
+{
+  puts("zoom in") ; 
+  _canvas_driver->increase_or_decrease_scaling('+')  ;  
+  
+}
+
+
+void MainFrame::on_zoom_out(wxCommandEvent & evt) 
+{
+  _canvas_driver->increase_or_decrease_scaling('-')  ;  
 }

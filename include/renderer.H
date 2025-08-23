@@ -26,28 +26,24 @@ enum {
   TRIANGLES,  
 #define TRIANGLES (1 << TRIANGLES) 
   QUADS ,
-#define  QUADS   (1 << QUADS)  
+#define  QUADS    (1 << QUADS)  
   POLYGON
-#define POLYGON  (1 << POLYGON)  
+#define POLYGON   (1 << POLYGON)  
 };
 
 #define  RENDERER_ALL_FORM ( TRIANGLES| QUADS |  POLYGON ) 
 
 /*!  BASIC GEOMETRICS  FORM OBJECT */ 
-
 #define  OBJECT_TRIANGLES\
   glColor3f(1.0f, 0.0f, 0.0f); glVertex2f(-0.8f, -0.5f);\
   glColor3f(0.0f, 1.0f, 0.0f); glVertex2f(-0.2f, -0.5f);\
   glColor3f(0.0f, 0.0f, 1.0f); glVertex2f(-0.5f,  0.2f);
-
-
 
 #define  OBJECT_QUADS \
   glVertex2f(0.2f, -0.5f);\
   glVertex2f(0.7f, -0.5f);\
   glVertex2f(0.7f,  0.0f);\
   glVertex2f(0.2f,  0.0f);
-
 
 #define  OBJECT_POLYGON ({\
     int segments = 60; \
@@ -61,7 +57,6 @@ enum {
     }\
     });
 
-
 #define  OPENGL_OBJECT(__figure , ...) \
   __VA_ARGS__;\
   glBegin(GL_##__figure);\
@@ -72,41 +67,69 @@ enum {
 
 /** 
  * @class  Renderer  
- * @brief  Dedicated for Rendering  Object using OpenGL  
- * 
+ * @brief  Dedicated for Rendering 2D Object using OpenGL logic 
  */
-
 class  Renderer
 {  
   
   int _form_options =  RENDERER_ALL_FORM ; 
   float _rot = 0.0 , 
         _scl = 1.0f; 
-  public : 
-    Renderer() = default  ;
-    Renderer(int) ;  
-    virtual  ~Renderer()= default ; 
+  public :
+  /*
+   * @brief  default ctor 
+   * */
+  Renderer() = default  ;
+ 
+  /**
+   * @brief  alternative ctor 
+   */
+  Renderer(int) ; 
+
+  /** 
+   * @brief  Default dtor 
+   **/
+  virtual  ~Renderer()= default ; 
   
-
-    /** 
-     * @brief  forms by setting form flags  mask by oring 
-     */
-    void   setforms(int __form_flag_options) ;
+  /** 
+   * @brief  enable forms  by  specifying the  apropriate flags 
+   *         Multiple Forms can be enable or  disable by ORing
+   */
+  void setforms(int __form_flag_options) ;
     
-    /** 
-     *  @brief retrieve bit mask for current enabling forms  
-     *  @return int  - forms flags bit mask  
-     */
-    int    getforms(void) const ; 
+  /** 
+   * @brief retrieve bit mask for current  enabling forms  
+   * @return int  - forms flags bit mask  
+   **/
+  int getforms(void) const ; 
+
+  
+  /**
+   * @brief rotate by updating the _rot attribute that is responsible for the rotation
+   */
+    
+  void rotate_forms(float angle) ; 
+
+  /*
+   * @brief scale  by updating the _scl attribute that is responsible for scaling forms 
+   **/
+
+  void scale_forms(float scale) ;  
+
+  /*
+   * @brief  increase the  scale  produce zoom in  effect 
+   **/
+  void upscale(void) ; 
+
+  /**
+   * @brief  decrease the scale  produce zoom out  effect 
+   */
+  void downscale(void) ;  
 
 
-    void rotate_forms(float angle) ; 
-
-    void scale_forms(float scale) ;  
-    /** 
-     * @brief  display  form shape 
-     * */
-
+   /**
+    * @brief  display OpenGL  forms  in Canvas Area   
+    */
     void display(void) ; 
   
 }; 

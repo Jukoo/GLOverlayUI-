@@ -72,4 +72,29 @@ void Renderer::rotate_forms(float angle)
 void Renderer::scale_forms(float scale) 
 {
    _scl = scale ; 
+} 
+
+void Renderer::upscale(void)  
+{
+  unsigned int scl_factor = (unsigned int )  _scl ;  
+  if(!(scl_factor ^ 0x64))
+  { 
+     _scl = 100.f  ; 
+     return ; 
+  }
+
+   scl_factor=-~scl_factor ; 
+   _scl =  (float) scl_factor ;
+
+}
+
+void Renderer::downscale(void) 
+{
+   if(!_scl) 
+   {
+      _scl=1.f; 
+      return ; 
+   }
+  
+  _scl-- ;  
 }

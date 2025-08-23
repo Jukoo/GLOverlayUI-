@@ -31,25 +31,9 @@
 #define  APP_TITLE   _PREFIX(APP_NAME)  
 #define  APP_VERSION _PREFIX(VERSION)  
 #define  APP_ICO     _PREFIX(ICON_APP) 
-/*!  Define  the default base size of the frame  */
-#if !defined(DEF_BASE_SIZE)
-#define  DEF_BASE_SIZE     650 
-#endif
-
-#if !defined(MF_SIZE) 
-/*! Will have a square main frame window  */
-# define  MF_SIZE  DEF_BASE_SIZE,DEF_BASE_SIZE 
-#endif
-
-/*! Desable  Option or Exclude option about frame style and behavior */
-#define  DEF_FRAME_STYLE(_EXCLUDE_OPTION) \
-  wxDEFAULT_FRAME_STYLE & ~(_EXCLUDE_OPTION) 
-
-
 
 /**
  * @class  GLOverlayUI_APP 
- * 
  * @brief Handle Global Application state
  * */
 
@@ -62,50 +46,30 @@ class  GLOverlayUI_APP: public wxApp
  
 /**
  * @class MainFrame 
- *
  * @brief Responsible  about main frame layout GLOverlayUI application 
  * */
 class  MainFrame : public wxFrame  
 {
-   std::basic_string<char> _app_title; 
-   std::basic_string<char> _app_status_text;
+   std::basic_string<char> _app_title;      /* ! Application  Title */
+   std::basic_string<char> _app_status_text;/* ! Application status  text */
 
-   std::map<std::basic_string<char>  , wxPanel*> _panels;  
+   std::map<std::basic_string<char>  , wxPanel*> _panels;  /* ! hold the panels  */ 
    
-   wxIcon       _app_icon; 
-   wxBoxSizer * _main_boxsizer ;  
-   wxCheckBox * _checkbox ;
-   wxSlider   * _slider ; 
-   CanvasDriver * _canvas_driver ; 
+   wxIcon       _app_icon;                  /* ! Application  icon in .ico format */
+   wxBoxSizer   * _main_boxsizer ;          /* ! Main box sizer split the layout in half*/
+   wxCheckBox   * _checkbox ;               /* ! Checkbox  component  */
+   wxSlider     * _slider ;                 /* ! Slider    component  */
+   CanvasDriver * _canvas_driver ;          /* ! CanvasDriver  instance */
 
-   /**
-    * @brief handle on exit event  
-    * @param evt - the event 
-    * */
-   void  on_exit(wxCommandEvent & evt) ; 
-   /**
-    * @brief handle on exit event  
-    * @param evt - the event 
-    * */
-   void  on_about(wxCommandEvent & evt); 
-
-   /** 
-    * @brief Handle checkbox event  
-    **/
-
+   /* -- UI Event -- */
+   void on_exit(wxCommandEvent & evt) ; 
+   void on_about(wxCommandEvent & evt); 
    void on_checking(wxCommandEvent  & evt) ; 
-
-   /**
-    * @brief Handle slider event 
-    * */
-
    void on_sliding (wxCommandEvent & evt) ;
-    
-   /** 
-    * @brief  Toggle sidepanel control
-    */
-
    void on_sidepanel_toggle(wxCommandEvent & evt) ; 
+   void on_refresh(wxCommandEvent &) ; 
+   void on_zoom_in(wxCommandEvent &) ;  
+   void on_zoom_out(wxCommandEvent &) ;  
 
    public:
    /**
@@ -132,10 +96,10 @@ class  MainFrame : public wxFrame
 
 
      /**
-      * @brief setting  rule on how panels should be arranged  
+      * @brief Calculate how the layout rendering  must be shared between panels
       * @return  int - (canvaspanel size | control panel size) 
       **/
-     virtual int panel_sizing_layout_rule(void)  ;  
+     virtual int dispatch_layout (void)  ;  
 
 
   

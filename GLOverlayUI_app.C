@@ -17,7 +17,6 @@
 
 
 #include <cstdlib> 
-
 #include "mainframe.H" 
 #include "canvasdriver.H"
 

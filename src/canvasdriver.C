@@ -124,7 +124,7 @@ void CanvasDriver::on_resizing(wxSizeEvent  & evt)
 
 
 void CanvasDriver::on_mouse(wxMouseEvent& evt) 
-{
+{ 
   if(_mouse_grab_state) 
   {
     wxPoint position=  evt.GetPosition() ;
@@ -144,3 +144,14 @@ void CanvasDriver::on_mouse_release(wxMouseEvent & evt)
 {
   on_mouse_grab(evt) ; 
 }
+
+
+void CanvasDriver::increase_or_decrease_scaling(unsigned char  symbole) 
+{ 
+  if (!((symbole & 0xff)  ^ 0x2b)) 
+    _renderer.upscale() ;  
+  
+  if (!((symbole & 0xff) ^ 0x2d))  
+    _renderer.downscale() ; 
+}
+

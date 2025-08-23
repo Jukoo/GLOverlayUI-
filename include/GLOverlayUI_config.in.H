@@ -30,4 +30,28 @@
 #define  _PREFIX(__prefix)\
          GLOverlayUI_ ## __prefix 
 
+
+/*!  Define  the default base size of the frame  */
+#if !defined(DEF_BASE_SIZE)
+#define  DEF_BASE_SIZE     800 
+#endif  
+
+#if !defined(MF_SIZE) 
+/*! Will have a square main frame window  */
+# define  MF_SIZE  DEF_BASE_SIZE,DEF_BASE_SIZE 
+#endif
+
+/*! Desable  Option or Exclude option about frame style and behavior */
+#define  DEF_FRAME_STYLE(_EXCLUDE_OPTION) \
+  wxDEFAULT_FRAME_STYLE & ~(_EXCLUDE_OPTION) 
+
+
+
+
+#define GLOverlayUI_TIPS "GLOverlayUI:Tips",\
+  "Grab the Canvas Area with Your Mouse\n"\
+  "And move it to  rotate objects"
+
+
+
 #endif /*! GLOverlayUI_ */ 
