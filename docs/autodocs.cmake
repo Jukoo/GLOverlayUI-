@@ -13,7 +13,7 @@ if(NOT DOXYGEN_FOUND)
 endif() 
 
 #-- Prevent to wipe out the pre-configured DOXYFILE   
-#-- If the Doxyfile already exists you should remove it manualy 
+#-- If the Doxyfile isalready exists you should remove it manualy 
 
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile")
   #+ Generate a new doxyfile 
@@ -43,14 +43,14 @@ execute_process(
 )
 
 if(NOT HTML_BUILD_RESULT EQUAL  "0")
-  message(FATAL_ERROR "Fail to Process Doxyfile")
+  message(SEND_ERROR "Fail to Process Doxyfile")
 endif() 
 
 #-- Generate the Html Doc  
 
 message(STATUS "Build doc using Sphinx configuration X Breathe Extension")
 if(NOT EXISTS  ${CMAKE_CURRENT_SOURCE_DIR}/docs/index.rst) 
-  message(FATAL_ERROR "Not able to generate the html file")
+  message(SEND_ERROR "Not able to generate the html file")
 endif() 
 
 execute_process(

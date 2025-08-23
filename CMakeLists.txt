@@ -29,12 +29,19 @@ file(GLOB_RECURSE  src  ${CMAKE_CURRENT_SOURCE_DIR}/src/*)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include) 
 
 
+OPTION(BUILD_DOC  "Build the documentation" OFF) 
+
 #--NOTE:Change it to Release  in prodution mode 
 set(CMAKE_BUILD_TYPE  Release)
 #-- Autobuild the documentation on Release  
 if(CMAKE_BUILD_TYPE STREQUAL "Release") 
-  message(STATUS "Generating Autodoc")
-  include(docs/autodocs.cmake) 
+  if (BUILD_DOC)
+    message(STATUS "Generating Autodoc")
+    include(docs/autodocs.cmake) 
+  else() 
+    message(STATUS "Skipping Generating Docs")
+  endif()  
+  
 endif()
 
 
