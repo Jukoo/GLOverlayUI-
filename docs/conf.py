@@ -21,7 +21,6 @@ release = 'v1'
 
 extensions = [
         'breathe',
-        'sphinx.ext.graphviz'
         ]
 
 breathe_projects = {
