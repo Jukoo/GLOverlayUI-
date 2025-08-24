@@ -37,6 +37,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_logo="../assets/logo/gloverui.ico"
-html_favicon="../assets/logo/gloverui.ico" 
-html_theme = 'sphinx_nefertiti'
+html_favicon=html_logo 
+html_theme = 'nature'
 html_static_path = ['_static']

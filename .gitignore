@@ -2,7 +2,8 @@ dist/*
 dist
 build
 bin
-note.txt 
+note.txt
+docs/_build
 docs/_doxy/html
 docs/_doxy/xml
 docs/_doxy/latex
