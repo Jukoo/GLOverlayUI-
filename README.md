@@ -70,7 +70,7 @@ From the root of the repository:
  
  > $ ./bin/GLOverlayUI 
 
-_**For more detail  about the build please  see [here](http://localhost:8000/pages/build.html)**_
+_**For more detail  about the build please  see [here](https://gloverlayui.readthedocs.io/en/latest/pages/build.html)**_
 
 
  📦 Dependencies
