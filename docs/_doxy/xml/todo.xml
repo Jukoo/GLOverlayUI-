@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Global <ref refid="classRenderer_1aad725f02dbf870d6b24079769713aa1e" kindref="member">Renderer::downscale</ref>  (void)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000002"/>improve the scale precision  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="classRenderer_1a276415b914eebfe9f6874b40382ec34c" kindref="member">Renderer::upscale</ref>  (void)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>improve the scale precision </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

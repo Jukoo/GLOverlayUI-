@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>GLOverlayUI</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__2home_2umar_2Desktop_2workstation_2CGui_2WxWidget_2README"/> <image type="html" name="assets/logo/gloverui-ico.png" alt="minilog-logo" inline="yes"></image>
+ <linebreak/>
+</para>
+<para><bold>GLOverlayUI</bold> is a desktop application that demonstrates the integration of a real-time OpenGL rendering pipeline with a native wxWidgets GUI. It features an interactive 2D scene rendered on a <computeroutput>wxGLCanvas</computeroutput>, including a clickable OpenGL overlay and a dynamic control panel using native UI widgets.</para>
+<para><hruler/>
+ </para>
+<sect2 id="index_1autotoc_md1">
+<title>🖼️ Features</title>
+<para><itemizedlist>
+<listitem><para>✅ OpenGL-powered 2D scene rendered on <computeroutput>wxGLCanvas</computeroutput></para>
+</listitem><listitem><para>🎯 Clickable UI overlay (PNG icon) rendered directly in OpenGL<itemizedlist>
+<listitem><para>Using Mouse motion to control object rotation</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>📌 Toggleable right-side control panel with:<itemizedlist>
+<listitem><para><computeroutput>wxSlider</computeroutput> to control object scale<itemizedlist>
+<listitem><para><computeroutput>wxCheckBox</computeroutput> to toggle visibility of scene objects</para>
+</listitem><listitem><para>🧼 Clean separation between rendering engine and UI logic</para>
+</listitem><listitem><para>🔁 Real-time interaction between OpenGL scene and native UI</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>The Full documentation of the project is available <ulink url="https://gloverlayui.readthedocs.io/en/latest">here</ulink> please take a look.</para>
+</sect2>
+<sect2 id="index_1autotoc_md2">
+<title>📁 Project Structure</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">GLOverlayUI/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>assets/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Assets<sp/>resources</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>logo/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Logo<sp/>Emplacement<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>&lt;images&gt;<sp/><sp/><sp/><sp/>#<sp/>Images</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>src/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>C++<sp/>source<sp/>files</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>renderer.C<sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>OpenGL<sp/>rendering<sp/>logic<sp/>(source)<sp/>(UI-agnostic)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>mainframe.C<sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>wxWidget<sp/><sp/>wrapper<sp/>(source)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>canvasdriver.C<sp/><sp/><sp/>#<sp/>wxGLCanvas<sp/>wrapper<sp/>(source)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>include/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>C++<sp/>header<sp/>files</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>renderer.H<sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>OpenGL<sp/>rendering<sp/>logic<sp/>(header)<sp/>(UI-agnostic)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>canvasdriver.H<sp/><sp/><sp/>#<sp/>wxGLCanvas<sp/>wrapper<sp/>(header)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>mainframe.H<sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>wxWidget<sp/>wrapper<sp/>(header)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>GLOverlayUI_config.in.H<sp/><sp/><sp/><sp/><sp/>#<sp/>Generated<sp/><sp/>Configuration<sp/>(header)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>CMakeLists.txt<sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Build<sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>config/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Folder<sp/><sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>GLOverlayUI_config.in<sp/><sp/><sp/>#<sp/>Basic<sp/>Config<sp/><sp/>of<sp/>GLOverlayUI<sp/>application</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>docs/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Documentation<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>conf.py<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Sphinx<sp/>configuration</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>index.rst<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>This<sp/>file<sp/>(Sphinx<sp/>entry<sp/>point)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>doc.cmake<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Doxygen<sp/>+<sp/>Sphinx<sp/>integration</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>autodocs.cmake<sp/><sp/><sp/>#<sp/>cmake<sp/>file<sp/>to<sp/>automate<sp/>the<sp/>documentation<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>make.bat<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Generated<sp/>by<sp/>sphinx-quickstart</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>Doxyfile<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Doxyfile<sp/>Generated<sp/>by<sp/>Doxygen</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>Makefile<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Generated<sp/>by<sp/>sphinx-quickstart</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>GLOverlayUI_app.C<sp/><sp/><sp/><sp/>#<sp/>Main<sp/>application<sp/>window<sp/>and<sp/>UI<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>├──<sp/>requirements.txt<sp/><sp/><sp/><sp/><sp/>#<sp/>Python<sp/>dependencies<sp/>for<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>└──<sp/>README.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Project<sp/>overview</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md3">
+<title>Build Instructions (Linux)</title>
+<para>✅ Prerequisites Ensure the following packages are installed: <blockquote><para><zwj/> cmake build-essential libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev </para>
+</blockquote></para>
+<sect3 id="index_1autotoc_md4">
+<title>Build the project</title>
+<para>From the root of the repository:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>-B<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>build</highlight></codeline>
+</programlisting></para>
+<para><emphasis>This will generate the GLOverlayUI executable inside the bin/ directory.</emphasis></para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>🚀 Run the Application</title>
+<para><blockquote><para><zwj/>$ ./bin/GLOverlayUI </para>
+</blockquote><emphasis><bold>For more detail about the build please see <ulink url="http://localhost:8000/pages/build.html">here</ulink></bold></emphasis></para>
+</sect2>
+<sect2 id="index_1autotoc_md6">
+<title>📦 Dependencies</title>
+<para><itemizedlist>
+<listitem><para>wxWidgets (GUI framework)</para>
+</listitem><listitem><para>OpenGL (GL/GLU for 2D rendering)</para>
+</listitem><listitem><para>CMake ≥ 3.11</para>
+</listitem></itemizedlist>
+</para>
+<para>PNG loading is handled via wxImage (no external image libraries required).</para>
+</sect2>
+<sect2 id="index_1autotoc_md7">
+<title>🏛️ Architecture Overview</title>
+<para>The application is organized into three decoupled components:</para>
+<para>Component Description Depends on wxWidgets renderer Core OpenGL rendering logic ❌ canvasdriver wxGLCanvas wrapper, handles UI integration ✅ <ref refid="classMainFrame" kindref="compound">MainFrame</ref> Main UI (panel, slider, checkbox) ✅</para>
+<para>This separation enables easy testing and reusability of the rendering logic in other contexts.</para>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title>📸 Screenshots</title>
+<para>([]Todo Add a screenshot here showing the scene + overlay + control panel)</para>
+<para>📄 License This project is released under the GPLv3 License. See LICENSE for details.</para>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>🙋‍♂️ Author</title>
+<para>Made with ❤️ by Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> </para>
+</sect2>
+    </detaileddescription>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/README.md"/>
+  </compounddef>
+</doxygen>

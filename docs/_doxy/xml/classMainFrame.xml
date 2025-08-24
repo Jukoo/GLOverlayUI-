@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMainFrame" kind="class" language="C++" prot="public">
+    <compoundname>MainFrame</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">wxFrame</basecompoundref>
+    <includes refid="mainframe_8H" local="no">mainframe.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMainFrame_1a85616e128cefa2af66f8aa13a1dd92c2" prot="private" static="no" mutable="no">
+        <type>wxIcon</type>
+        <definition>wxIcon MainFrame::_app_icon</definition>
+        <argsstring></argsstring>
+        <name>_app_icon</name>
+        <qualifiedname>MainFrame::_app_icon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="62" column="17" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1a055bc506fff0fbb36efa23f0168f0e87" prot="private" static="no" mutable="no">
+        <type>std::basic_string&lt; char &gt;</type>
+        <definition>std::basic_string&lt;char&gt; MainFrame::_app_status_text</definition>
+        <argsstring></argsstring>
+        <name>_app_status_text</name>
+        <qualifiedname>MainFrame::_app_status_text</qualifiedname>
+        <briefdescription>
+<para>Application Title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="58" column="22" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1a45b6ad48bb0520166bd50a9c915b82e3" prot="private" static="no" mutable="no">
+        <type>std::basic_string&lt; char &gt;</type>
+        <definition>std::basic_string&lt;char&gt; MainFrame::_app_title</definition>
+        <argsstring></argsstring>
+        <name>_app_title</name>
+        <qualifiedname>MainFrame::_app_title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="57" column="22" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1a5022c6feab3e61163f94f1610eae2e30" prot="private" static="no" mutable="no">
+        <type><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> *</type>
+        <definition>CanvasDriver* MainFrame::_canvas_driver</definition>
+        <argsstring></argsstring>
+        <name>_canvas_driver</name>
+        <qualifiedname>MainFrame::_canvas_driver</qualifiedname>
+        <briefdescription>
+<para>Slider component <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="66" column="18" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1a43014238db291be92074dc55f040c181" prot="private" static="no" mutable="no">
+        <type>wxCheckBox *</type>
+        <definition>wxCheckBox* MainFrame::_checkbox</definition>
+        <argsstring></argsstring>
+        <name>_checkbox</name>
+        <qualifiedname>MainFrame::_checkbox</qualifiedname>
+        <briefdescription>
+<para>Main box sizer split the layout in half. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="64" column="18" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1ac639760e392bf6a511496a023c71da98" prot="private" static="no" mutable="no">
+        <type>wxBoxSizer *</type>
+        <definition>wxBoxSizer* MainFrame::_main_boxsizer</definition>
+        <argsstring></argsstring>
+        <name>_main_boxsizer</name>
+        <qualifiedname>MainFrame::_main_boxsizer</qualifiedname>
+        <briefdescription>
+<para>Application icon in .ico format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="63" column="18" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1afa72eb4be849cb064f04d412a7d2c074" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::basic_string&lt; char &gt;, wxPanel * &gt;</type>
+        <definition>std::map&lt;std::basic_string&lt;char&gt; , wxPanel*&gt; MainFrame::_panels</definition>
+        <argsstring></argsstring>
+        <name>_panels</name>
+        <qualifiedname>MainFrame::_panels</qualifiedname>
+        <briefdescription>
+<para>Application status text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="60" column="13" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainFrame_1a24415cfb4f17df9b50940d38fd4a1962" prot="private" static="no" mutable="no">
+        <type>wxSlider *</type>
+        <definition>wxSlider* MainFrame::_slider</definition>
+        <argsstring></argsstring>
+        <name>_slider</name>
+        <qualifiedname>MainFrame::_slider</qualifiedname>
+        <briefdescription>
+<para>Checkbox component <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="65" column="18" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainFrame::define_layout</definition>
+        <argsstring>(void)</argsstring>
+        <name>define_layout</name>
+        <qualifiedname>MainFrame::define_layout</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>define the layout UI </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="100" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainFrame_1adaaef5e8a34f6fe81d7eabef75b33fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int MainFrame::dispatch_layout</definition>
+        <argsstring>(void)</argsstring>
+        <name>dispatch_layout</name>
+        <qualifiedname>MainFrame::dispatch_layout</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Calculate how the layout rendering must be shared between panels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int - (canvaspanel size | control panel size) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainFrame_1a2329fd01577ea2ebf4063757ec6ddf2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainFrame::MainFrame</definition>
+        <argsstring>(std::basic_string&lt; char &gt; application_title)</argsstring>
+        <name>MainFrame</name>
+        <qualifiedname>MainFrame::MainFrame</qualifiedname>
+        <param>
+          <type>std::basic_string&lt; char &gt;</type>
+          <declname>application_title</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ndash/> UI Event <ndash/></para>
+<para><ref refid="classMainFrame" kindref="compound">MainFrame</ref> class Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>application_title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The Application title </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="85" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainFrame::setup_menubar</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_menubar</name>
+        <qualifiedname>MainFrame::setup_menubar</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>setup the menu bar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="95" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainFrame_1aa727c6800d56dd11e348a179a8506a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual MainFrame::~MainFrame</definition>
+        <argsstring>()</argsstring>
+        <name>~MainFrame</name>
+        <qualifiedname>MainFrame::~MainFrame</qualifiedname>
+        <briefdescription>
+<para><ref refid="classMainFrame" kindref="compound">MainFrame</ref> class Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="90" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Responsible about main frame layout GLOverlayUI application. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainFrame</label>
+        <link refid="classMainFrame"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="55" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="56" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classMainFrame_1a85616e128cefa2af66f8aa13a1dd92c2" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_app_icon</name></member>
+      <member refid="classMainFrame_1a055bc506fff0fbb36efa23f0168f0e87" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_app_status_text</name></member>
+      <member refid="classMainFrame_1a45b6ad48bb0520166bd50a9c915b82e3" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_app_title</name></member>
+      <member refid="classMainFrame_1a5022c6feab3e61163f94f1610eae2e30" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_canvas_driver</name></member>
+      <member refid="classMainFrame_1a43014238db291be92074dc55f040c181" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_checkbox</name></member>
+      <member refid="classMainFrame_1ac639760e392bf6a511496a023c71da98" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_main_boxsizer</name></member>
+      <member refid="classMainFrame_1afa72eb4be849cb064f04d412a7d2c074" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_panels</name></member>
+      <member refid="classMainFrame_1a24415cfb4f17df9b50940d38fd4a1962" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_slider</name></member>
+      <member refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" prot="public" virt="non-virtual"><scope>MainFrame</scope><name>define_layout</name></member>
+      <member refid="classMainFrame_1adaaef5e8a34f6fe81d7eabef75b33fb7" prot="public" virt="virtual"><scope>MainFrame</scope><name>dispatch_layout</name></member>
+      <member refid="classMainFrame_1a2329fd01577ea2ebf4063757ec6ddf2e" prot="public" virt="non-virtual"><scope>MainFrame</scope><name>MainFrame</name></member>
+      <member refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" prot="public" virt="non-virtual"><scope>MainFrame</scope><name>setup_menubar</name></member>
+      <member refid="classMainFrame_1aa727c6800d56dd11e348a179a8506a3f" prot="public" virt="virtual"><scope>MainFrame</scope><name>~MainFrame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

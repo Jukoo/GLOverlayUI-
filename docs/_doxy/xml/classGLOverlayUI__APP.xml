@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classGLOverlayUI__APP" kind="class" language="C++" prot="public">
+    <compoundname>GLOverlayUI_APP</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">wxApp</basecompoundref>
+    <includes refid="mainframe_8H" local="no">mainframe.H</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool GLOverlayUI_APP::OnInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>OnInit</name>
+        <qualifiedname>GLOverlayUI_APP::OnInit</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Of the App. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="47" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handle Global Application state. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>GLOverlayUI_APP</label>
+        <link refid="classGLOverlayUI__APP"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="41" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="42" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" prot="public" virt="virtual"><scope>GLOverlayUI_APP</scope><name>OnInit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

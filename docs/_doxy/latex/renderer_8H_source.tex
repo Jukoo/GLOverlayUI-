@@ -1,0 +1,98 @@
+\doxysection{renderer.\+H}
+\hypertarget{renderer_8H_source}{}\label{renderer_8H_source}\index{/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H@{/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H}}
+\mbox{\hyperlink{renderer_8H}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ !defined(GLOverlayUI\_renderer\_h)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ GLOverlayUI\_renderer\_h\ }}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <GL/glu.h>}\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <cmath>}\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{enum}\ \{\ }
+\DoxyCodeLine{00027\ \ \ TRIANGLES,\ \ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TRIANGLES\ (1\ <<\ TRIANGLES)\ }}
+\DoxyCodeLine{00029\ \ \ QUADS\ ,}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ \ QUADS\ \ \ \ (1\ <<\ QUADS)\ \ }}
+\DoxyCodeLine{00031\ \ \ POLYGON}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ POLYGON\ \ \ (1\ <<\ POLYGON)\ \ }}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \ RENDERER\_ALL\_FORM\ (\ TRIANGLES|\ QUADS\ |\ \ POLYGON\ )\ }}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ \ OBJECT\_TRIANGLES\(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ glColor3f(1.0f,\ 0.0f,\ 0.0f);\ glVertex2f(-\/0.8f,\ -\/0.5f);\(\backslash\)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ glColor3f(0.0f,\ 1.0f,\ 0.0f);\ glVertex2f(-\/0.2f,\ -\/0.5f);\(\backslash\)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ glColor3f(0.0f,\ 0.0f,\ 1.0f);\ glVertex2f(-\/0.5f,\ \ 0.2f);}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ \ OBJECT\_QUADS\ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ glVertex2f(0.2f,\ -\/0.5f);\(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ glVertex2f(0.7f,\ -\/0.5f);\(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ glVertex2f(0.7f,\ \ 0.0f);\(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ glVertex2f(0.2f,\ \ 0.0f);}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ \ OBJECT\_POLYGON\ (\{\(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ int\ segments\ =\ 60;\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ float\ r\ =\ 0.3f;\(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ float\ cx\ =\ 0.0f,\ cy\ =\ 0.5f;\(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ segments;\ ++i)\ \{\(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ float\ t\ =\ 2.0f\ *\ M\_PI\ *\ float(i)\ /\ float(segments);\(\backslash\)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ float\ x\ =\ r\ *\ std::cos(t);\(\backslash\)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ float\ y\ =\ r\ *\ std::sin(t);\(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ glVertex2f(cx\ +\ x,\ cy\ +\ y);\(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \});}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ \ OPENGL\_OBJECT(\_\_figure\ ,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \_\_VA\_ARGS\_\_;\(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ glBegin(GL\_\#\#\_\_figure);\(\backslash\)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ OBJECT\_\#\#\_\_figure\(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ glEnd();}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classRenderer}{Renderer}}}
+\DoxyCodeLine{00075\ \{\ \ }
+\DoxyCodeLine{00076\ \ \ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{int}\ \_form\_options\ =\ \ RENDERER\_ALL\_FORM\ ;\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{float}\ \_rot\ =\ 0.0\ ,\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \_scl\ =\ 1.0f;\ }
+\DoxyCodeLine{00080\ \ \ public\ :}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \mbox{\hyperlink{classRenderer_a4dddd75ab18573a3686f90225f3f03d4}{Renderer}}()\ =\ default\ \ ;}
+\DoxyCodeLine{00086\ \ }
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{classRenderer_a55482d49aa42d8e2d13ebed007a25052}{Renderer}}(\textcolor{keywordtype}{int})\ ;\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classRenderer_add2012f269f157754034e7b5475a8927}{\string~Renderer}}()=\ default\ ;\ }
+\DoxyCodeLine{00096\ \ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{classRenderer_a5e1627b264f10486af827a09e5837edb}{init}}(\textcolor{keywordtype}{void})\ ;\ \ \ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_afc711f32933d61863420f8443cb4a632}{setforms}}(\textcolor{keywordtype}{int}\ \_\_form\_flag\_options)\ ;}
+\DoxyCodeLine{00107\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7}{getforms}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ ;\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_aa12beb68d3ec044b3445d32b2b25afdd}{projection}}(\textcolor{keywordtype}{int}\ xcoords\ ,\ \textcolor{keywordtype}{int}\ ycoords)\ \ ;\ }
+\DoxyCodeLine{00120\ \ \ }
+\DoxyCodeLine{00121\ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ \ \ *\ @brief\ rotate\ by\ updating\ the\ \_rot\ attribute\ that\ is\ responsible\ for\ the\ rotation}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ \ \ **/}}
+\DoxyCodeLine{00124\ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a693ac5762e3d9b3317038ab111d1ef9f}{rotate\_forms}}(\textcolor{keywordtype}{float}\ angle)\ ;\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ \ \ *\ @brief\ scale\ \ by\ updating\ the\ \_scl\ attribute\ that\ is\ responsible\ for\ scaling\ forms\ }}
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ **/}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_ac7b99d2aa500e76f6d4ca0b76c4bc725}{scale\_forms}}(\textcolor{keywordtype}{float}\ scale)\ ;\ \ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a276415b914eebfe9f6874b40382ec34c}{upscale}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_aad725f02dbf870d6b24079769713aa1e}{downscale}}(\textcolor{keywordtype}{void})\ ;\ \ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8}{display}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00150\ \ \ }
+\DoxyCodeLine{00151\ \};\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ GLOverlayUI\_renderer\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

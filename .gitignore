@@ -4,7 +4,4 @@ build
 bin
 note.txt
 docs/_build
-docs/_doxy/html
-docs/_doxy/xml
-docs/_doxy/latex
 docs/latex

@@ -1,0 +1,183 @@
+\doxysection{Renderer Class Reference}
+\hypertarget{classRenderer}{}\label{classRenderer}\index{Renderer@{Renderer}}
+
+
+Dedicated for Rendering 2D Object using Open\+GL logic.  
+
+
+
+
+{\ttfamily \#include $<$renderer.\+H$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8}{display}} (void)
+\begin{DoxyCompactList}\small\item\em display Open\+GL forms in Canvas Area ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_aad725f02dbf870d6b24079769713aa1e}{downscale}} (void)
+\begin{DoxyCompactList}\small\item\em decrease the scale produce zoom out effect \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7}{getforms}} (void) const
+\begin{DoxyCompactList}\small\item\em retrieve bit mask for current enabling forms ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a5e1627b264f10486af827a09e5837edb}{init}} (void)
+\begin{DoxyCompactList}\small\item\em init open\+GL stuff \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_aa12beb68d3ec044b3445d32b2b25afdd}{projection}} (int xcoords, int ycoords)
+\begin{DoxyCompactList}\small\item\em apply othogonal projection when the canvas layou expand ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRenderer_a4dddd75ab18573a3686f90225f3f03d4}{Renderer}} ()=default
+\begin{DoxyCompactList}\small\item\em default ctor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRenderer_a55482d49aa42d8e2d13ebed007a25052}{Renderer}} (int)
+\begin{DoxyCompactList}\small\item\em alternative ctor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a693ac5762e3d9b3317038ab111d1ef9f}{rotate\+\_\+forms}} (float angle)
+\item 
+void \mbox{\hyperlink{classRenderer_ac7b99d2aa500e76f6d4ca0b76c4bc725}{scale\+\_\+forms}} (float scale)
+\item 
+void \mbox{\hyperlink{classRenderer_afc711f32933d61863420f8443cb4a632}{setforms}} (int \+\_\+\+\_\+form\+\_\+flag\+\_\+options)
+\begin{DoxyCompactList}\small\item\em enable forms by specifying the apropriate flags Multiple Forms can be enable or disable by ORing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a276415b914eebfe9f6874b40382ec34c}{upscale}} (void)
+\begin{DoxyCompactList}\small\item\em increase the scale produce zoom in effect \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRenderer_add2012f269f157754034e7b5475a8927}{\texorpdfstring{$\sim$}{\string~}\+Renderer}} ()=default
+\begin{DoxyCompactList}\small\item\em Default dtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dedicated for Rendering 2D Object using Open\+GL logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRenderer_a4dddd75ab18573a3686f90225f3f03d4}\label{classRenderer_a4dddd75ab18573a3686f90225f3f03d4} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default ctor 
+
+\Hypertarget{classRenderer_a55482d49aa42d8e2d13ebed007a25052}\label{classRenderer_a55482d49aa42d8e2d13ebed007a25052} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+alternative ctor 
+
+\Hypertarget{classRenderer_add2012f269f157754034e7b5475a8927}\label{classRenderer_add2012f269f157754034e7b5475a8927} 
+\index{Renderer@{Renderer}!````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}}
+\index{````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Renderer()}{\string~Renderer()}}
+{\footnotesize\ttfamily virtual Renderer\+::\texorpdfstring{$\sim$}{\string~}\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default dtor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8}\label{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8} 
+\index{Renderer@{Renderer}!display@{display}}
+\index{display@{display}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Renderer\+::display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+display Open\+GL forms in Canvas Area ~\newline
+ 
+
+\Hypertarget{classRenderer_aad725f02dbf870d6b24079769713aa1e}\label{classRenderer_aad725f02dbf870d6b24079769713aa1e} 
+\index{Renderer@{Renderer}!downscale@{downscale}}
+\index{downscale@{downscale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{downscale()}{downscale()}}
+{\footnotesize\ttfamily void Renderer\+::downscale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+decrease the scale produce zoom out effect 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]improve the scale precision \end{DoxyRefDesc}
+\Hypertarget{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7}\label{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7} 
+\index{Renderer@{Renderer}!getforms@{getforms}}
+\index{getforms@{getforms}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getforms()}{getforms()}}
+{\footnotesize\ttfamily int Renderer\+::getforms (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+retrieve bit mask for current enabling forms ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+int -\/ forms flags bit mask ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{classRenderer_a5e1627b264f10486af827a09e5837edb}\label{classRenderer_a5e1627b264f10486af827a09e5837edb} 
+\index{Renderer@{Renderer}!init@{init}}
+\index{init@{init}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Renderer\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+init open\+GL stuff 
+
+\Hypertarget{classRenderer_aa12beb68d3ec044b3445d32b2b25afdd}\label{classRenderer_aa12beb68d3ec044b3445d32b2b25afdd} 
+\index{Renderer@{Renderer}!projection@{projection}}
+\index{projection@{projection}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{projection()}{projection()}}
+{\footnotesize\ttfamily void Renderer\+::projection (\begin{DoxyParamCaption}\item[{int}]{xcoords,  }\item[{int}]{ycoords }\end{DoxyParamCaption})}
+
+
+
+apply othogonal projection when the canvas layou expand ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & -\/ the coordinate x -\/ y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_a693ac5762e3d9b3317038ab111d1ef9f}\label{classRenderer_a693ac5762e3d9b3317038ab111d1ef9f} 
+\index{Renderer@{Renderer}!rotate\_forms@{rotate\_forms}}
+\index{rotate\_forms@{rotate\_forms}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{rotate\_forms()}{rotate\_forms()}}
+{\footnotesize\ttfamily void Renderer\+::rotate\+\_\+forms (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+\Hypertarget{classRenderer_ac7b99d2aa500e76f6d4ca0b76c4bc725}\label{classRenderer_ac7b99d2aa500e76f6d4ca0b76c4bc725} 
+\index{Renderer@{Renderer}!scale\_forms@{scale\_forms}}
+\index{scale\_forms@{scale\_forms}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{scale\_forms()}{scale\_forms()}}
+{\footnotesize\ttfamily void Renderer\+::scale\+\_\+forms (\begin{DoxyParamCaption}\item[{float}]{scale }\end{DoxyParamCaption})}
+
+\Hypertarget{classRenderer_afc711f32933d61863420f8443cb4a632}\label{classRenderer_afc711f32933d61863420f8443cb4a632} 
+\index{Renderer@{Renderer}!setforms@{setforms}}
+\index{setforms@{setforms}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setforms()}{setforms()}}
+{\footnotesize\ttfamily void Renderer\+::setforms (\begin{DoxyParamCaption}\item[{int}]{\+\_\+\+\_\+form\+\_\+flag\+\_\+options }\end{DoxyParamCaption})}
+
+
+
+enable forms by specifying the apropriate flags Multiple Forms can be enable or disable by ORing 
+
+\Hypertarget{classRenderer_a276415b914eebfe9f6874b40382ec34c}\label{classRenderer_a276415b914eebfe9f6874b40382ec34c} 
+\index{Renderer@{Renderer}!upscale@{upscale}}
+\index{upscale@{upscale}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{upscale()}{upscale()}}
+{\footnotesize\ttfamily void Renderer\+::upscale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+increase the scale produce zoom in effect 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]improve the scale precision \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/umar/\+Desktop/workstation/\+CGui/\+Wx\+Widget/include/\mbox{\hyperlink{renderer_8H}{renderer.\+H}}\end{DoxyCompactItemize}

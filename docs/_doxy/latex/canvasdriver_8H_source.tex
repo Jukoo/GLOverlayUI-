@@ -1,0 +1,71 @@
+\doxysection{canvasdriver.\+H}
+\hypertarget{canvasdriver_8H_source}{}\label{canvasdriver_8H_source}\index{/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H@{/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H}}
+\mbox{\hyperlink{canvasdriver_8H}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ !defined(GLOverlayUI\_canvasdriver\_h)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ \ GLOverlayUI\_canvasdriver\_h\ }}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <wx/glcanvas.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <GL/glu.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <memory>}\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer_8H}{renderer.H}}"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ (\_\_cplusplus\ >=\ 201402L\ )\ }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ std::unique\_ptr<\_\_object>\ \ \ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ std::shared\_ptr<\_\_object>\ \ }}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ ,\ \_\_object\ ,\ ...\ )\ \ std::make\_\#\#\_\_type<\_\_object>\ (\_\_VA\_ARGS\_\_)\ \ }}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#else\ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ }\textcolor{comment}{/*\ ignored\ */}\textcolor{preprocessor}{\ ,\ \_\_object\ ,...\ )\ \ \ new\ \_\_object\ (\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#\ define\ \ \ \_\_cpp\_11}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}\ :\ \textcolor{keyword}{public}\ \ wxGLCanvas\ \ }
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ uniq\_allocator(wxGLContext)\ \_ctx\ \ ;\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{comment}{/*\ -\/-\/\ \ Canvas\ \ Event\ -\/-\/\ \ */}}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ on\_painting(wxPaintEvent\&)\ ;\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ on\_resizing(wxSizeEvent\&)\ ;\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ on\_mouse(wxMouseEvent\&)\ ;\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_grab(wxMouseEvent\&)\ ;\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_release(wxMouseEvent\&);\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{bool}\ \_mouse\_grab\_state\ =\ false\ ;\ \ \ }
+\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{classRenderer}{Renderer}}\ \_renderer\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{bool}\ \_show\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{CanvasDriver}}(wxWindow\ \ *\ mainframe\_parent);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}{\string~CanvasDriver}}()\ ;\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3}{CanvasDriver\_init}}(\textcolor{keywordtype}{void});\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}{apply\_rotation}}(\textcolor{keywordtype}{float}\ rotation\_angle)\ ;\ }
+\DoxyCodeLine{00093\ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}{apply\_scaling}}(\textcolor{keywordtype}{float}\ \ \ scale)\ ;\ \ }
+\DoxyCodeLine{00099\ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aaf772d52ae181146d59c5c503f6786f6}{increase\_or\_decrease\_scaling}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ )\ ;\ \ \ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}{renderer}}(\textcolor{keywordtype}{int}\ forms\_bit\_mask)\ ;\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}{toggle\_renderer}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}{get\_renderer\_state}}(\textcolor{keywordtype}{void})\ \ ;\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}{set\_renderer\_state}}(\textcolor{keywordtype}{bool}\ state)\ ;\ }
+\DoxyCodeLine{00128\ \};\ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ \ }}
+
+\end{DoxyCode}

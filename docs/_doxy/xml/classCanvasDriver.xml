@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classCanvasDriver" kind="class" language="C++" prot="public">
+    <compoundname>CanvasDriver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">wxGLCanvas</basecompoundref>
+    <includes refid="canvasdriver_8H" local="no">canvasdriver.H</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CanvasDriver::_mouse_grab_state</definition>
+        <argsstring></argsstring>
+        <name>_mouse_grab_state</name>
+        <qualifiedname>CanvasDriver::_mouse_grab_state</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="69" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" prot="private" static="no" mutable="no">
+        <type><ref refid="classRenderer" kindref="compound">Renderer</ref></type>
+        <definition>Renderer CanvasDriver::_renderer</definition>
+        <argsstring></argsstring>
+        <name>_renderer</name>
+        <qualifiedname>CanvasDriver::_renderer</qualifiedname>
+        <briefdescription>
+<para>Detecte the mouse grab to trigger rotation on mouse motion <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="70" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CanvasDriver::_show</definition>
+        <argsstring></argsstring>
+        <name>_show</name>
+        <qualifiedname>CanvasDriver::_show</qualifiedname>
+        <briefdescription>
+<para><ref refid="classRenderer" kindref="compound">Renderer</ref> instance <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="71" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::apply_rotation</definition>
+        <argsstring>(float rotation_angle)</argsstring>
+        <name>apply_rotation</name>
+        <qualifiedname>CanvasDriver::apply_rotation</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>rotation_angle</declname>
+        </param>
+        <briefdescription>
+<para>apply rotation angle on all form </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotation_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- float </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::apply_scaling</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>apply_scaling</name>
+        <qualifiedname>CanvasDriver::apply_scaling</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>apply scaling form </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- float </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="98" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CanvasDriver::CanvasDriver</definition>
+        <argsstring>(wxWindow *mainframe_parent)</argsstring>
+        <name>CanvasDriver</name>
+        <qualifiedname>CanvasDriver::CanvasDriver</qualifiedname>
+        <param>
+          <type>wxWindow *</type>
+          <declname>mainframe_parent</declname>
+        </param>
+        <briefdescription>
+<para>The rendere state <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="76" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::CanvasDriver_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>CanvasDriver_init</name>
+        <qualifiedname>CanvasDriver::CanvasDriver_init</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize OpenGL stuff. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="86" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CanvasDriver::get_renderer_state</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_renderer_state</name>
+        <qualifiedname>CanvasDriver::get_renderer_state</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>get the renderer state </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="121" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::increase_or_decrease_scaling</definition>
+        <argsstring>(unsigned char)</argsstring>
+        <name>increase_or_decrease_scaling</name>
+        <qualifiedname>CanvasDriver::increase_or_decrease_scaling</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+        </param>
+        <briefdescription>
+<para>increase or decrease scaling </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>symbole</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- unsigned char should be &quot;+&quot; or &quot;-&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::renderer</definition>
+        <argsstring>(int forms_bit_mask)</argsstring>
+        <name>renderer</name>
+        <qualifiedname>CanvasDriver::renderer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>forms_bit_mask</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classRenderer" kindref="compound">Renderer</ref> OpenGL frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>forms_bit_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Each form can be represented by a mask. please see the <ref refid="renderer_8H" kindref="compound">renderer.H</ref> file for more information <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::set_renderer_state</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>set_renderer_state</name>
+        <qualifiedname>CanvasDriver::set_renderer_state</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>set the renderer state <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- (true or false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="127" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::toggle_renderer</definition>
+        <argsstring>(void)</argsstring>
+        <name>toggle_renderer</name>
+        <qualifiedname>CanvasDriver::toggle_renderer</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>enable/disable the canvas renderering forms <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CanvasDriver::~CanvasDriver</definition>
+        <argsstring>()</argsstring>
+        <name>~CanvasDriver</name>
+        <qualifiedname>CanvasDriver::~CanvasDriver</qualifiedname>
+        <briefdescription>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="81" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Responsable to render OpenGL stuff on Canvas Frame layout <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CanvasDriver</label>
+        <link refid="classCanvasDriver"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="54" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="55" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_mouse_grab_state</name></member>
+      <member refid="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_renderer</name></member>
+      <member refid="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_show</name></member>
+      <member refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>apply_rotation</name></member>
+      <member refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>apply_scaling</name></member>
+      <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver</name></member>
+      <member refid="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver_init</name></member>
+      <member refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>get_renderer_state</name></member>
+      <member refid="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>increase_or_decrease_scaling</name></member>
+      <member refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>renderer</name></member>
+      <member refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>set_renderer_state</name></member>
+      <member refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>toggle_renderer</name></member>
+      <member refid="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" prot="public" virt="virtual"><scope>CanvasDriver</scope><name>~CanvasDriver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

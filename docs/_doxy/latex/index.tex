@@ -1,0 +1,96 @@
+\chapter{GLOverlay\+UI}
+\hypertarget{index}{}\label{index}\index{GLOverlayUI@{GLOverlayUI}}
+\label{index_md__2home_2umar_2Desktop_2workstation_2CGui_2WxWidget_2README}%
+\Hypertarget{index_md__2home_2umar_2Desktop_2workstation_2CGui_2WxWidget_2README}%
+  ~\newline
+
+
+{\bfseries{GLOverlay\+UI}} is a desktop application that demonstrates the integration of a real-\/time Open\+GL rendering pipeline with a native wx\+Widgets GUI. It features an interactive 2D scene rendered on a {\ttfamily wx\+GLCanvas}, including a clickable Open\+GL overlay and a dynamic control panel using native UI widgets.
+
+\DoxyHorRuler{0}
+ \hypertarget{index_autotoc_md1}{}\doxysubsection{\texorpdfstring{🖼️ Features}{🖼️ Features}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item ✅ Open\+GL-\/powered 2D scene rendered on {\ttfamily wx\+GLCanvas}
+\item 🎯 Clickable UI overlay (PNG icon) rendered directly in Open\+GL
+\begin{DoxyItemize}
+\item Using Mouse motion to control object rotation
+\end{DoxyItemize}
+\item 📌 Toggleable right-\/side control panel with\+:
+\begin{DoxyItemize}
+\item {\ttfamily wx\+Slider} to control object scale
+\begin{DoxyItemize}
+\item {\ttfamily wx\+Check\+Box} to toggle visibility of scene objects
+\item 🧼 Clean separation between rendering engine and UI logic
+\item 🔁 Real-\/time interaction between Open\+GL scene and native UI
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The Full documentation of the project is available \href{https://gloverlayui.readthedocs.io/en/latest}{\texttt{ here}} please take a look.\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{📁 Project Structure}{📁 Project Structure}}\label{index_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GLOverlayUI/}
+\DoxyCodeLine{\ \ \ ├──\ assets/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Assets\ resources}
+\DoxyCodeLine{\ \ \ │\ \ \ └──\ logo/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Logo\ Emplacement\ folder}
+\DoxyCodeLine{\ \ \ │\ \ \ \ \ \ \ \ └──\ <images>\ \ \ \ \#\ Images}
+\DoxyCodeLine{\ \ \ ├──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ C++\ source\ files}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ renderer.C\ \ \ \ \ \ \ \#\ OpenGL\ rendering\ logic\ (source)\ (UI-\/agnostic)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ mainframe.C\ \ \ \ \ \ \#\ wxWidget\ \ wrapper\ (source)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ canvasdriver.C\ \ \ \#\ wxGLCanvas\ wrapper\ (source)}
+\DoxyCodeLine{\ \ \ ├──\ include/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ C++\ header\ files}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ renderer.H\ \ \ \ \ \ \ \#\ OpenGL\ rendering\ logic\ (header)\ (UI-\/agnostic)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ canvasdriver.H\ \ \ \#\ wxGLCanvas\ wrapper\ (header)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ mainframe.H\ \ \ \ \ \ \#\ wxWidget\ wrapper\ (header)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ GLOverlayUI\_config.in.H\ \ \ \ \ \#\ Generated\ \ Configuration\ (header)}
+\DoxyCodeLine{\ \ \ ├──\ CMakeLists.txt\ \ \ \ \ \ \ \#\ Build\ configuration}
+\DoxyCodeLine{\ \ \ ├──\ config/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Folder\ \ configuration}
+\DoxyCodeLine{\ \ \ │\ \ \ └──\ GLOverlayUI\_config.in\ \ \ \#\ Basic\ Config\ \ of\ GLOverlayUI\ application}
+\DoxyCodeLine{\ \ \ ├──\ docs/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Documentation\ folder}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ conf.py\ \ \ \ \ \ \ \ \ \ \#\ Sphinx\ configuration}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ index.rst\ \ \ \ \ \ \ \ \#\ This\ file\ (Sphinx\ entry\ point)}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ doc.cmake\ \ \ \ \ \ \ \ \#\ Doxygen\ +\ Sphinx\ integration}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ autodocs.cmake\ \ \ \#\ cmake\ file\ to\ automate\ the\ documentation\ build}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ make.bat\ \ \ \ \ \ \ \ \ \#\ Generated\ by\ sphinx-\/quickstart}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ Doxyfile\ \ \ \ \ \ \ \ \ \#\ Doxyfile\ Generated\ by\ Doxygen}
+\DoxyCodeLine{\ \ \ │\ \ \ ├──\ Makefile\ \ \ \ \ \ \ \ \ \#\ Generated\ by\ sphinx-\/quickstart}
+\DoxyCodeLine{\ \ \ ├──\ GLOverlayUI\_app.C\ \ \ \ \#\ Main\ application\ window\ and\ UI\ logic}
+\DoxyCodeLine{\ \ \ ├──\ requirements.txt\ \ \ \ \ \#\ Python\ dependencies\ for\ documentation}
+\DoxyCodeLine{\ \ \ └──\ README.md\ \ \ \ \ \ \ \ \ \ \ \ \#\ Project\ overview}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Build Instructions (\+Linux)}{Build Instructions (Linux)}}\label{index_autotoc_md3}
+✅ Prerequisites Ensure the following packages are installed\+: \begin{quote}
+ cmake build-\/essential libwxgtk3.\+0-\/gtk3-\/dev libgl1-\/mesa-\/dev libglu1-\/mesa-\/dev \end{quote}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Build the project}{Build the project}}\label{index_autotoc_md4}
+From the root of the repository\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/B\ build}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+
+
+{\itshape This will generate the GLOverlay\+UI executable inside the bin/ directory.}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{🚀 Run the Application}{🚀 Run the Application}}\label{index_autotoc_md5}
+\begin{quote}
+\$ ./bin/\+GLOverlay\+UI \end{quote}
+{\itshape {\bfseries{For more detail about the build please see \href{http://localhost:8000/pages/build.html}{\texttt{ here}}}}}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{📦 Dependencies}{📦 Dependencies}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item wx\+Widgets (GUI framework)
+\item Open\+GL (GL/\+GLU for 2D rendering)
+\item CMake ≥ 3.\+11
+\end{DoxyItemize}
+
+PNG loading is handled via wx\+Image (no external image libraries required).\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{🏛️ Architecture Overview}{🏛️ Architecture Overview}}\label{index_autotoc_md7}
+The application is organized into three decoupled components\+:
+
+Component Description Depends on wx\+Widgets renderer Core Open\+GL rendering logic ❌ canvasdriver wx\+GLCanvas wrapper, handles UI integration ✅ \doxylink{classMainFrame}{Main\+Frame} Main UI (panel, slider, checkbox) ✅
+
+This separation enables easy testing and reusability of the rendering logic in other contexts.\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{📸 Screenshots}{📸 Screenshots}}\label{index_autotoc_md8}
+(\mbox{[}\mbox{]}Todo Add a screenshot here showing the scene + overlay + control panel)
+
+📄 License This project is released under the GPLv3 License. See LICENSE for details.\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{🙋‍♂️ Author}{🙋‍♂️ Author}}\label{index_autotoc_md9}
+Made with ❤️ by Umar Ba \href{mailto:jUmarB@protonmail.com}{\texttt{ j\+Umar\+B@protonmail.\+com}} 

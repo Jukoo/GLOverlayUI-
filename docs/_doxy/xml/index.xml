@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classCanvasDriver" kind="class"><name>CanvasDriver</name>
+    <member refid="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" kind="variable"><name>_mouse_grab_state</name></member>
+    <member refid="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" kind="variable"><name>_renderer</name></member>
+    <member refid="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" kind="variable"><name>_show</name></member>
+    <member refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" kind="function"><name>apply_rotation</name></member>
+    <member refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" kind="function"><name>apply_scaling</name></member>
+    <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" kind="function"><name>CanvasDriver</name></member>
+    <member refid="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" kind="function"><name>CanvasDriver_init</name></member>
+    <member refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" kind="function"><name>get_renderer_state</name></member>
+    <member refid="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" kind="function"><name>increase_or_decrease_scaling</name></member>
+    <member refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" kind="function"><name>renderer</name></member>
+    <member refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" kind="function"><name>set_renderer_state</name></member>
+    <member refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" kind="function"><name>toggle_renderer</name></member>
+    <member refid="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" kind="function"><name>~CanvasDriver</name></member>
+  </compound>
+  <compound refid="classGLOverlayUI__APP" kind="class"><name>GLOverlayUI_APP</name>
+    <member refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" kind="function"><name>OnInit</name></member>
+  </compound>
+  <compound refid="classMainFrame" kind="class"><name>MainFrame</name>
+    <member refid="classMainFrame_1a85616e128cefa2af66f8aa13a1dd92c2" kind="variable"><name>_app_icon</name></member>
+    <member refid="classMainFrame_1a055bc506fff0fbb36efa23f0168f0e87" kind="variable"><name>_app_status_text</name></member>
+    <member refid="classMainFrame_1a45b6ad48bb0520166bd50a9c915b82e3" kind="variable"><name>_app_title</name></member>
+    <member refid="classMainFrame_1a5022c6feab3e61163f94f1610eae2e30" kind="variable"><name>_canvas_driver</name></member>
+    <member refid="classMainFrame_1a43014238db291be92074dc55f040c181" kind="variable"><name>_checkbox</name></member>
+    <member refid="classMainFrame_1ac639760e392bf6a511496a023c71da98" kind="variable"><name>_main_boxsizer</name></member>
+    <member refid="classMainFrame_1afa72eb4be849cb064f04d412a7d2c074" kind="variable"><name>_panels</name></member>
+    <member refid="classMainFrame_1a24415cfb4f17df9b50940d38fd4a1962" kind="variable"><name>_slider</name></member>
+    <member refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" kind="function"><name>define_layout</name></member>
+    <member refid="classMainFrame_1adaaef5e8a34f6fe81d7eabef75b33fb7" kind="function"><name>dispatch_layout</name></member>
+    <member refid="classMainFrame_1a2329fd01577ea2ebf4063757ec6ddf2e" kind="function"><name>MainFrame</name></member>
+    <member refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" kind="function"><name>setup_menubar</name></member>
+    <member refid="classMainFrame_1aa727c6800d56dd11e348a179a8506a3f" kind="function"><name>~MainFrame</name></member>
+  </compound>
+  <compound refid="classRenderer" kind="class"><name>Renderer</name>
+    <member refid="classRenderer_1a72a1c4233981f9faafb889953417d8f8" kind="variable"><name>_form_options</name></member>
+    <member refid="classRenderer_1aca021e8884df45198a70b589537e7997" kind="variable"><name>_rot</name></member>
+    <member refid="classRenderer_1ae41404a827d788a10a152f9820a12d01" kind="variable"><name>_scl</name></member>
+    <member refid="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" kind="function"><name>display</name></member>
+    <member refid="classRenderer_1aad725f02dbf870d6b24079769713aa1e" kind="function"><name>downscale</name></member>
+    <member refid="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" kind="function"><name>getforms</name></member>
+    <member refid="classRenderer_1a5e1627b264f10486af827a09e5837edb" kind="function"><name>init</name></member>
+    <member refid="classRenderer_1aa12beb68d3ec044b3445d32b2b25afdd" kind="function"><name>projection</name></member>
+    <member refid="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" kind="function"><name>Renderer</name></member>
+    <member refid="classRenderer_1a55482d49aa42d8e2d13ebed007a25052" kind="function"><name>Renderer</name></member>
+    <member refid="classRenderer_1a693ac5762e3d9b3317038ab111d1ef9f" kind="function"><name>rotate_forms</name></member>
+    <member refid="classRenderer_1ac7b99d2aa500e76f6d4ca0b76c4bc725" kind="function"><name>scale_forms</name></member>
+    <member refid="classRenderer_1afc711f32933d61863420f8443cb4a632" kind="function"><name>setforms</name></member>
+    <member refid="classRenderer_1a276415b914eebfe9f6874b40382ec34c" kind="function"><name>upscale</name></member>
+    <member refid="classRenderer_1add2012f269f157754034e7b5475a8927" kind="function"><name>~Renderer</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="canvasdriver_8H" kind="file"><name>canvasdriver.H</name>
+  </compound>
+  <compound refid="GLOverlayUI__config_8in_8H" kind="file"><name>GLOverlayUI_config.in.H</name>
+    <member refid="GLOverlayUI__config_8in_8H_1a657e487534a7c8d9bbc4e2e2b6472cf5" kind="define"><name>_CONCATENATE</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a7dc1a62b056b6a90505ab5579abdb9aa" kind="define"><name>_PREFIX</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a99b8e0b8713833eda1c418a75ca16da5" kind="define"><name>_STRINGIFY</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a8aad34522f51f4254632370286f27c0a" kind="define"><name>DEF_BASE_SIZE</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1aa94c752bbd681d9dc223733a0f9ad7bb" kind="define"><name>DEF_FRAME_STYLE</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1afbe3a77672a4fa457248548199ef2167" kind="define"><name>GLOverlayUI_APP_NAME</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a4c686751048c45f15a148876d0093675" kind="define"><name>GLOverlayUI_ICO</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a0a887d8ad9ac484ccfc63c004fe46287" kind="define"><name>GLOverlayUI_ICON_APP</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a24dff4f22e962ee5e691eb71c28b7d85" kind="define"><name>GLOverlayUI_TIPS</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a1f1b5a4df0c0fc233918d7ee0fe25d3f" kind="define"><name>GLOverlayUI_VERSION</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1ab6698091c06f224c058b04315666190a" kind="define"><name>MF_SIZE</name></member>
+  </compound>
+  <compound refid="mainframe_8H" kind="file"><name>mainframe.H</name>
+  </compound>
+  <compound refid="renderer_8H" kind="file"><name>renderer.H</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/umar/Desktop/workstation/CGui/WxWidget/include</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,66 @@
+\doxysection{mainframe.\+H}
+\hypertarget{mainframe_8H_source}{}\label{mainframe_8H_source}\index{/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H@{/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H}}
+\mbox{\hyperlink{mainframe_8H}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ !defined(GLOverlayUI\_mainframe\_h)\ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ \ \ \ \ \ GLOverlayUI\_mainframe\_h\ }}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <wx/aboutdlg.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <wx/splitter.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <wx/icon.h>}\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <map>}\ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GLOverlayUI__config_8in_8H}{GLOverlayUI\_config.in.H}}"{}}\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{canvasdriver_8H}{canvasdriver.H}}"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ \ APP\_TITLE\ \ \ \_PREFIX(APP\_NAME)\ \ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ \ APP\_VERSION\ \_PREFIX(VERSION)\ \ }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ \ APP\_ICO\ \ \ \ \ \_PREFIX(ICON\_APP)\ }}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classGLOverlayUI__APP}{GLOverlayUI\_APP}}:\ \textcolor{keyword}{public}\ wxApp}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ public\ :\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGLOverlayUI__APP_a115e689bfa3ba7e46f5afac62c296596}{OnInit}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00048\ \};\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{classMainFrame}{MainFrame}}\ :\ \textcolor{keyword}{public}\ wxFrame\ \ }
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ std::basic\_string<char>\ \_app\_title;\ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ std::basic\_string<char>\ \_app\_status\_text;}
+\DoxyCodeLine{00060\ \ \ \ std::map<std::basic\_string<char>\ \ ,\ wxPanel*>\ \_panels;\ \ \textcolor{comment}{/*\ !\ hold\ the\ panels\ \ */}\ }
+\DoxyCodeLine{00061\ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ wxIcon\ \ \ \ \ \ \ \_app\_icon;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ wxBoxSizer\ \ \ *\ \_main\_boxsizer\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ wxCheckBox\ \ \ *\ \_checkbox\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ wxSlider\ \ \ \ \ *\ \_slider\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}\ *\ \_canvas\_driver\ ;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \textcolor{keywordtype}{void}\ on\_exit(wxCommandEvent\ \&\ evt)\ ;\ }
+\DoxyCodeLine{00070\ \ \ \ \textcolor{keywordtype}{void}\ on\_about(wxCommandEvent\ \&\ evt);\ }
+\DoxyCodeLine{00071\ \ \ \ \textcolor{keywordtype}{void}\ on\_checking(wxCommandEvent\ \ \&\ evt)\ ;\ }
+\DoxyCodeLine{00072\ \ \ \ \textcolor{keywordtype}{void}\ on\_sliding\ (wxCommandEvent\ \&\ evt)\ ;}
+\DoxyCodeLine{00073\ \ \ \ \textcolor{keywordtype}{void}\ on\_sidepanel\_toggle(wxCommandEvent\ \&\ evt)\ ;\ }
+\DoxyCodeLine{00074\ \ \ \ \textcolor{keywordtype}{void}\ on\_refresh(wxCommandEvent\ \&)\ ;\ }
+\DoxyCodeLine{00075\ \ \ \ \textcolor{keywordtype}{void}\ on\_zoom\_in(wxCommandEvent\ \&)\ ;\ \ }
+\DoxyCodeLine{00076\ \ \ \ \textcolor{keywordtype}{void}\ on\_zoom\_out(wxCommandEvent\ \&)\ ;\ \ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00080\ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \mbox{\hyperlink{classMainFrame_a2329fd01577ea2ebf4063757ec6ddf2e}{MainFrame}}(std::basic\_string<char>\ application\_title)\ ;\ \ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMainFrame_aa727c6800d56dd11e348a179a8506a3f}{\string~MainFrame}}()\ ;\ \ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainFrame_a1bd9055232235f241fe40c7ac9d35cda}{setup\_menubar}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainFrame_a84b2c7aa31e7161950f78b669df18b0c}{define\_layout}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainFrame_adaaef5e8a34f6fe81d7eabef75b33fb7}{dispatch\_layout}}\ (\textcolor{keywordtype}{void})\ \ ;\ \ }
+\DoxyCodeLine{00107\ \ \ }
+\DoxyCodeLine{00108\ \};\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif\ \ }}
+
+\end{DoxyCode}
