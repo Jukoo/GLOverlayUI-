@@ -28,18 +28,22 @@
 #include "GLOverlayUI_config.in.H" 
 #include "canvasdriver.H"
 
+/** \cond  */
 #define  APP_TITLE   _PREFIX(APP_NAME)  
 #define  APP_VERSION _PREFIX(VERSION)  
 #define  APP_ICO     _PREFIX(ICON_APP) 
+/** \endcond  */
 
 /**
  * @class  GLOverlayUI_APP 
  * @brief Handle Global Application state
- * */
-
+ */
 class  GLOverlayUI_APP: public wxApp
 {
   public : 
+    /**
+     * @brief Entry  Of the App
+     */
     virtual  bool OnInit(void) ; 
 }; 
 
@@ -47,21 +51,21 @@ class  GLOverlayUI_APP: public wxApp
 /**
  * @class MainFrame 
  * @brief Responsible  about main frame layout GLOverlayUI application 
- * */
+ */
 class  MainFrame : public wxFrame  
 {
-   std::basic_string<char> _app_title;      /* ! Application  Title */
-   std::basic_string<char> _app_status_text;/* ! Application status  text */
+   std::basic_string<char> _app_title;      /** Application  Title */
+   std::basic_string<char> _app_status_text;/** Application status  text */
 
    std::map<std::basic_string<char>  , wxPanel*> _panels;  /* ! hold the panels  */ 
    
-   wxIcon       _app_icon;                  /* ! Application  icon in .ico format */
-   wxBoxSizer   * _main_boxsizer ;          /* ! Main box sizer split the layout in half*/
-   wxCheckBox   * _checkbox ;               /* ! Checkbox  component  */
-   wxSlider     * _slider ;                 /* ! Slider    component  */
-   CanvasDriver * _canvas_driver ;          /* ! CanvasDriver  instance */
+   wxIcon       _app_icon;                  /** Application  icon in .ico format */
+   wxBoxSizer   * _main_boxsizer ;          /** Main box sizer split the layout in half*/
+   wxCheckBox   * _checkbox ;               /** Checkbox  component  */
+   wxSlider     * _slider ;                 /** Slider    component  */
+   CanvasDriver * _canvas_driver ;          /** CanvasDriver  instance */
 
-   /* -- UI Event -- */
+   /** \cond -- UI Event -- */
    void on_exit(wxCommandEvent & evt) ; 
    void on_about(wxCommandEvent & evt); 
    void on_checking(wxCommandEvent  & evt) ; 
@@ -71,37 +75,35 @@ class  MainFrame : public wxFrame
    void on_zoom_in(wxCommandEvent &) ;  
    void on_zoom_out(wxCommandEvent &) ;  
 
+   /** \endcond -- UI Event -- */ 
    public:
+   
    /**
-    *  @fn MainFrame(std::basic_string<char>) 
     *  @brief  MainFrame class Constructor 
     *  @param  application_title  - The Application title 
-    * */
+    */
      MainFrame(std::basic_string<char> application_title) ;  
 
      /**
       * @brief MainFrame class Destructor 
-      **/
+      */
      virtual ~MainFrame() ;  
 
      /**
       * @brief setup the menu bar
-      * */
+      */
      void setup_menubar(void) ; 
 
      /**
       * @brief  define the layout UI 
-      * */
+      */
      void define_layout(void) ; 
-
 
      /**
       * @brief Calculate how the layout rendering  must be shared between panels
       * @return  int - (canvaspanel size | control panel size) 
-      **/
+      */
      virtual int dispatch_layout (void)  ;  
-
-
   
 }; 
 

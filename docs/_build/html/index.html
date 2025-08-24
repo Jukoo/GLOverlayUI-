@@ -1,60 +1,248 @@
 
 <!DOCTYPE html>
-
-<html lang="en" data-content_root="./">
+<html class="no-js" lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GLOverlayUI documentation &#8212; GLOverlayUI v1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
-    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=5283bb3d" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     
-    <script src="_static/documentation_options.js?v=5cb08e4e"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/bizstyle.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="GLOverlayUI API DOCSTRING" href="api-references/index.html" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <!--[if lt IE 9]>
-    <script src="_static/css3-mediaqueries.js"></script>
-    <![endif]-->
-  </head><body>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="api-references/index.html" title="GLOverlayUI API DOCSTRING"
-             accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">GLOverlayUI v1 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">GLOverlayUI documentation</a></li> 
-      </ul>
-    </div>  
+    <meta name="docsearch:name" content="GLOverlayUI" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="v1" />
+    <meta name="docsearch:version" content="" />
+    
+      <meta name="theme-color" content="#0DCAF0" />
+    
+    
+      <title>GLOverlayUI documentation &mdash; GLOverlayUI v1 documentation</title>
+    
+    <link rel="canonical" href="index" />
+      <link rel="icon" href="_static/gloverui.ico" />
+          <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/sphinx-nefertiti-default.min.css?v=3139f035" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/fonts/ubuntu-sans-mono/stylesheet.css?v=8616a587" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-light.css?v=970f37b1" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="genindex.html" />
+        <link rel="search" title="Search" href="search.html" />
+        <link rel="top" title="GLOverlayUI v1 documentation" href="#" />
+        <link rel="next" title="Project Overview" href="pages/project-structure.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Ubuntu Sans Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);}
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a href="#"
+             class="navbar-brand"
+          ><span class="brand-text">GLOverlayUI</span><span class="brand-short-text">GLOverlayUI</span></a>
+        
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-short-text">GLOverlayUI</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+              
+              
+              
+              
+              <!-- lightdark-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Change appearance</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Automatic</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
             
-  <section id="gloverlayui-documentation">
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Index
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/project-structure.html">Project OverViews</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-references/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-references/mainframe.html">Mainframe - The wxWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-references/canvasdriver.html">Canvasdriver - The wxGLCanvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-references/renderer.html">Renderer - The OpenGL Renderer Logic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/build.html">Build Instruction</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/screenshots.html">ScreenShots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/license.html">License</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">GLOverlayUI documentation</li>
+  </ol>
+</nav>
+    <figure class="align-default">
+<img alt="_images/gloverui.ico" src="_images/gloverui.ico" />
+</figure>
+<section id="gloverlayui-documentation">
 <h1>GLOverlayUI documentation<a class="headerlink" href="#gloverlayui-documentation" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/project-structure.html">Project OverViews</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/project-structure.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/project-structure.html#architecture-overview">Architecture Overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api-references/index.html">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api-references/mainframe.html">Mainframe - The wxWrapper</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api-references/mainframe.html#mainframe-the-wxwidget-wrapper">Mainframe : the wxWidget wrapper</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.APP_ICO"><code class="docutils literal notranslate"><span class="pre">APP_ICO</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.APP_TITLE"><code class="docutils literal notranslate"><span class="pre">APP_TITLE</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.APP_VERSION"><code class="docutils literal notranslate"><span class="pre">APP_VERSION</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.DEF_BASE_SIZE"><code class="docutils literal notranslate"><span class="pre">DEF_BASE_SIZE</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.DEF_FRAME_STYLE"><code class="docutils literal notranslate"><span class="pre">DEF_FRAME_STYLE</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#c.MF_SIZE"><code class="docutils literal notranslate"><span class="pre">MF_SIZE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#_CPPv415GLOverlayUI_APP"><code class="docutils literal notranslate"><span class="pre">GLOverlayUI_APP</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api-references/mainframe.html#_CPPv49MainFrame"><code class="docutils literal notranslate"><span class="pre">MainFrame</span></code></a></li>
 </ul>
@@ -63,10 +251,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="api-references/canvasdriver.html">Canvasdriver - The wxGLCanvas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api-references/canvasdriver.html#canvasdriver-the-wxglcanvas-wrapper">CanvasDriver : The wxGLCanvas Wrapper</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api-references/canvasdriver.html#c.__cpp_11"><code class="docutils literal notranslate"><span class="pre">__cpp_11</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/canvasdriver.html#c.mkptr"><code class="docutils literal notranslate"><span class="pre">mkptr</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/canvasdriver.html#c.shrd_allocator"><code class="docutils literal notranslate"><span class="pre">shrd_allocator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/canvasdriver.html#c.uniq_allocator"><code class="docutils literal notranslate"><span class="pre">uniq_allocator</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api-references/canvasdriver.html#_CPPv412CanvasDriver"><code class="docutils literal notranslate"><span class="pre">CanvasDriver</span></code></a></li>
 </ul>
 </li>
@@ -74,16 +258,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="api-references/renderer.html">Renderer - The OpenGL Renderer Logic</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api-references/renderer.html#renderer-the-2d-renderering-opengl-renderig-logic-source">Renderer : The 2D renderering (OpenGL renderig logic source)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.OBJECT_POLYGON"><code class="docutils literal notranslate"><span class="pre">OBJECT_POLYGON</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.OBJECT_QUADS"><code class="docutils literal notranslate"><span class="pre">OBJECT_QUADS</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.OBJECT_TRIANGLES"><code class="docutils literal notranslate"><span class="pre">OBJECT_TRIANGLES</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.OPENGL_OBJECT"><code class="docutils literal notranslate"><span class="pre">OPENGL_OBJECT</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.POLYGON"><code class="docutils literal notranslate"><span class="pre">POLYGON</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.QUADS"><code class="docutils literal notranslate"><span class="pre">QUADS</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.RENDERER_ALL_FORM"><code class="docutils literal notranslate"><span class="pre">RENDERER_ALL_FORM</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#c.TRIANGLES"><code class="docutils literal notranslate"><span class="pre">TRIANGLES</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#_CPPv4N19PhonyNameDueToError9TRIANGLESE"><code class="docutils literal notranslate"><span class="pre">TRIANGLES</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#_CPPv4N19PhonyNameDueToError5QUADSE"><code class="docutils literal notranslate"><span class="pre">QUADS</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api-references/renderer.html#_CPPv48Renderer"><code class="docutils literal notranslate"><span class="pre">Renderer</span></code></a></li>
 </ul>
 </li>
@@ -91,6 +265,25 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pages/build.html">Build Instruction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#build-instructions">Build Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#run-the-application">Run the Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/build.html#id1">Build Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#dependencies-or-prerequisites">Dependencies or Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#basic-build">Basic Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#extended-build-documentation">Extended Build: Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#viewing-documentation">Viewing Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#public-documentation">Public Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/build.html#issues-bug-reports">Issues &amp; Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/screenshots.html">ScreenShots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/screenshots.html#screenshots">Screenshots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/license.html">License</a></li>
 </ul>
 </div>
 </section>
@@ -114,59 +307,6 @@
 <li><p>🔁 Real-time interaction between OpenGL scene and native UI</p></li>
 </ul>
 </section>
-<section id="project-structure">
-<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading">¶</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GLOverlayUI/
-├── assets/              # Assets resources
-│   └── logo/            # Logo Emplacement folder
-│        └── &lt;images&gt;    # Images
-├── src/                 # C++ source files
-│   ├── renderer.C       # OpenGL rendering logic (source) (UI-agnostic)
-│   ├── mainframe.C      # wxWidget  wrapper (source)
-│   ├── canvasdriver.C   # wxGLCanvas wrapper (source)
-├── include/             # C++ header files
-│   ├── renderer.H       # OpenGL rendering logic (header) (UI-agnostic)
-│   ├── canvasdriver.H   # wxGLCanvas wrapper (header)
-│   ├── mainframe.H      # wxWidget wrapper (header)
-│   ├── GLOverlayUI_config.in.H     # Generated  Configuration (header)
-├── CMakeLists.txt       # Build configuration
-├── config/              # Folder  configuration
-│   └── GLOverlayUI_config.in   # Basic Config  of GLOverlayUI application
-├── docs/                # Documentation folder
-│   ├── conf.py          # Sphinx configuration
-│   ├── index.rst        # This file (Sphinx entry point)
-│   ├── doc.cmake        # Doxygen + Sphinx integration
-│   ├── autodocs.cmake   # cmake file to automate the documentation build
-│   ├── make.bat         # Generated by sphinx-quickstart
-│   ├── Doxyfile         # Doxyfile Generated by Doxygen
-│   ├── Makefile         # Generated by sphinx-quickstart
-├── GLOverlayUI_app.C    # Main application window and UI logic
-├── requirements.txt     # Python dependencies for documentation
-└── README.md            # Project overview
-</pre></div>
-</div>
-</section>
-<section id="build-instructions-linux">
-<h2>Build Instructions (Linux)<a class="headerlink" href="#build-instructions-linux" title="Link to this heading">¶</a></h2>
-<p><strong>Prerequisites</strong></p>
-<p>Install required system packages:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w">  </span>cmake<span class="w"> </span>build-essential<span class="w"> </span>libwxgtk3.0-gtk3-dev<span class="w"> </span>libgl1-mesa-dev<span class="w"> </span>libglu1-mesa-dev
-</pre></div>
-</div>
-<p><strong>Build the Project</strong></p>
-<p>From the root of the repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-B<span class="w"> </span>build
-cmake<span class="w"> </span>--build<span class="w"> </span>build
-</pre></div>
-</div>
-<p>The final executable will be located in the <code class="docutils literal notranslate"><span class="pre">bin/</span></code> directory.</p>
-</section>
-<section id="run-the-application">
-<h2>Run the Application<a class="headerlink" href="#run-the-application" title="Link to this heading">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./bin/GLOverlayUI
-</pre></div>
-</div>
-</section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
 <ul class="simple">
@@ -179,124 +319,94 @@ cmake<span class="w"> </span>--build<span class="w"> </span>build
 <p>PNG loading is handled via <code class="docutils literal notranslate"><span class="pre">wxImage</span></code> – no external image library is required.</p>
 </div>
 </section>
-<section id="architecture-overview">
-<h2>Architecture Overview<a class="headerlink" href="#architecture-overview" title="Link to this heading">¶</a></h2>
-<p>The application is organized into <strong>three decoupled components</strong>:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 22.2%" />
-<col style="width: 55.6%" />
-<col style="width: 22.2%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Component</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Depends on wxWidgets</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">renderer</span></code></p></td>
-<td><p>Core OpenGL rendering logic</p></td>
-<td><p>❌</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">canvasdriver</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">canvasdriver</span></code> wrapper, handles UI integration</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">MainFrame</span></code></p></td>
-<td><p>Main UI (panel, slider, checkbox)</p></td>
-<td><p>✅</p></td>
-</tr>
-</tbody>
-</table>
-<p>This clean separation enables easy testing and reusability of the rendering logic in other contexts.</p>
-</section>
-<section id="screenshots">
-<h2>Screenshots<a class="headerlink" href="#screenshots" title="Link to this heading">¶</a></h2>
-<p><em>(&#64;todo  Insert screenshot of the canvas + overlay + side panel here)</em></p>
-</section>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
 <p>This project is released under the GPLv3 License. See <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> for details.</p>
 </section>
 <section id="author">
 <h2>Author<a class="headerlink" href="#author" title="Link to this heading">¶</a></h2>
-<p>Made with ❤️ by <strong>Umar Ba</strong>
-📧 <em>jUmarB&#64;protonmail.com</em></p>
+<p>Created  by   <strong>Umar Ba</strong></p>
+<p>Contact  : <em>jUmarB&#64;protonmail.com</em></p>
+<p>Github link: <em>https://github.com/Jukoo</em></p>
 </section>
 </section>
 
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="#">
-              <img class="logo" src="_static/gloverui-ico.png" alt="Logo of GLOverlayUI"/>
-            </a></p>
-  <div>
-    <h3><a href="#">Table of Contents</a></h3>
-    <ul>
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
 <li><a class="reference internal" href="#">GLOverlayUI documentation</a></li>
 <li><a class="reference internal" href="#gloverlayui">GLOverlayUI</a><ul>
 <li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#project-structure">Project Structure</a></li>
-<li><a class="reference internal" href="#build-instructions-linux">Build Instructions (Linux)</a></li>
-<li><a class="reference internal" href="#run-the-application">Run the Application</a></li>
 <li><a class="reference internal" href="#dependencies">Dependencies</a></li>
-<li><a class="reference internal" href="#architecture-overview">Architecture Overview</a></li>
-<li><a class="reference internal" href="#screenshots">Screenshots</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
 <li><a class="reference internal" href="#author">Author</a></li>
 </ul>
 </li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="api-references/index.html"
-                          title="next chapter">GLOverlayUI API DOCSTRING</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
       </div>
-      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="api-references/index.html" title="GLOverlayUI API DOCSTRING"
-             >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">GLOverlayUI v1 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">GLOverlayUI documentation</a></li> 
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item ms-auto">
+            <a href="pages/project-structure.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Project Overview">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">Project  Overview</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2025, Umar Ba &lt;jUmarB@protonmail.com&gt;.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="GLOverlayUI">
+          <span class="fs-6 fw-bold">GLOverlayUI</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2025, Umar Ba <jUmarB@protonmail.com></li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.2.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.6</a>
+        </div>
+        
+      </div>
     </div>
+  </div>
+</div>
+    </footer>
+    <script src="_static/documentation_options.js?v=5cb08e4e"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/docs-versions.js?v=08b0cbfb"></script>
+    <script src="_static/sphinx-nefertiti.min.js?v=cd4e68e4"></script>
+    <script src="_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
   </body>
 </html>

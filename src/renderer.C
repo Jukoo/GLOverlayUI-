@@ -39,7 +39,7 @@ int Renderer::getforms(void) const
   return _form_options ; 
 }
 
-void Renderer::apply_orthogonal_projection(int x , int y) 
+void Renderer::projection(int x , int y) 
 {
    glViewport(0, 0,x, y);
   glMatrixMode(GL_PROJECTION);

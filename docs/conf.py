@@ -21,6 +21,7 @@ release = 'v1'
 
 extensions = [
         'breathe',
+        'sphinx.ext.graphviz'
         ]
 
 breathe_projects = {
@@ -35,6 +36,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_logo="../assets/logo/gloverui-ico.png"
-html_theme = 'bizstyle'
+html_logo="../assets/logo/gloverui.ico"
+html_favicon="../assets/logo/gloverui.ico" 
+html_theme = 'sphinx_nefertiti'
 html_static_path = ['_static']

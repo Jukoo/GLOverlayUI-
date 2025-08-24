@@ -15,6 +15,7 @@
     - 🧼 Clean separation between rendering engine and UI logic
     - 🔁 Real-time interaction between OpenGL scene and native UI
 
+The Full documentation of the project  is available  [here](https://gloverlayui.readthedocs.io/en/latest) please take a look. 
 
 ## 📁 Project Structure
 
@@ -47,9 +48,6 @@ GLOverlayUI/
    ├── GLOverlayUI_app.C    # Main application window and UI logic
    ├── requirements.txt     # Python dependencies for documentation
    └── README.md            # Project overview
-
-
-
 ```
 
 ##  Build Instructions (Linux)
@@ -72,18 +70,7 @@ From the root of the repository:
  
  > $ ./bin/GLOverlayUI 
 
-###  Extra Build 
-
-To build the complete application  with  the documentation: 
-Make sure to enable the python environment : 
-
-```bash 
-$  python3 -m venv dist 
-$  source dist/bin/activate 
-$  python3 -m pip install -r /docs/requirements.txt # to install  dependencies  
-```
-Once done , you can proceed  with the classical cmake build  above: 
-it'll compile all the sources + docs 
+_**For more detail  about the build please  see [here](http://localhost:8000/pages/build.html)**_
 
 
  📦 Dependencies

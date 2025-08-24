@@ -9,7 +9,7 @@
 
 find_package(Doxygen  REQUIRED) 
 if(NOT DOXYGEN_FOUND)
-  message(SEND_ERROR "Documentation build  Error")
+  message(WARNING "Documentation build  Error")
 endif() 
 
 #-- Prevent to wipe out the pre-configured DOXYFILE   
@@ -43,14 +43,14 @@ execute_process(
 )
 
 if(NOT HTML_BUILD_RESULT EQUAL  "0")
-  message(SEND_ERROR "Fail to Process Doxyfile")
+  message(WARNING "Fail to Process Doxyfile")
 endif() 
 
 #-- Generate the Html Doc  
 
 message(STATUS "Build doc using Sphinx configuration X Breathe Extension")
 if(NOT EXISTS  ${CMAKE_CURRENT_SOURCE_DIR}/docs/index.rst) 
-  message(SEND_ERROR "Not able to generate the html file")
+  message(WARNING  "Not able to generate the html file")
 endif() 
 
 execute_process(
@@ -61,7 +61,7 @@ execute_process(
 )
 
 if(NOT HTML_BUILD_RESULT EQUAL "0") 
-  message(SEND_ERROR  "Fail to build html documentation ressources")
+  message(WARNING "Fail to build html documentation ressources")
   message(INFO  ":|\tCheck if you're under  py virtual env")
   message(WARNING  "\tDo not forget to install the depencies via requirements.txt file")
 else() 

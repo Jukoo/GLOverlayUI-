@@ -22,6 +22,7 @@
 #include <GL/glu.h> 
 #include <cmath> 
 
+/** \cond */
 enum { 
   TRIANGLES,  
 #define TRIANGLES (1 << TRIANGLES) 
@@ -64,6 +65,7 @@ enum {
   glEnd();
 
 
+/** \endcond */
 
 /** 
  * @class  Renderer  
@@ -76,9 +78,10 @@ class  Renderer
   float _rot = 0.0 , 
         _scl = 1.0f; 
   public :
-  /*
+
+  /**
    * @brief  default ctor 
-   * */
+   */
   Renderer() = default  ;
  
   /**
@@ -88,7 +91,7 @@ class  Renderer
 
   /** 
    * @brief  Default dtor 
-   **/
+   */
   virtual  ~Renderer()= default ; 
  
   /** 
@@ -105,19 +108,19 @@ class  Renderer
   /** 
    * @brief retrieve bit mask for current  enabling forms  
    * @return int  - forms flags bit mask  
-   **/
+   */
   int getforms(void) const ; 
 
-  /*
+  /**
    * @brief apply othogonal  projection when  the canvas layou expand  
    * @param  coord  - the coordinate  x - y
-   **/
-  
-  void apply_orthogonal_projection(int xcoords , int ycoords)  ; 
-  
-  /**
-   * @brief rotate by updating the _rot attribute that is responsible for the rotation
    */
+  
+  void projection(int xcoords , int ycoords)  ; 
+  
+  /*
+   * @brief rotate by updating the _rot attribute that is responsible for the rotation
+   **/
     
   void rotate_forms(float angle) ; 
 
@@ -127,10 +130,10 @@ class  Renderer
 
   void scale_forms(float scale) ;  
 
-  /*
+  /**
    * @brief  increase the  scale  produce zoom in  effect 
    * @todo   improve the scale precision 
-   **/
+   */
   void upscale(void) ; 
 
   /**

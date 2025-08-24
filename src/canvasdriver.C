@@ -111,7 +111,7 @@ void CanvasDriver::on_resizing(wxSizeEvent  & evt)
 {
 
   wxSize size =  GetClientSize() ; 
-  _renderer.apply_orthogonal_projection(size.x , size.y) ; 
+  _renderer.projection(size.x , size.y) ; 
   evt.Skip() ; 
   Refresh(false) ; 
 }

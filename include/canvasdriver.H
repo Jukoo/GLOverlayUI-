@@ -26,9 +26,9 @@
 
 #include "renderer.H"
 
-/** 
- * @NOTE : Adapts the memory allocation to the standard C++ (11 -> 17)
- **/
+/** \cond 
+ *   @NOTE : Adapts the memory allocation to the standard C++ (11 -> 17)
+ */
 
 #if defined(__cplusplus) && (__cplusplus >= 201402L ) 
 # define   uniq_allocator(__object)  std::unique_ptr<__object>   
@@ -45,15 +45,17 @@
 # define   __cpp_11
 #endif 
 
+/** \endcond  */
 
 /** 
  * @class CanvasDriver
  * @brief Responsable to render OpenGL stuff  on Canvas Frame layout  
  */
-
 class CanvasDriver : public  wxGLCanvas  
 {
 
+
+  /** \cond  */
   uniq_allocator(wxGLContext) _ctx  ; 
 
   /* --  Canvas  Event --  */
@@ -62,51 +64,50 @@ class CanvasDriver : public  wxGLCanvas
   void on_mouse(wxMouseEvent&) ; 
   void on_mouse_grab(wxMouseEvent&) ; 
   void on_mouse_release(wxMouseEvent&); 
+  /** \endcond  */
   
-  bool _mouse_grab_state = false ;   /* !  Detecte the mouse grab to trigger  rotation  
-                                        on mouse motion  */
-   
-  Renderer _renderer ;               /* !  Renderer instance  */ 
-  bool _show ;                       /* !  The rendere state  */
+  bool _mouse_grab_state = false ;   /**  Detecte the mouse grab to trigger  rotation on mouse motion  */
+  Renderer _renderer ;               /** Renderer instance  */ 
+  bool _show ;                       /** The rendere state  */
   public: 
     /** 
-     * @brief  CanvasDriver  ctor
-     * */
+     * @brief  CanvasDriver  constructor
+     */
     CanvasDriver(wxWindow  * mainframe_parent);
 
     /**
-     * @brief CanvasDriver dtor
-     * */
+     * @brief CanvasDriver destructor
+     */
     virtual  ~CanvasDriver() ; 
 
     /** 
      * @brief  Initialize OpenGL stuff 
-     * */
+     */
     void  CanvasDriver_init(void); 
 
     /**
      * @brief apply  rotation angle  on all form 
      * @param  rotation_angle -  float 
-     * */
+     */
     void apply_rotation(float rotation_angle) ; 
    
     /**
      * @brief apply scaling form
      * @param  scale - float 
-     * */
+     */
     void apply_scaling(float   scale) ;  
   
-    /* 
+    /** 
      * @brief increase or decrease scaling
      * @param symbole  -  unsigned char should be "+" or "-" 
-     **/
+     */
     void increase_or_decrease_scaling(unsigned char ) ;   
 
     /** 
      * @brief Renderer OpenGL frame 
      * @param  forms_bit_mask - Each form can be represented by a mask. 
      *         please see  the  renderer.H  file for more information  
-     **/
+     */
     void renderer(int forms_bit_mask) ; 
 
     /** 
@@ -114,15 +115,15 @@ class CanvasDriver : public  wxGLCanvas
      */
     void toggle_renderer(void) ; 
     
-    /*
+    /**
      * @brief   get the renderer state 
-     * */
+     */
     bool get_renderer_state(void)  ; 
 
-    /*
+    /**
      * @brief  set the renderer  state  
      * @param  state - (true or false)
-     * */
+     */
     void set_renderer_state(bool state) ; 
 }; 
 
