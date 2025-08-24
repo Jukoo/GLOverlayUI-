@@ -21,6 +21,7 @@ release = 'v1'
 
 extensions = [
         'breathe',
+        'sphinx_nefertiti'
         ]
 
 breathe_projects = {
