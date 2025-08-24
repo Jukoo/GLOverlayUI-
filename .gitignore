@@ -3,10 +3,7 @@ dist
 build
 bin
 note.txt 
-docs/_templates/
-docs/_static/
 docs/_doxy/html
 docs/_doxy/xml
 docs/_doxy/latex
-docs/html
 docs/latex
