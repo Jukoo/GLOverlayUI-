@@ -21,6 +21,7 @@ release = 'v1'
 
 extensions = [
         'breathe',
+        'sphinxcontrib.video'
         ]
 
 breathe_projects = {

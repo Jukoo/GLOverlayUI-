@@ -21,7 +21,7 @@ GLOverlayUI documentation
    ScreenShots       <pages/screenshots> 
    Changelogs        <pages/changes>
    License           <pages/license>
-
+   Ressources        <pages/ressources> 
 
 
 GLOverlayUI

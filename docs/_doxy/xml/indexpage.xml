@@ -80,7 +80,7 @@
 <sect2 id="index_1autotoc_md5">
 <title>🚀 Run the Application</title>
 <para><blockquote><para><zwj/>$ ./bin/GLOverlayUI </para>
-</blockquote><emphasis><bold>For more detail about the build please see <ulink url="http://localhost:8000/pages/build.html">here</ulink></bold></emphasis></para>
+</blockquote><emphasis><bold>For more detail about the build please see <ulink url="https://gloverlayui.readthedocs.io/en/latest/pages/build.html">here</ulink></bold></emphasis></para>
 </sect2>
 <sect2 id="index_1autotoc_md6">
 <title>📦 Dependencies</title>
