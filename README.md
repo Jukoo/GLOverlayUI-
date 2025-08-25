@@ -7,10 +7,10 @@
 ## 🖼️ Features
 
 - ✅ OpenGL-powered 2D scene rendered on `wxGLCanvas`
-- 🎯 Clickable UI overlay (PNG icon) rendered directly in OpenGL
+- 🎯 Clickable UI overlay Geometric forms rendered directly in OpenGL
     - Using Mouse motion to control object  rotation 
 - 📌 Toggleable right-side control panel with:
-  - `wxSlider` to control object  scale 
+    - `wxSlider` to control object  scale 
     - `wxCheckBox` to toggle visibility of scene objects
     - 🧼 Clean separation between rendering engine and UI logic
     - 🔁 Real-time interaction between OpenGL scene and native UI
@@ -92,13 +92,13 @@ _**For more detail  about the build please  see [here](https://gloverlayui.readt
 
  This separation enables easy testing and reusability of the rendering logic in other contexts.
 
- 📸 Screenshots
- ---
- ([]Todo  Add a screenshot here showing the scene + overlay + control panel)
+ 📸 Screenshots   & Demo 
+ --- 
+ Please Take a Look  [Here](https://gloverlayui.readthedocs.io/en/latest/pages/screenshots.html)
 
  📄 License
- This project is released under the GPLv3 License. See LICENSE for details.
+ This project is released under the GPLv3 License. See [LICENSE](https://gloverlayui.readthedocs.io/en/latest/pages/license.html) for details.
 
- 🙋‍♂️ Author
+ Author
  ---
- Made with ❤️  by  Umar Ba <jUmarB@protonmail.com> 
+ Umar Ba <jUmarB@protonmail.com> 
