@@ -19,6 +19,7 @@ GLOverlayUI documentation
    API Reference <api-references/index>
    Build Instruction <pages/build>
    ScreenShots       <pages/screenshots> 
+   Changelogs        <pages/changes>
    License           <pages/license>
 
 
