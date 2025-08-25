@@ -12,44 +12,44 @@ Screenshots & Demo
 ==================
 
 
-.. figure:: ../../assets/screenshots/app.png
+.. figure:: ../_static/screenshots/app.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: Main Application
    :align: left
 
-.. figure:: ../../assets/screenshots/app-aboutdialog.png 
+.. figure:: ../_static/screenshots/app-aboutdialog.png 
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: About dialog
    :align: right
-.. figure:: ../../assets/screenshots/app-viewmenu.png
+.. figure:: ../_static/screenshots/app-viewmenu.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: View Menu
    :align: left
-.. figure:: ../../assets/screenshots/app-helpmenu.png
+.. figure:: ../_static/screenshots/app-helpmenu.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: Help Menu
    :align: right
-.. figure:: ../../assets/screenshots/app-scalingobject.png
+.. figure:: ../_static/screenshots/app-scalingobject.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: Scaling Object
    :align: left
-.. figure:: ../../assets/screenshots/app-hideobject.png
+.. figure:: ../_static/screenshots/app-hideobject.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
    :alt: Scaling Object
    :align: right
-.. figure:: ../../assets/screenshots/app-hiddensidepanel.png
+.. figure:: ../_static/screenshots/app-hiddensidepanel.png
    :height: 200px
    :width: 200 px
    :scale: 50 %
@@ -58,7 +58,7 @@ Screenshots & Demo
 
 
 
-.. video:: ../../assets/demo.mp4
+.. video:: ../_static/demo.mp4
    :autoplay:
    :width: 800
    :height: 764
