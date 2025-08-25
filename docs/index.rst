@@ -12,16 +12,15 @@ GLOverlayUI documentation
 
 
 .. toctree::
-   :maxdepth: 4
-   :caption: Contents:
+   :hidden: 
 
    Project OverViews <pages/project-structure> 
    API Reference <api-references/index>
    Build Instruction <pages/build>
-   ScreenShots       <pages/screenshots> 
+   ScreenShots & Demo       <pages/screenshots> 
    Changelogs        <pages/changes>
+   Acknowledgments & Resources        <pages/acknowledgments_and_resources> 
    License           <pages/license>
-   Ressources        <pages/ressources> 
 
 
 GLOverlayUI
@@ -31,14 +30,15 @@ GLOverlayUI
 
 It features an interactive 2D scene rendered on a ``wxGLCanvas``, including a clickable OpenGL overlay and a dynamic control panel using native UI widgets.
 
+The Project is available `HERE! <https://github.com/Jukoo/GLOverlayUI->`_ 
+
 Features
 --------
 
 - ✅ OpenGL-powered 2D scene rendered on ``wxGLCanvas``
 - 🎯 Clickable UI overlay (PNG icon) rendered directly in OpenGL
 - 📌 Toggleable right-side control panel with:
-  -  + using Mouse motion to control object  rotation [Feature] 
-
+  -  Using Mouse motion to control object  rotation [Feature] 
   - ``wxSlider`` to control object rotation or scale
   - ``wxCheckBox`` to toggle visibility of scene objects
 
@@ -55,21 +55,21 @@ Dependencies
 
 .. note::
 
-   PNG loading is handled via ``wxImage`` – no external image library is required.
+   PNG loading is handled via ``wxImage`` and 'wxIcon' – no external image library is required.
+   The Rendering 2D Object is made by using OpenGL Rendering   Pipeline
 
 
 License
 -------
 
-This project is released under the GPLv3 License. See ``LICENSE`` for details.
+This project is released under the GPLv3 License. See  `LICENSE <pages/license>`_ for details.
 
 
 Author
 ------
 
-Created  by   **Umar Ba** 
+Created  by   **Umar Ba**  
 
-Contact  : *jUmarB@protonmail.com*
-
-Github link: *https://github.com/Jukoo*
-
+- `Github Profile <https://github.com/Jukoo>`_
+- See Project Progression at `github.com/Jukoo/GLOverlayUI- <https://github.com/Jukoo/GLOverlayUI->`_
+- Contact `jUmarB@protonmail.com <jUmarB@protonmail.com>`_

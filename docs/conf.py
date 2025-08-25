@@ -38,5 +38,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_logo="../assets/logo/gloverui.ico"
 html_favicon=html_logo 
-html_theme = 'bizstyle'
+#html_theme = 'bizstylei'
+html_theme ='sphinx_rtd_theme'
 html_static_path = ['_static']
