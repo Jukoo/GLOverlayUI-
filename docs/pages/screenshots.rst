@@ -59,6 +59,5 @@ Screenshots & Demo
 
 
 .. video:: ../_static/demo.mp4
-   :autoplay:
-   :width: 800
-   :height: 764
+   :width:  600
+   :height: 700
