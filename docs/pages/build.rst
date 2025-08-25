@@ -1,6 +1,6 @@
-**************************
-Build Instructions (Linux)
-**************************
+******************************
+Build Instructions (GNU/Linux)
+******************************
 
 .. toctree:: 
    :maxdepth: 4
@@ -53,7 +53,13 @@ On Linux, ensure the following packages are available:
    sudo <your package-manager-install> cmake build-essential libwxgtk3.0-gtk3-dev \
         libgl1-mesa-dev libglu1-mesa-dev
 
-Optional (for documentation build):
+.. warning:: 
+
+   To find out the names of the packages, please search using your package manager. 
+   The names may vary depending on the Linux distribution.
+
+
+**Optional (for documentation build):**
 
 - Python 3 (recommended via `pyenv` or `venv`)
 - Doxygen
@@ -137,6 +143,6 @@ Issues & Bug Reports
 --------------------
 
 If you encounter problems building the project or discover bugs,
-please open an issue on the GitHub repository.
+please open an issue on the `GitHub repository <https://github.com/Jukoo/GLOverlayUI->`_.
 
-Happy hacking! 🚀
+Happy hacking Folks! 🚀
