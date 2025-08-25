@@ -37,5 +37,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_logo="../assets/logo/gloverui.ico"
 html_favicon=html_logo 
-html_theme = 'pydata_sphinx_theme'
+html_theme = 'furo'
 html_static_path = ['_static']
