@@ -21,6 +21,7 @@
 #include <GL/gl.h> 
 #include <GL/glu.h> 
 #include <cmath> 
+#include <vector> 
 
 /** \cond */
 enum { 
@@ -63,6 +64,7 @@ enum {
   glBegin(GL_##__figure);\
   OBJECT_##__figure\
   glEnd();
+
 
 
 /** \endcond */
@@ -142,6 +144,11 @@ class  Renderer
    */
   void downscale(void) ;  
 
+  /** 
+   * @brief  draw form on given lists of coordinates 
+   * @param  points -  a list of points  
+   */
+  void draw(std::vector<float> points) ; 
 
   /**
    * @brief  display OpenGL  forms  in Canvas Area   

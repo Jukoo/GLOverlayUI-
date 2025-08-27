@@ -22,7 +22,8 @@
 #include <wx/glcanvas.h>
 #include <GL/gl.h> 
 #include <GL/glu.h>
-#include <memory> 
+#include <memory>
+#include <map>  
 
 #include "renderer.H"
 
@@ -45,6 +46,52 @@
 # define   __cpp_11
 #endif 
 
+enum __button_overlay_position_t{ 
+  TOP_LEFT , 
+#define TOP_LEFT       (1 << TOP_LEFT) 
+  BOTTOM_LEFT,
+#define  BOTTOM_LEFT   (1 << BOTTOM_LEFT) 
+  TOP_RIGHT, 
+#define  TOP_RIGHT     (1 << TOP_RIGHT) 
+  BOTTOM_RIGHT, 
+#define  BOTTOM_RIGHT  (1 << BOTTOM_RIGHT) 
+};
+
+#define  X  0.9f, 0.7f
+#define  Y  0.8f, 0.9f 
+
+#define  POS    0x2b   
+#define  NEG    0x2d 
+
+/** 
+ *   This bunch of macro bellow  represente the  xy  coords : 
+ *                ^
+ *                |(y) + 
+ *    TOP_LEFT    |   TOP_RIGHT 
+ *       - _______.________> (x) +
+ *                |
+ *   BOTTOM_LEFT  |   BOTTOM_RIGHT   
+ *             -  | 
+ *                v 
+ */
+
+#define  SIGN_TOP_LEFT     ('-'<<8|'+')          /** x negative & y positive   */
+#define  DRAW_BUTTON_TOP_LEFT  (SIGN_TOP_LEFT <<4 | TOP_LEFT)
+
+#define  SIGN_TOP_RIGHT    ('+'<<8|'+')          /** x positive & y positive */  
+#define  DRAW_BUTTON_TOP_RIGHT  (SIGN_TOP_RIGHT << 4 | TOP_RIGHT) 
+
+#define  SIGN_BOTTOM_LEFT  ('-'<<8|'-')           /** x negative & y  negative */ 
+#define  DRAW_BUTTON_BOTTOM_LEFT  (SIGN_BOTTOM_LEFT << 4 | BOTTOM_LEFT)
+
+#define  SIGN_BOTTOM_RIGHT ('+'<<8|'-')          /** x positive & y negative */
+#define  DRAW_BUTTON_BOTTOM_RIGHT  (SIGN_BOTTOM_RIGHT << 4 | BOTTOM_RIGHT) 
+
+
+#define SIGN(_position) SIGN_##_position 
+#define DRAW(_position) DRAW_##_position   
+
+
 /** \endcond  */
 
 /** 
@@ -58,6 +105,8 @@ class CanvasDriver : public  wxGLCanvas
   /** \cond  */
   uniq_allocator(wxGLContext) _ctx  ; 
 
+  
+
   /* --  Canvas  Event --  */
   void on_painting(wxPaintEvent&) ; 
   void on_resizing(wxSizeEvent&) ; 
@@ -69,6 +118,7 @@ class CanvasDriver : public  wxGLCanvas
   bool _mouse_grab_state = false ;   /**  Detecte the mouse grab to trigger  rotation on mouse motion  */
   Renderer _renderer ;               /** Renderer instance  */ 
   bool _show ;                       /** The rendere state  */
+  std::vector<float> button_area ;  
   public: 
     /** 
      * @brief  CanvasDriver  constructor
@@ -124,7 +174,16 @@ class CanvasDriver : public  wxGLCanvas
      * @brief  set the renderer  state  
      * @param  state - (true or false)
      */
-    void set_renderer_state(bool state) ; 
+    void set_renderer_state(bool state) ;
+    
+    /** 
+     * @brief make kind of sketch mappin point 
+     *        to place the coordinate of each point  
+     *        depending where the form should be appear  
+     * @param  where  - the location   ( TOP_LEFT , TOP_RIGHT ,BOTTOM_LEFT ,BOTTOM_RIGHT )
+     */
+    void sketch_map(int where = TOP_LEFT /* TOP_LEFT as default value */)  ; 
+
 }; 
 
 #endif  /*! GLOverlayUI_canvasdriver_h */

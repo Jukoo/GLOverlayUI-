@@ -110,7 +110,7 @@ void MainFrame::define_layout(void)
 
   int i = 0 ; 
   for (auto  const & panel :  _panels )  
-    _main_boxsizer->Add(panel.second, (i=-~i), wxEXPAND|wxALL , 5) ; 
+    _main_boxsizer->Add(panel.second, (i=-~i), wxEXPAND|wxALL , 0) ; 
 
   SetSizer(_main_boxsizer) ;  
   Center() ; 

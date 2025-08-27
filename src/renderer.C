@@ -41,7 +41,7 @@ int Renderer::getforms(void) const
 
 void Renderer::projection(int x , int y) 
 {
-   glViewport(0, 0,x, y);
+  glViewport(0, 0,x, y);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
 
@@ -114,4 +114,20 @@ void Renderer::downscale(void)
    }
   
   _scl-- ;  
+}
+
+void  Renderer::draw(std::vector<float> points)  
+{
+   //!For this moment this routine is just static  
+   //!@todo : need to be improve in near future 
+   
+   glColor3f(1,1,1) ; 
+ 
+   glBegin(GL_QUADS); 
+   glVertex2f(points[0] ,  points[3]) ; 
+   glVertex2f(points[0] ,  points[2]) ; 
+   glVertex2f(points[1] ,  points[2]) ; 
+   glVertex2f(points[1] ,  points[3]) ; 
+   glEnd() ; 
+
 }

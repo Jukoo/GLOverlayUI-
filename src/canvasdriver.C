@@ -58,10 +58,10 @@ void CanvasDriver::renderer(int forms)
 {
 
   SetCurrent(*_ctx) ;
-  
   _renderer.setforms(forms) ;  
   _renderer.display()  ;
-
+  
+  sketch_map() ; 
   SwapBuffers() ;  
    
 }
@@ -119,13 +119,15 @@ void CanvasDriver::on_resizing(wxSizeEvent  & evt)
 
 void CanvasDriver::on_mouse(wxMouseEvent& evt) 
 { 
+  wxPoint cursor_position=  evt.GetPosition() ;
+  //mouse_motion_action_on(CANVAS_OVERLAY_BUTTON ,cursor_position,  /*propagation=false */) ; 
   if(_mouse_grab_state) 
   {
-    wxPoint position=  evt.GetPosition() ;
-    float angle =  (position.x * position.y)  /  360.f ; 
+    float angle =  (cursor_position.x * cursor_position.y)  /  360.f ; 
     apply_rotation(static_cast<float>(angle)) ;
-
   }
+  
+  
 }
 
 void CanvasDriver::on_mouse_grab(wxMouseEvent& evt ) 
@@ -147,5 +149,39 @@ void CanvasDriver::increase_or_decrease_scaling(unsigned char  symbole)
   
   if (!((symbole & 0xff) ^ 0x2d))  
     _renderer.downscale() ; 
+}
+
+
+void CanvasDriver::sketch_map(int where) 
+{
+  unsigned int sign_mask   =0; 
+  
+  switch(where  & 0xf )
+  {
+    case   TOP_RIGHT : sign_mask  = SIGN(TOP_RIGHT) ; break; 
+    case   TOP_LEFT : sign_mask  = SIGN(TOP_LEFT) ; break; 
+    case   BOTTOM_RIGHT : sign_mask  = SIGN(BOTTOM_RIGHT) ; break; 
+    case   BOTTOM_LEFT : sign_mask  = SIGN(BOTTOM_LEFT) ; break; 
+  } 
+  
+  int x_sign = (sign_mask>>8)  ,
+      y_sign = (sign_mask & 0xff) ; 
+  
+  std::vector<float> points {X,Y};  
+
+  int y_coord_strating  = 0 ,
+      j=0 ; 
+
+  for (float i : points ) 
+  {
+     if(!(y_coord_strating&~(1) )) 
+       button_area.push_back(!(x_sign ^ NEG) ? -i: i) ;  
+     else
+       button_area.push_back(!(y_sign ^ POS) ?  i:-i) ; 
+
+     y_coord_strating-=~0 ; 
+  }
+  
+  _renderer.draw(button_area) ; 
 }
 
