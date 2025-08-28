@@ -119,8 +119,9 @@ void CanvasDriver::on_resizing(wxSizeEvent  & evt)
 
 void CanvasDriver::on_mouse(wxMouseEvent& evt) 
 { 
-  wxPoint cursor_position=  evt.GetPosition() ;
-  //mouse_motion_action_on(CANVAS_OVERLAY_BUTTON ,cursor_position,  /*propagation=false */) ; 
+  wxPoint cursor_position=  evt.GetPosition(); 
+
+  mouse_motion_action_on(CanvasDriver::overlay_button, &evt) ;  //  /*,propagation=false */) ; 
   if(_mouse_grab_state) 
   {
     float angle =  (cursor_position.x * cursor_position.y)  /  360.f ; 
@@ -182,6 +183,41 @@ void CanvasDriver::sketch_map(int where)
      y_coord_strating-=~0 ; 
   }
   
+  /** @todo : move this function away of sketch_map 
+   *          sketch_map should be a generic function to sketch_map  whatever */ 
   _renderer.draw(button_area) ; 
 }
 
+void CanvasDriver::mouse_motion_action_on(void (*what)(wxMouseEvent*, void * data),  wxMouseEvent* evt)   
+{
+  struct motion_metadata data =  { 
+     GetSize() , 
+     button_area
+  }; 
+
+  what(evt, (void *)&data); 
+}
+
+void CanvasDriver::overlay_button(wxMouseEvent * mouse ,  void *  extradata)    
+{
+
+  struct  motion_metadata *data =  (struct motion_metadata *) extradata ; 
+  wxPoint  mp =  mouse->GetPosition() ; 
+
+  struct gl_coords_translation { 
+     float x ; 
+     float y ; 
+  } gl_coords={
+       (2.f  * mp.x / data->_size.GetWidth())   - 1.f , 
+       (1.f  - (2.f * mp.y  / data->_size.GetHeight())) 
+  } ;
+  float  x1  =data->_reference_coords[0]  , 
+         x2  =data->_reference_coords[1]  , 
+         y1  =data->_reference_coords[2]  , 
+         y2  =data->_reference_coords[3] ; 
+  if( (gl_coords.x >= x1   && gl_coords.x <= x2 ) && 
+       gl_coords.y >= y1   && gl_coords.y <= y2 ) 
+  {
+     
+  } 
+}

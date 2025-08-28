@@ -19,11 +19,13 @@
 #define  GLOverlayUI_canvasdriver_h 
 
 #include <wx/wx.h> 
+#include <wx/window.h>
+#include <wx/gdicmn.h>
 #include <wx/glcanvas.h>
 #include <GL/gl.h> 
 #include <GL/glu.h>
 #include <memory>
-#include <map>  
+#include <map>
 
 #include "renderer.H"
 
@@ -94,6 +96,11 @@ enum __button_overlay_position_t{
 
 /** \endcond  */
 
+struct motion_metadata { 
+  wxSize _size;
+  std::vector<float> _reference_coords ; 
+}; 
+
 /** 
  * @class CanvasDriver
  * @brief Responsable to render OpenGL stuff  on Canvas Frame layout  
@@ -116,9 +123,11 @@ class CanvasDriver : public  wxGLCanvas
   /** \endcond  */
   
   bool _mouse_grab_state = false ;   /**  Detecte the mouse grab to trigger  rotation on mouse motion  */
-  Renderer _renderer ;               /** Renderer instance  */ 
-  bool _show ;                       /** The rendere state  */
-  std::vector<float> button_area ;  
+  Renderer _renderer ;               /**  Renderer instance  */ 
+  bool _show ;                       /**  The rendere state  */
+  std::vector<float> button_area ;   /**  Hold the coords of "Button"*/ 
+  wxSize canvas_surface  ; 
+
   public: 
     /** 
      * @brief  CanvasDriver  constructor
@@ -175,14 +184,30 @@ class CanvasDriver : public  wxGLCanvas
      * @param  state - (true or false)
      */
     void set_renderer_state(bool state) ;
-    
-    /** 
+   
+
+   /*
+    * @brief  specialized function to trac mouse motion on canvas 
+    * @param  custom function that define the behavior   
+    * @param  cursor_position - cursor position
+    */
+
+   void mouse_motion_action_on(void (*what)(wxMouseEvent*, void * ) , wxMouseEvent*  ) ; 
+  
+   /** 
      * @brief make kind of sketch mappin point 
      *        to place the coordinate of each point  
      *        depending where the form should be appear  
      * @param  where  - the location   ( TOP_LEFT , TOP_RIGHT ,BOTTOM_LEFT ,BOTTOM_RIGHT )
      */
     void sketch_map(int where = TOP_LEFT /* TOP_LEFT as default value */)  ; 
+
+    /**
+     * @brief  a specialized  function to detecte  mouse action on "button"
+     * @param  mouse coords  as reference  
+     */
+
+    static void overlay_button(  wxMouseEvent * , void * ) ;  
 
 }; 
 
