@@ -97,8 +97,9 @@ enum __button_overlay_position_t{
 /** \endcond  */
 
 struct motion_metadata { 
-  wxSize _size;
-  std::vector<float> _reference_coords ; 
+  wxSize _size;                             /**  Hold the area size of   the canvas  */
+  std::vector<float> _reference_coords ;    /**  coords reference you want to lookup */
+  void  * status ;                          /**  status it can be anything. You can use it pass data in or out */  
 }; 
 
 /** 
@@ -118,7 +119,6 @@ class CanvasDriver : public  wxGLCanvas
   void on_painting(wxPaintEvent&) ; 
   void on_resizing(wxSizeEvent&) ; 
   void on_mouse(wxMouseEvent&) ; 
-  void on_mouse_grab(wxMouseEvent&) ; 
   void on_mouse_release(wxMouseEvent&); 
   /** \endcond  */
   
@@ -192,7 +192,7 @@ class CanvasDriver : public  wxGLCanvas
     * @param  cursor_position - cursor position
     */
 
-   void mouse_motion_action_on(void (*what)(wxMouseEvent*, void * ) , wxMouseEvent*  ) ; 
+   void *mouse_motion_action_on(void (*what)(wxMouseEvent*, void * extradata) , wxMouseEvent*  ) ; 
   
    /** 
      * @brief make kind of sketch mappin point 
@@ -208,6 +208,8 @@ class CanvasDriver : public  wxGLCanvas
      */
 
     static void overlay_button(  wxMouseEvent * , void * ) ;  
+
+  void on_mouse_grab(wxMouseEvent&) ; 
 
 }; 
 

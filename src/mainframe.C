@@ -42,6 +42,7 @@ MainFrame::MainFrame(std::basic_string<char> app_title) :
   Bind(wxEVT_MENU , &MainFrame::on_zoom_in , this , wxID_ZOOM_IN) ; 
   Bind(wxEVT_MENU , &MainFrame::on_zoom_out , this , wxID_ZOOM_OUT) ; 
 
+  Bind(wxEVT_MOTION , &MainFrame::on_canvas_overlay_btn , this) ;  
 }
 
 MainFrame::~MainFrame(){}  
@@ -172,13 +173,12 @@ void  MainFrame::on_sliding(wxCommandEvent  & evt)
 void MainFrame::on_sidepanel_toggle(wxCommandEvent &evt) 
 {
   static bool toggle_state =false ; 
-  toggle_state^=1 ; 
-
+  toggle_state^=1 ;  
   if (toggle_state)
     _main_boxsizer->Hide(&*_panels["ctrl"]) ;  
   else 
     _main_boxsizer->Show(&*_panels["ctrl"]) ;  
-
+   
   Layout() ;
 }
 
@@ -197,3 +197,13 @@ void MainFrame::on_zoom_out(wxCommandEvent & evt)
 {
   _canvas_driver->increase_or_decrease_scaling('-')  ;  
 }
+
+
+void MainFrame::on_canvas_overlay_btn(wxMouseEvent &evt) 
+{
+
+  std::puts("triggered") ; 
+  _canvas_driver->on_mouse_grab(evt) ; 
+
+}
+

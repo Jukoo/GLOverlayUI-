@@ -121,7 +121,6 @@ void CanvasDriver::on_mouse(wxMouseEvent& evt)
 { 
   wxPoint cursor_position=  evt.GetPosition(); 
 
-  mouse_motion_action_on(CanvasDriver::overlay_button, &evt) ;  //  /*,propagation=false */) ; 
   if(_mouse_grab_state) 
   {
     float angle =  (cursor_position.x * cursor_position.y)  /  360.f ; 
@@ -133,8 +132,27 @@ void CanvasDriver::on_mouse(wxMouseEvent& evt)
 
 void CanvasDriver::on_mouse_grab(wxMouseEvent& evt ) 
 {
-   _mouse_grab_state^=1 ; 
-   (_mouse_grab_state) ?  CaptureMouse() : ReleaseMouse() ; 
+
+  bool * btn_pressed = (bool *) mouse_motion_action_on(CanvasDriver::overlay_button, &evt); 
+  
+  static  char  prevent_debounce = 2 ; 
+  if(btn_pressed)
+  { 
+     if(0  == prevent_debounce) 
+     {
+       wxCommandEvent mainframe_panel_toggle_evt(wxEVT_MENU, wxID_JUMP_TO);
+       mainframe_panel_toggle_evt.SetEventObject(this);
+       GetParent()->GetEventHandler()->ProcessEvent(mainframe_panel_toggle_evt);
+       prevent_debounce =  2 ; 
+     }
+    
+    prevent_debounce+=~0;  
+    return ; 
+  } 
+
+  _mouse_grab_state^=1 ; 
+  (_mouse_grab_state) ? CaptureMouse() : ReleaseMouse() ;  
+
 }
 
 void CanvasDriver::on_mouse_release(wxMouseEvent & evt) 
@@ -145,10 +163,10 @@ void CanvasDriver::on_mouse_release(wxMouseEvent & evt)
 
 void CanvasDriver::increase_or_decrease_scaling(unsigned char  symbole) 
 { 
-  if (!((symbole & 0xff)  ^ 0x2b)) 
+  if (!((symbole & 0xff)  ^ POS)) 
     _renderer.upscale() ;  
   
-  if (!((symbole & 0xff) ^ 0x2d))  
+  if (!((symbole & 0xff) ^ NEG))  
     _renderer.downscale() ; 
 }
 
@@ -188,14 +206,17 @@ void CanvasDriver::sketch_map(int where)
   _renderer.draw(button_area) ; 
 }
 
-void CanvasDriver::mouse_motion_action_on(void (*what)(wxMouseEvent*, void * data),  wxMouseEvent* evt)   
+void  *  CanvasDriver::mouse_motion_action_on(void (*what)(wxMouseEvent*, void * data),  wxMouseEvent* evt)   
 {
-  struct motion_metadata data =  { 
+  struct motion_metadata data =  {
      GetSize() , 
-     button_area
+     button_area, 
+     (void *) 0   
   }; 
 
-  what(evt, (void *)&data); 
+  what(evt, (void *)&data);  
+  
+  return  data.status  ;
 }
 
 void CanvasDriver::overlay_button(wxMouseEvent * mouse ,  void *  extradata)    
@@ -214,10 +235,12 @@ void CanvasDriver::overlay_button(wxMouseEvent * mouse ,  void *  extradata)
   float  x1  =data->_reference_coords[0]  , 
          x2  =data->_reference_coords[1]  , 
          y1  =data->_reference_coords[2]  , 
-         y2  =data->_reference_coords[3] ; 
-  if( (gl_coords.x >= x1   && gl_coords.x <= x2 ) && 
+         y2  =data->_reference_coords[3]  ;  
+   
+  if ( (gl_coords.x >= x1   && gl_coords.x <= x2 ) && 
        gl_coords.y >= y1   && gl_coords.y <= y2 ) 
-  {
-     
-  } 
+    data->status = (void *) 1 ; 
+  else 
+    data->status = (void *) 0 ; 
+
 }
