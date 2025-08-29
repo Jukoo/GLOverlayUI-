@@ -30,6 +30,8 @@
 #define  _PREFIX(__prefix)\
          GLOverlayUI_ ## __prefix 
 
+#define  GLOverlayUI_IMG_OVBTN_PNG "@CMAKE_CURRENT_SOURCE_DIR@/assets/setting.png"
+#define  GLOverlayUI_IMG_OVBTN_ICO "@CMAKE_CURRENT_SOURCE_DIR@/assets/setting.ico"
 
 /*!  Define  the default base size of the frame  */
 #if !defined(DEF_BASE_SIZE)

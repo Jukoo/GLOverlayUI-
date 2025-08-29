@@ -22,11 +22,12 @@
 #include <wx/window.h>
 #include <wx/gdicmn.h>
 #include <wx/glcanvas.h>
-#include <GL/gl.h> 
+#include <GL/gl.h>
+#include <string> 
 #include <GL/glu.h>
 #include <memory>
 #include <map>
-
+#include "GLOverlayUI_config.in.H"
 #include "renderer.H"
 
 /** \cond 
@@ -59,8 +60,8 @@ enum __button_overlay_position_t{
 #define  BOTTOM_RIGHT  (1 << BOTTOM_RIGHT) 
 };
 
-#define  X  0.9f, 0.7f
-#define  Y  0.8f, 0.9f 
+#define  X  0.9f, 0.75f
+#define  Y  0.85f, 0.9f 
 
 #define  POS    0x2b   
 #define  NEG    0x2d 
@@ -128,6 +129,7 @@ class CanvasDriver : public  wxGLCanvas
   std::vector<float> button_area ;   /**  Hold the coords of "Button"*/ 
   wxSize canvas_surface  ; 
 
+  GLuint  texture;  
   public: 
     /** 
      * @brief  CanvasDriver  constructor
@@ -209,7 +211,11 @@ class CanvasDriver : public  wxGLCanvas
 
     static void overlay_button(  wxMouseEvent * , void * ) ;  
 
-  void on_mouse_grab(wxMouseEvent&) ; 
+
+    void apply_texture_button(const wxString  & image) ;
+
+
+    void on_mouse_grab(wxMouseEvent&) ; 
 
 }; 
 

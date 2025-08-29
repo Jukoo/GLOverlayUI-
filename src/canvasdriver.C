@@ -22,13 +22,19 @@
 #include "renderer.H"  
 #include "canvasdriver.H"
 
+
+unsigned  int texture ; 
 CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) : 
   wxGLCanvas(mainframe_parent) 
 {
 
   
    _ctx =  mkptr(unique ,  wxGLContext, this) ; 
+      
+
    CanvasDriver_init() ;  
+   wxInitAllImageHandlers(); 
+   apply_texture_button(GLOverlayUI_IMG_OVBTN_PNG); 
 
    Bind(wxEVT_PAINT , &CanvasDriver::on_painting , this) ; 
    Bind(wxEVT_SIZE , &CanvasDriver::on_resizing ,  this) ; 
@@ -40,7 +46,8 @@ CanvasDriver::CanvasDriver(wxWindow  * mainframe_parent) :
 
 void CanvasDriver::CanvasDriver_init(void) 
 {
-   _renderer.init() ;  
+   _renderer.init() ; 
+  
 }
  
 
@@ -57,13 +64,20 @@ CanvasDriver::~CanvasDriver()
 void CanvasDriver::renderer(int forms) 
 {
 
+  wxPaintDC dc (this) ; 
+
   SetCurrent(*_ctx) ;
   _renderer.setforms(forms) ;  
-  _renderer.display()  ;
+  _renderer.display()  ; 
+  sketch_map() ;  
+  SwapBuffers() ; 
+
+
+  dc.SetTextForeground(*wxBLACK);
+  //dc.DrawText("⚙️ ", 40,50);
   
-  sketch_map() ; 
-  SwapBuffers() ;  
-   
+  wxIcon  icon = wxIcon(GLOverlayUI_IMG_OVBTN_ICO, wxBITMAP_TYPE_ICO  ,-2, -10) ; 
+  dc.DrawIcon(icon, 30,30) ; 
 }
 
 bool CanvasDriver::get_renderer_state(void) 
@@ -127,7 +141,6 @@ void CanvasDriver::on_mouse(wxMouseEvent& evt)
     apply_rotation(static_cast<float>(angle)) ;
   }
   
-  
 }
 
 void CanvasDriver::on_mouse_grab(wxMouseEvent& evt ) 
@@ -174,7 +187,7 @@ void CanvasDriver::increase_or_decrease_scaling(unsigned char  symbole)
 void CanvasDriver::sketch_map(int where) 
 {
   unsigned int sign_mask   =0; 
-  
+
   switch(where  & 0xf )
   {
     case   TOP_RIGHT : sign_mask  = SIGN(TOP_RIGHT) ; break; 
@@ -203,7 +216,7 @@ void CanvasDriver::sketch_map(int where)
   
   /** @todo : move this function away of sketch_map 
    *          sketch_map should be a generic function to sketch_map  whatever */ 
-  _renderer.draw(button_area) ; 
+  _renderer.draw(button_area , texture)  ; 
 }
 
 void  *  CanvasDriver::mouse_motion_action_on(void (*what)(wxMouseEvent*, void * data),  wxMouseEvent* evt)   
@@ -243,4 +256,18 @@ void CanvasDriver::overlay_button(wxMouseEvent * mouse ,  void *  extradata)
   else 
     data->status = (void *) 0 ; 
 
+}
+
+
+void CanvasDriver::apply_texture_button(const wxString& image) 
+{
+   wxImage img(image ,wxBITMAP_TYPE_PNG) ;  
+   
+   if(!img.IsOk())  
+   {
+     std::fprintf(stderr , " <%s> Fail to load texture image \n" , __func__) ; 
+     return ; 
+   } 
+
+   _renderer.create_texture(texture ,  img.GetWidth(),img.GetHeight(),img.GetData()) ; 
 }

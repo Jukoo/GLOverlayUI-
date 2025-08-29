@@ -23,7 +23,8 @@ Renderer::Renderer(int form) : _form_options {form} {}
 void Renderer::init(void) 
 {
    glEnable(GL_DEPTH_TEST);
-   glShadeModel(GL_SMOOTH); 
+   glEnable(GL_TEXTURE_2D) ; 
+   glShadeModel(GL_SMOOTH);   
 
 }
  
@@ -54,7 +55,7 @@ void Renderer::display(void)
 {
   int forms =  getforms()  ; 
 
-  glClearColor(0.15f, 0.15f, 0.2f, 1.0f);
+  glClearColor(RENDERER_BG_COLOR, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   if(!forms)
   {
@@ -116,18 +117,46 @@ void Renderer::downscale(void)
   _scl-- ;  
 }
 
-void  Renderer::draw(std::vector<float> points)  
+void  Renderer::draw(std::vector<float> points, GLuint &texture)  
 {
    //!For this moment this routine is just static  
    //!@todo : need to be improve in near future 
-   
-   glColor3f(1,1,1) ; 
+
+   if (!texture) 
+   {
+     std::fprintf(stderr , " fail to  load texture \n") ; 
+     return ; 
+   }
+   glEnable(GL_TEXTURE_2D);
+   glBindTexture(GL_TEXTURE_2D, texture);
+   glColor3f(RENDERER_BG_COLOR);
  
    glBegin(GL_QUADS); 
    glVertex2f(points[0] ,  points[3]) ; 
    glVertex2f(points[0] ,  points[2]) ; 
    glVertex2f(points[1] ,  points[2]) ; 
    glVertex2f(points[1] ,  points[3]) ; 
-   glEnd() ; 
+   glEnd() ;
+   
+   glDisable(GL_TEXTURE_2D) ; 
+
+}
+
+
+void Renderer::create_texture(GLuint &  texture , int width , int height , GLvoid * data)  
+{
+   //_texture  = texture ; 
+   glGenTextures(1 , &texture) ; 
+   glBindTexture(GL_TEXTURE_2D , texture) ; 
+  
+
+   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 
+       0, GL_RGB, GL_UNSIGNED_BYTE, data) ; 
+
+   //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+   //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);  
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
 
 }

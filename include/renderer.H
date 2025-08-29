@@ -35,6 +35,8 @@ enum {
 
 #define  RENDERER_ALL_FORM ( TRIANGLES| QUADS |  POLYGON ) 
 
+#define  RENDERER_BG_COLOR 0.15f, 0.15f, 0.2f  
+
 /*!  BASIC GEOMETRICS  FORM OBJECT */ 
 #define  OBJECT_TRIANGLES\
   glColor3f(1.0f, 0.0f, 0.0f); glVertex2f(-0.8f, -0.5f);\
@@ -66,7 +68,6 @@ enum {
   glEnd();
 
 
-
 /** \endcond */
 
 /** 
@@ -79,6 +80,8 @@ class  Renderer
   int _form_options =  RENDERER_ALL_FORM ; 
   float _rot = 0.0 , 
         _scl = 1.0f; 
+
+  GLuint _texture ;  
   public :
 
   /**
@@ -148,13 +151,16 @@ class  Renderer
    * @brief  draw form on given lists of coordinates 
    * @param  points -  a list of points  
    */
-  void draw(std::vector<float> points) ; 
+  void draw(std::vector<float> points , GLuint &) ; 
 
   /**
    * @brief  display OpenGL  forms  in Canvas Area   
    */
   void display(void) ; 
-  
+ 
+
+  void create_texture(GLuint  & , int , int , GLvoid *)  ; 
+
 }; 
 
 #endif  /* GLOverlayUI_renderer_h */

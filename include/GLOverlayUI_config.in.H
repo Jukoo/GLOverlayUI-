@@ -30,6 +30,8 @@
 #define  _PREFIX(__prefix)\
          GLOverlayUI_ ## __prefix 
 
+#define  GLOverlayUI_IMG_OVBTN_PNG "/home/umar/Desktop/workstation/CGui/WxWidget/assets/setting.png"
+#define  GLOverlayUI_IMG_OVBTN_ICO "/home/umar/Desktop/workstation/CGui/WxWidget/assets/setting.ico"
 
 /*!  Define  the default base size of the frame  */
 #if !defined(DEF_BASE_SIZE)
