@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structmotion__metadata" kind="struct" language="C++" prot="public">
+    <compoundname>motion_metadata</compoundname>
+    <includes refid="canvasdriver_8H" local="no">canvasdriver.H</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmotion__metadata_1aaca941361057e9fd274e6cd4af868413" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; motion_metadata::_reference_coords</definition>
+        <argsstring></argsstring>
+        <name>_reference_coords</name>
+        <qualifiedname>motion_metadata::_reference_coords</qualifiedname>
+        <briefdescription>
+<para>Hold the area size of the canvas <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="105" column="15" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotion__metadata_1acd0873152ec2585311d781edbc609d9e" prot="public" static="no" mutable="no">
+        <type>wxSize</type>
+        <definition>wxSize motion_metadata::_size</definition>
+        <argsstring></argsstring>
+        <name>_size</name>
+        <qualifiedname>motion_metadata::_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="104" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotion__metadata_1a088a3005052d3658eb36565894c3ea46" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* motion_metadata::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>motion_metadata::status</qualifiedname>
+        <briefdescription>
+<para>coords reference you want to lookup </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="106" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="106" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>specialized mouse motion data structure that embedded some needed data to draw and locate the frame button sketched on the canvas <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>motion_metadata</label>
+        <link refid="structmotion__metadata"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="103" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="103" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structmotion__metadata_1aaca941361057e9fd274e6cd4af868413" prot="public" virt="non-virtual"><scope>motion_metadata</scope><name>_reference_coords</name></member>
+      <member refid="structmotion__metadata_1acd0873152ec2585311d781edbc609d9e" prot="public" virt="non-virtual"><scope>motion_metadata</scope><name>_size</name></member>
+      <member refid="structmotion__metadata_1a088a3005052d3658eb36565894c3ea46" prot="public" virt="non-virtual"><scope>motion_metadata</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

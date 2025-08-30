@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="69" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="69" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="129" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" prot="private" static="no" mutable="no">
         <type><ref refid="classRenderer" kindref="compound">Renderer</ref></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="70" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="70" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="130" column="12" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -50,7 +50,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="71" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="71" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="131" column="8" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCanvasDriver_1aa4317807c3e14ceec2cf894f3ac4e3cf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; CanvasDriver::button_area</definition>
+        <argsstring></argsstring>
+        <name>button_area</name>
+        <qualifiedname>CanvasDriver::button_area</qualifiedname>
+        <briefdescription>
+<para>The rendere state <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="132" column="15" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCanvasDriver_1a273243af3af7c887a06dd3e717be884e" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint CanvasDriver::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <qualifiedname>CanvasDriver::texture</qualifiedname>
+        <briefdescription>
+<para>Hold the coords of &quot;Button&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="134" column="11" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="134" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -81,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="92" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="155" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,7 +141,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="98" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="161" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a48d9651696b1f66a6675bfb6bb7b28e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::apply_texture_button</definition>
+        <argsstring>(const wxString &amp;image)</argsstring>
+        <name>apply_texture_button</name>
+        <qualifiedname>CanvasDriver::apply_texture_button</qualifiedname>
+        <param>
+          <type>const wxString &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>load image for texture </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- image filename (PNG) format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>: investigate why the texture fail <linebreak/>
+ related bug : at renderer.h (FIXME) </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="223" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -123,15 +185,13 @@
           <declname>mainframe_parent</declname>
         </param>
         <briefdescription>
-<para>The rendere state <linebreak/>
- </para>
+<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> constructor. </para>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="classCanvasDriver" kindref="compound">CanvasDriver</ref> constructor </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="76" column="5"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="139" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -149,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="86" column="11"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="149" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -167,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="121" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="184" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,7 +255,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="104" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="167" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a5b5ff400c0d06551109f998265b55dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * CanvasDriver::mouse_motion_action_on</definition>
+        <argsstring>(void(*what)(wxMouseEvent *, void *extradata), wxMouseEvent *)</argsstring>
+        <name>mouse_motion_action_on</name>
+        <qualifiedname>CanvasDriver::mouse_motion_action_on</qualifiedname>
+        <param>
+          <type>void(*)(wxMouseEvent *, void *extradata)</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>wxMouseEvent *</type>
+        </param>
+        <briefdescription>
+<para>Generic function to track mouse motion on canvas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>what</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A callback function that define the behavior it takes the mouse event and generic data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mouse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>event object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>generic pointer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="207" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="111" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="174" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,7 +357,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="127" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="190" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classCanvasDriver_1a1b9a61e46cc6d817c136e53af560a7f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanvasDriver::sketch_map</definition>
+        <argsstring>(int where=TOP_LEFT)</argsstring>
+        <name>sketch_map</name>
+        <qualifiedname>CanvasDriver::sketch_map</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>where</declname>
+          <defval>TOP_LEFT</defval>
+        </param>
+        <briefdescription>
+<para>make kind of sketch mappin&apos; point to place the coordinate of each point <linebreak/>
+ depending where the form should be appear </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>where</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the location ( TOP_LEFT , TOP_RIGHT ,BOTTOM_LEFT ,BOTTOM_RIGHT ) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="198" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="116" column="10"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="179" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -289,7 +422,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="81" column="14"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="144" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classCanvasDriver_1a4b19024f560a93149aee49db7ada1276" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CanvasDriver::overlay_button</definition>
+        <argsstring>(wxMouseEvent *evt, void *metadata)</argsstring>
+        <name>overlay_button</name>
+        <qualifiedname>CanvasDriver::overlay_button</qualifiedname>
+        <param>
+          <type>wxMouseEvent *</type>
+          <declname>evt</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>metadata</declname>
+        </param>
+        <briefdescription>
+<para>a specialized function to detecte mouse action on &quot;button&quot; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- event mouse </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metadata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passed data to the function (it can be anything ) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="214" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -304,19 +480,25 @@
         <link refid="classCanvasDriver"/>
       </node>
     </collaborationgraph>
-    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="54" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="55" bodyend="128"/>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" line="113" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/canvasdriver.H" bodystart="114" bodyend="226"/>
     <listofallmembers>
       <member refid="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_mouse_grab_state</name></member>
       <member refid="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_renderer</name></member>
       <member refid="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>_show</name></member>
       <member refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>apply_rotation</name></member>
       <member refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>apply_scaling</name></member>
+      <member refid="classCanvasDriver_1a48d9651696b1f66a6675bfb6bb7b28e7" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>apply_texture_button</name></member>
+      <member refid="classCanvasDriver_1aa4317807c3e14ceec2cf894f3ac4e3cf" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>button_area</name></member>
       <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver</name></member>
       <member refid="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>CanvasDriver_init</name></member>
       <member refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>get_renderer_state</name></member>
       <member refid="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>increase_or_decrease_scaling</name></member>
+      <member refid="classCanvasDriver_1a5b5ff400c0d06551109f998265b55dcc" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>mouse_motion_action_on</name></member>
+      <member refid="classCanvasDriver_1a4b19024f560a93149aee49db7ada1276" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>overlay_button</name></member>
       <member refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>renderer</name></member>
       <member refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>set_renderer_state</name></member>
+      <member refid="classCanvasDriver_1a1b9a61e46cc6d817c136e53af560a7f0" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>sketch_map</name></member>
+      <member refid="classCanvasDriver_1a273243af3af7c887a06dd3e717be884e" prot="private" virt="non-virtual"><scope>CanvasDriver</scope><name>texture</name></member>
       <member refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" prot="public" virt="non-virtual"><scope>CanvasDriver</scope><name>toggle_renderer</name></member>
       <member refid="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" prot="public" virt="virtual"><scope>CanvasDriver</scope><name>~CanvasDriver</name></member>
     </listofallmembers>

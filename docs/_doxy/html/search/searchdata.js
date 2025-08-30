@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdfgilmoprstu~🏛📁📦📸🖼🙋🚀",
+  0: "_abcdfgilmoprstu~🏛📁📦📸🖼🚀",
   1: "cgmr",
   2: "cgmr",
   3: "acdgimoprstu~",
-  4: "_dgm",
-  5: "glt"
+  4: "_s",
+  5: "_dgm",
+  6: "glt"
 };
 
 var indexSectionNames =
@@ -14,8 +15,9 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "defines",
-  5: "pages"
+  4: "variables",
+  5: "defines",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +26,8 @@ var indexSectionLabels =
   1: "Data Structures",
   2: "Files",
   3: "Functions",
-  4: "Macros",
-  5: "Pages"
+  4: "Variables",
+  5: "Macros",
+  6: "Pages"
 };
 

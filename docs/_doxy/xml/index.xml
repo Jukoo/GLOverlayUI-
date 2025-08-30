@@ -4,16 +4,22 @@
     <member refid="classCanvasDriver_1ac6ebd0c25ccb33fd958f537b08678663" kind="variable"><name>_mouse_grab_state</name></member>
     <member refid="classCanvasDriver_1a8629f5c9d219ee367307525ef193ea46" kind="variable"><name>_renderer</name></member>
     <member refid="classCanvasDriver_1ab4cbb30b8120e1090004d4b41e135ff9" kind="variable"><name>_show</name></member>
+    <member refid="classCanvasDriver_1aa4317807c3e14ceec2cf894f3ac4e3cf" kind="variable"><name>button_area</name></member>
+    <member refid="classCanvasDriver_1a273243af3af7c887a06dd3e717be884e" kind="variable"><name>texture</name></member>
     <member refid="classCanvasDriver_1a47f9f434ea2d275d2779825176f23585" kind="function"><name>apply_rotation</name></member>
     <member refid="classCanvasDriver_1aa99ed92d57e3cdc8e13596f9f42d5041" kind="function"><name>apply_scaling</name></member>
+    <member refid="classCanvasDriver_1a48d9651696b1f66a6675bfb6bb7b28e7" kind="function"><name>apply_texture_button</name></member>
     <member refid="classCanvasDriver_1a00d082182dd62773e59b9b9ba59849c6" kind="function"><name>CanvasDriver</name></member>
     <member refid="classCanvasDriver_1abc701ae83ad51030115ba6490730f5b3" kind="function"><name>CanvasDriver_init</name></member>
     <member refid="classCanvasDriver_1a9fa09da05f675d9f10cd945a9965dc50" kind="function"><name>get_renderer_state</name></member>
     <member refid="classCanvasDriver_1aaf772d52ae181146d59c5c503f6786f6" kind="function"><name>increase_or_decrease_scaling</name></member>
+    <member refid="classCanvasDriver_1a5b5ff400c0d06551109f998265b55dcc" kind="function"><name>mouse_motion_action_on</name></member>
     <member refid="classCanvasDriver_1af9ca95586488aaca0f8c73a0ab7c5002" kind="function"><name>renderer</name></member>
     <member refid="classCanvasDriver_1ab3396951fd4de41f87d5a79e93d6e1c6" kind="function"><name>set_renderer_state</name></member>
+    <member refid="classCanvasDriver_1a1b9a61e46cc6d817c136e53af560a7f0" kind="function"><name>sketch_map</name></member>
     <member refid="classCanvasDriver_1a4807bc38743f9f93b276a82d8afd0672" kind="function"><name>toggle_renderer</name></member>
     <member refid="classCanvasDriver_1a3abaefa4fe6991a71ab7ac1a662e8f66" kind="function"><name>~CanvasDriver</name></member>
+    <member refid="classCanvasDriver_1a4b19024f560a93149aee49db7ada1276" kind="function"><name>overlay_button</name></member>
   </compound>
   <compound refid="classGLOverlayUI__APP" kind="class"><name>GLOverlayUI_APP</name>
     <member refid="classGLOverlayUI__APP_1a115e689bfa3ba7e46f5afac62c296596" kind="function"><name>OnInit</name></member>
@@ -33,12 +39,20 @@
     <member refid="classMainFrame_1a1bd9055232235f241fe40c7ac9d35cda" kind="function"><name>setup_menubar</name></member>
     <member refid="classMainFrame_1aa727c6800d56dd11e348a179a8506a3f" kind="function"><name>~MainFrame</name></member>
   </compound>
+  <compound refid="structmotion__metadata" kind="struct"><name>motion_metadata</name>
+    <member refid="structmotion__metadata_1aaca941361057e9fd274e6cd4af868413" kind="variable"><name>_reference_coords</name></member>
+    <member refid="structmotion__metadata_1acd0873152ec2585311d781edbc609d9e" kind="variable"><name>_size</name></member>
+    <member refid="structmotion__metadata_1a088a3005052d3658eb36565894c3ea46" kind="variable"><name>status</name></member>
+  </compound>
   <compound refid="classRenderer" kind="class"><name>Renderer</name>
     <member refid="classRenderer_1a72a1c4233981f9faafb889953417d8f8" kind="variable"><name>_form_options</name></member>
     <member refid="classRenderer_1aca021e8884df45198a70b589537e7997" kind="variable"><name>_rot</name></member>
     <member refid="classRenderer_1ae41404a827d788a10a152f9820a12d01" kind="variable"><name>_scl</name></member>
+    <member refid="classRenderer_1a54927d9eee326d68c329bf3192212ca1" kind="variable"><name>_texture</name></member>
+    <member refid="classRenderer_1a4c4bf3e9d04f39a068154a05a7deeb81" kind="function"><name>create_texture</name></member>
     <member refid="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" kind="function"><name>display</name></member>
     <member refid="classRenderer_1aad725f02dbf870d6b24079769713aa1e" kind="function"><name>downscale</name></member>
+    <member refid="classRenderer_1aa02d6e112f1d509984975f24288ae243" kind="function"><name>draw</name></member>
     <member refid="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" kind="function"><name>getforms</name></member>
     <member refid="classRenderer_1a5e1627b264f10486af827a09e5837edb" kind="function"><name>init</name></member>
     <member refid="classRenderer_1aa12beb68d3ec044b3445d32b2b25afdd" kind="function"><name>projection</name></member>
@@ -63,6 +77,8 @@
     <member refid="GLOverlayUI__config_8in_8H_1afbe3a77672a4fa457248548199ef2167" kind="define"><name>GLOverlayUI_APP_NAME</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a4c686751048c45f15a148876d0093675" kind="define"><name>GLOverlayUI_ICO</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a0a887d8ad9ac484ccfc63c004fe46287" kind="define"><name>GLOverlayUI_ICON_APP</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1af336bb304d59fd111ca09531285bb8fb" kind="define"><name>GLOverlayUI_IMG_OVBTN_ICO</name></member>
+    <member refid="GLOverlayUI__config_8in_8H_1a9e91a8768852549a4caf952059410a68" kind="define"><name>GLOverlayUI_IMG_OVBTN_PNG</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a24dff4f22e962ee5e691eb71c28b7d85" kind="define"><name>GLOverlayUI_TIPS</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1a1f1b5a4df0c0fc233918d7ee0fe25d3f" kind="define"><name>GLOverlayUI_VERSION</name></member>
     <member refid="GLOverlayUI__config_8in_8H_1ab6698091c06f224c058b04315666190a" kind="define"><name>MF_SIZE</name></member>

@@ -1,5 +1,6 @@
 var searchData=
 [
   ['oninit_0',['OnInit',['../classGLOverlayUI__APP.html#a115e689bfa3ba7e46f5afac62c296596',1,'GLOverlayUI_APP']]],
-  ['overview_1',['🏛️ Architecture Overview',['../index.html#autotoc_md7',1,'']]]
+  ['overlay_5fbutton_1',['overlay_button',['../classCanvasDriver.html#a4b19024f560a93149aee49db7ada1276',1,'CanvasDriver']]],
+  ['overview_2',['🏛️ Architecture Overview',['../index.html#autotoc_md7',1,'']]]
 ];

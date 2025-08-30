@@ -15,7 +15,15 @@ This file documents all notable changes to **GLOverlayUI**.
 [Unreleased]
 ------------
 
+-  Applying Texture on Object 
+
+Version 1.1.0
+-------------
+
+- Feature : Add button with icon on top inside the canvas area to toggle side panel 
 - Improved Sphinx and Doxygen documentation.
+  - news images and new demo to keep up to date 
+- Code improvement
 
 Version 1.0
 -----------

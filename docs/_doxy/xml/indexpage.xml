@@ -16,17 +16,15 @@
 <title>🖼️ Features</title>
 <para><itemizedlist>
 <listitem><para>✅ OpenGL-powered 2D scene rendered on <computeroutput>wxGLCanvas</computeroutput></para>
-</listitem><listitem><para>🎯 Clickable UI overlay (PNG icon) rendered directly in OpenGL<itemizedlist>
+</listitem><listitem><para>🎯 Clickable UI overlay Geometric forms rendered directly in OpenGL<itemizedlist>
 <listitem><para>Using Mouse motion to control object rotation</para>
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>📌 Toggleable right-side control panel with:<itemizedlist>
-<listitem><para><computeroutput>wxSlider</computeroutput> to control object scale<itemizedlist>
-<listitem><para><computeroutput>wxCheckBox</computeroutput> to toggle visibility of scene objects</para>
+<listitem><para><computeroutput>wxSlider</computeroutput> to control object scale</para>
+</listitem><listitem><para><computeroutput>wxCheckBox</computeroutput> to toggle visibility of scene objects</para>
 </listitem><listitem><para>🧼 Clean separation between rendering engine and UI logic</para>
 </listitem><listitem><para>🔁 Real-time interaction between OpenGL scene and native UI</para>
-</listitem></itemizedlist>
-</para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
@@ -99,13 +97,13 @@
 <para>This separation enables easy testing and reusability of the rendering logic in other contexts.</para>
 </sect2>
 <sect2 id="index_1autotoc_md8">
-<title>📸 Screenshots</title>
-<para>([]Todo Add a screenshot here showing the scene + overlay + control panel)</para>
-<para>📄 License This project is released under the GPLv3 License. See LICENSE for details.</para>
+<title>📸 Screenshots   &amp; Demo</title>
+<para>Please Take a Look <ulink url="https://gloverlayui.readthedocs.io/en/latest/pages/screenshots.html">Here</ulink></para>
+<para>📄 License This project is released under the GPLv3 License. See <ulink url="https://gloverlayui.readthedocs.io/en/latest/pages/license.html">LICENSE</ulink> for details.</para>
 </sect2>
 <sect2 id="index_1autotoc_md9">
-<title>🙋‍♂️ Author</title>
-<para>Made with ❤️ by Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> </para>
+<title>Author</title>
+<para>Umar Ba <ulink url="mailto:jUmarB@protonmail.com">jUmarB@protonmail.com</ulink> </para>
 </sect2>
     </detaileddescription>
     <location file="/home/umar/Desktop/workstation/CGui/WxWidget/README.md"/>

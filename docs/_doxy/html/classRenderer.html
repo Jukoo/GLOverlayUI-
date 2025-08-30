@@ -102,6 +102,8 @@ $(document).ready(function(){initNavTree('classRenderer.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4c4bf3e9d04f39a068154a05a7deeb81" id="r_a4c4bf3e9d04f39a068154a05a7deeb81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a4c4bf3e9d04f39a068154a05a7deeb81">create_texture</a> (GLuint &amp;, int witdh, int height, GLvoid *)</td></tr>
+<tr class="separator:a4c4bf3e9d04f39a068154a05a7deeb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c2f582951c35c16f6bba2c4e5be9f8" id="r_a54c2f582951c35c16f6bba2c4e5be9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a54c2f582951c35c16f6bba2c4e5be9f8">display</a> (void)</td></tr>
 <tr class="memdesc:a54c2f582951c35c16f6bba2c4e5be9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">display OpenGL forms in Canvas Area <br  />
   <br /></td></tr>
@@ -109,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad725f02dbf870d6b24079769713aa1e" id="r_aad725f02dbf870d6b24079769713aa1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#aad725f02dbf870d6b24079769713aa1e">downscale</a> (void)</td></tr>
 <tr class="memdesc:aad725f02dbf870d6b24079769713aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrease the scale produce zoom out effect  <br /></td></tr>
 <tr class="separator:aad725f02dbf870d6b24079769713aa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02d6e112f1d509984975f24288ae243" id="r_aa02d6e112f1d509984975f24288ae243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#aa02d6e112f1d509984975f24288ae243">draw</a> (std::vector&lt; float &gt; points, GLuint &amp;)</td></tr>
+<tr class="memdesc:aa02d6e112f1d509984975f24288ae243"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw form on given lists of coordinates  <br /></td></tr>
+<tr class="separator:aa02d6e112f1d509984975f24288ae243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45b83dcdf09d55ca17ff6fde5db14f7" id="r_ab45b83dcdf09d55ca17ff6fde5db14f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#ab45b83dcdf09d55ca17ff6fde5db14f7">getforms</a> (void) const</td></tr>
 <tr class="memdesc:ab45b83dcdf09d55ca17ff6fde5db14f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve bit mask for current enabling forms <br  />
   <br /></td></tr>
@@ -218,6 +223,46 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4c4bf3e9d04f39a068154a05a7deeb81" name="a4c4bf3e9d04f39a068154a05a7deeb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4bf3e9d04f39a068154a05a7deeb81">&#9670;&#160;</a></span>create_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::create_texture </td>
+          <td>(</td>
+          <td class="paramtype">GLuint &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>witdh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLvoid *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a54c2f582951c35c16f6bba2c4e5be9f8" name="a54c2f582951c35c16f6bba2c4e5be9f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54c2f582951c35c16f6bba2c4e5be9f8">&#9670;&#160;</a></span>display()</h2>
 
@@ -256,7 +301,44 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>decrease the scale produce zoom out effect </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>improve the scale precision </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>improve the scale precision </dd></dl>
+
+</div>
+</div>
+<a id="aa02d6e112f1d509984975f24288ae243" name="aa02d6e112f1d509984975f24288ae243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02d6e112f1d509984975f24288ae243">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::draw </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw form on given lists of coordinates </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>- a list of points <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -413,7 +495,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>increase the scale produce zoom in effect </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>improve the scale precision </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>improve the scale precision </dd></dl>
 
 </div>
 </div>

@@ -16,10 +16,10 @@
 <codeline><highlight class="normal">##<sp/>🖼️<sp/>Features</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>✅<sp/>OpenGL-powered<sp/>2D<sp/>scene<sp/>rendered<sp/>on<sp/>`wxGLCanvas`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>🎯<sp/>Clickable<sp/>UI<sp/>overlay<sp/>(PNG<sp/>icon)<sp/>rendered<sp/>directly<sp/>in<sp/>OpenGL</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>🎯<sp/>Clickable<sp/>UI<sp/>overlay<sp/>Geometric<sp/>forms<sp/>rendered<sp/>directly<sp/>in<sp/>OpenGL</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Using<sp/>Mouse<sp/>motion<sp/>to<sp/>control<sp/>object<sp/><sp/>rotation<sp/></highlight></codeline>
 <codeline><highlight class="normal">-<sp/>📌<sp/>Toggleable<sp/>right-side<sp/>control<sp/>panel<sp/>with:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>-<sp/>`wxSlider`<sp/>to<sp/>control<sp/>object<sp/><sp/>scale<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`wxSlider`<sp/>to<sp/>control<sp/>object<sp/><sp/>scale<sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`wxCheckBox`<sp/>to<sp/>toggle<sp/>visibility<sp/>of<sp/>scene<sp/>objects</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>🧼<sp/>Clean<sp/>separation<sp/>between<sp/>rendering<sp/>engine<sp/>and<sp/>UI<sp/>logic</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>🔁<sp/>Real-time<sp/>interaction<sp/>between<sp/>OpenGL<sp/>scene<sp/>and<sp/>native<sp/>UI</highlight></codeline>
@@ -101,16 +101,16 @@
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/>This<sp/>separation<sp/>enables<sp/>easy<sp/>testing<sp/>and<sp/>reusability<sp/>of<sp/>the<sp/>rendering<sp/>logic<sp/>in<sp/>other<sp/>contexts.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/>📸<sp/>Screenshots</highlight></codeline>
-<codeline><highlight class="normal"><sp/>---</highlight></codeline>
-<codeline><highlight class="normal"><sp/>([]Todo<sp/><sp/>Add<sp/>a<sp/>screenshot<sp/>here<sp/>showing<sp/>the<sp/>scene<sp/>+<sp/>overlay<sp/>+<sp/>control<sp/>panel)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>📸<sp/>Screenshots<sp/><sp/><sp/>&amp;<sp/>Demo<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>---<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>Please<sp/>Take<sp/>a<sp/>Look<sp/><sp/>[Here](https://gloverlayui.readthedocs.io/en/latest/pages/screenshots.html)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/>📄<sp/>License</highlight></codeline>
-<codeline><highlight class="normal"><sp/>This<sp/>project<sp/>is<sp/>released<sp/>under<sp/>the<sp/>GPLv3<sp/>License.<sp/>See<sp/>LICENSE<sp/>for<sp/>details.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>This<sp/>project<sp/>is<sp/>released<sp/>under<sp/>the<sp/>GPLv3<sp/>License.<sp/>See<sp/>[LICENSE](https://gloverlayui.readthedocs.io/en/latest/pages/license.html)<sp/>for<sp/>details.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/>🙋‍♂️<sp/>Author</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Author</highlight></codeline>
 <codeline><highlight class="normal"><sp/>---</highlight></codeline>
-<codeline><highlight class="normal"><sp/>Made<sp/>with<sp/>❤️<sp/><sp/>by<sp/><sp/>Umar<sp/>Ba<sp/>&lt;jUmarB@protonmail.com&gt;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>Umar<sp/>Ba<sp/>&lt;jUmarB@protonmail.com&gt;<sp/></highlight></codeline>
     </programlisting>
     <location file="/home/umar/Desktop/workstation/CGui/WxWidget/README.md"/>
   </compounddef>

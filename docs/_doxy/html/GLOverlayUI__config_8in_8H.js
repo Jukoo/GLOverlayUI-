@@ -8,6 +8,8 @@ var GLOverlayUI__config_8in_8H =
     [ "GLOverlayUI_APP_NAME", "GLOverlayUI__config_8in_8H.html#afbe3a77672a4fa457248548199ef2167", null ],
     [ "GLOverlayUI_ICO", "GLOverlayUI__config_8in_8H.html#a4c686751048c45f15a148876d0093675", null ],
     [ "GLOverlayUI_ICON_APP", "GLOverlayUI__config_8in_8H.html#a0a887d8ad9ac484ccfc63c004fe46287", null ],
+    [ "GLOverlayUI_IMG_OVBTN_ICO", "GLOverlayUI__config_8in_8H.html#af336bb304d59fd111ca09531285bb8fb", null ],
+    [ "GLOverlayUI_IMG_OVBTN_PNG", "GLOverlayUI__config_8in_8H.html#a9e91a8768852549a4caf952059410a68", null ],
     [ "GLOverlayUI_TIPS", "GLOverlayUI__config_8in_8H.html#a24dff4f22e962ee5e691eb71c28b7d85", null ],
     [ "GLOverlayUI_VERSION", "GLOverlayUI__config_8in_8H.html#a1f1b5a4df0c0fc233918d7ee0fe25d3f", null ],
     [ "MF_SIZE", "GLOverlayUI__config_8in_8H.html#ab6698091c06f224c058b04315666190a", null ]

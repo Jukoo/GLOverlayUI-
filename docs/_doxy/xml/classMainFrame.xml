@@ -241,7 +241,7 @@
         <link refid="classMainFrame"/>
       </node>
     </collaborationgraph>
-    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="55" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="56" bodyend="108"/>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" line="55" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H" bodystart="56" bodyend="107"/>
     <listofallmembers>
       <member refid="classMainFrame_1a85616e128cefa2af66f8aa13a1dd92c2" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_app_icon</name></member>
       <member refid="classMainFrame_1a055bc506fff0fbb36efa23f0168f0e87" prot="private" virt="non-virtual"><scope>MainFrame</scope><name>_app_status_text</name></member>

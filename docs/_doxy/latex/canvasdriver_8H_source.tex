@@ -8,64 +8,119 @@
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}\ }
 \DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <wx/glcanvas.h>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <GL/glu.h>}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <memory>}\ }
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer_8H}{renderer.H}}"{}}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ (\_\_cplusplus\ >=\ 201402L\ )\ }}
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ std::unique\_ptr<\_\_object>\ \ \ }}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ std::shared\_ptr<\_\_object>\ \ }}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ ,\ \_\_object\ ,\ ...\ )\ \ std::make\_\#\#\_\_type<\_\_object>\ (\_\_VA\_ARGS\_\_)\ \ }}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <GL/glu.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GLOverlayUI__config_8in_8H}{GLOverlayUI\_config.in.H}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer_8H}{renderer.H}}"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ (\_\_cplusplus\ >=\ 201402L\ )\ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ std::unique\_ptr<\_\_object>\ \ \ }}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ std::shared\_ptr<\_\_object>\ \ }}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#else\ }}
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ }\textcolor{comment}{/*\ ignored\ */}\textcolor{preprocessor}{\ ,\ \_\_object\ ,...\ )\ \ \ new\ \_\_object\ (\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ ,\ \_\_object\ ,\ ...\ )\ \ std::make\_\#\#\_\_type<\_\_object>\ (\_\_VA\_ARGS\_\_)\ \ }}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#else\ }}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#\ define\ \ \ uniq\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#\ define\ \ \ shrd\_allocator(\_\_object)\ \ \ \_\_object\ *\ \ }}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#\ define\ \ \ \_\_cpp\_11}}
-\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}\ :\ \textcolor{keyword}{public}\ \ wxGLCanvas\ \ }
-\DoxyCodeLine{00055\ \{}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00059\ \ \ uniq\_allocator(wxGLContext)\ \_ctx\ \ ;\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#\ define\ \ \ mkptr(\_\_type\ }\textcolor{comment}{/*\ ignored\ */}\textcolor{preprocessor}{\ ,\ \_\_object\ ,...\ )\ \ \ new\ \_\_object\ (\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#\ define\ \ \ \_\_cpp\_11}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{enum}\ \_\_button\_overlay\_position\_t\{\ }
+\DoxyCodeLine{00051\ \ \ TOP\_LEFT\ ,\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ TOP\_LEFT\ \ \ \ \ \ \ (1\ <<\ TOP\_LEFT)\ }}
+\DoxyCodeLine{00053\ \ \ BOTTOM\_LEFT,}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ \ BOTTOM\_LEFT\ \ \ (1\ <<\ BOTTOM\_LEFT)\ }}
+\DoxyCodeLine{00055\ \ \ TOP\_RIGHT,\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ \ TOP\_RIGHT\ \ \ \ \ (1\ <<\ TOP\_RIGHT)\ }}
+\DoxyCodeLine{00057\ \ \ BOTTOM\_RIGHT,\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ \ BOTTOM\_RIGHT\ \ (1\ <<\ BOTTOM\_RIGHT)\ }}
+\DoxyCodeLine{00059\ \};}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \textcolor{comment}{/*\ -\/-\/\ \ Canvas\ \ Event\ -\/-\/\ \ */}}
-\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ on\_painting(wxPaintEvent\&)\ ;\ }
-\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ on\_resizing(wxSizeEvent\&)\ ;\ }
-\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ on\_mouse(wxMouseEvent\&)\ ;\ }
-\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_grab(wxMouseEvent\&)\ ;\ }
-\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_release(wxMouseEvent\&);\ }
-\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{bool}\ \_mouse\_grab\_state\ =\ false\ ;\ \ \ }
-\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{classRenderer}{Renderer}}\ \_renderer\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{bool}\ \_show\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{CanvasDriver}}(wxWindow\ \ *\ mainframe\_parent);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}{\string~CanvasDriver}}()\ ;\ }
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3}{CanvasDriver\_init}}(\textcolor{keywordtype}{void});\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ \ X\ \ 0.9f,\ 0.75f}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ \ Y\ \ 0.85f,\ 0.9f\ }}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ \ POS\ \ \ \ 0x2b\ \ \ }}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ \ NEG\ \ \ \ 0x2d\ }}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ \ SIGN\_TOP\_LEFT\ \ \ \ \ ('-\/'<<8|'+')\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ \ DRAW\_BUTTON\_TOP\_LEFT\ \ (SIGN\_TOP\_LEFT\ <<4\ |\ TOP\_LEFT)}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ \ SIGN\_TOP\_RIGHT\ \ \ \ ('+'<<8|'+')\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ \ DRAW\_BUTTON\_TOP\_RIGHT\ \ (SIGN\_TOP\_RIGHT\ <<\ 4\ |\ TOP\_RIGHT)\ }}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ \ SIGN\_BOTTOM\_LEFT\ \ ('-\/'<<8|'-\/')\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ \ DRAW\_BUTTON\_BOTTOM\_LEFT\ \ (SIGN\_BOTTOM\_LEFT\ <<\ 4\ |\ BOTTOM\_LEFT)}}
 \DoxyCodeLine{00087\ }
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}{apply\_rotation}}(\textcolor{keywordtype}{float}\ rotation\_angle)\ ;\ }
-\DoxyCodeLine{00093\ \ \ \ }
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}{apply\_scaling}}(\textcolor{keywordtype}{float}\ \ \ scale)\ ;\ \ }
-\DoxyCodeLine{00099\ \ \ }
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aaf772d52ae181146d59c5c503f6786f6}{increase\_or\_decrease\_scaling}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ )\ ;\ \ \ }
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}{renderer}}(\textcolor{keywordtype}{int}\ forms\_bit\_mask)\ ;\ }
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}{toggle\_renderer}}(\textcolor{keywordtype}{void})\ ;\ }
-\DoxyCodeLine{00117\ \ \ \ \ }
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}{get\_renderer\_state}}(\textcolor{keywordtype}{void})\ \ ;\ }
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}{set\_renderer\_state}}(\textcolor{keywordtype}{bool}\ state)\ ;\ }
-\DoxyCodeLine{00128\ \};\ }
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ \ }}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ \ SIGN\_BOTTOM\_RIGHT\ ('+'<<8|'-\/')\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ \ DRAW\_BUTTON\_BOTTOM\_RIGHT\ \ (SIGN\_BOTTOM\_RIGHT\ <<\ 4\ |\ BOTTOM\_RIGHT)\ }}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ SIGN(\_position)\ SIGN\_\#\#\_position\ }}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ DRAW(\_position)\ DRAW\_\#\#\_position\ \ \ }}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmotion__metadata}{motion\_metadata}}\ \{\ }
+\DoxyCodeLine{00104\ \ \ wxSize\ \mbox{\hyperlink{structmotion__metadata_acd0873152ec2585311d781edbc609d9e}{\_size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ std::vector<float>\ \mbox{\hyperlink{structmotion__metadata_aaca941361057e9fd274e6cd4af868413}{\_reference\_coords}}\ ;\ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \ *\ \mbox{\hyperlink{structmotion__metadata_a088a3005052d3658eb36565894c3ea46}{status}}\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \};\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCanvasDriver}{CanvasDriver}}\ :\ \textcolor{keyword}{public}\ \ wxGLCanvas\ \ }
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00118\ \ \ uniq\_allocator(wxGLContext)\ \_ctx\ \ ;\ }
+\DoxyCodeLine{00119\ \ \ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \textcolor{comment}{/*\ -\/-\/\ \ Canvas\ \ Event\ -\/-\/\ \ */}}
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordtype}{void}\ on\_painting(wxPaintEvent\&)\ ;\ }
+\DoxyCodeLine{00123\ \ \ \textcolor{keywordtype}{void}\ on\_resizing(wxSizeEvent\&)\ ;\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{keywordtype}{void}\ on\_mouse(wxMouseEvent\&)\ ;\ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_release(wxMouseEvent\&);\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordtype}{void}\ on\_mouse\_grab(wxMouseEvent\&)\ ;\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordtype}{bool}\ \_mouse\_grab\_state\ =\ false\ ;\ \ \ }
+\DoxyCodeLine{00130\ \ \ \mbox{\hyperlink{classRenderer}{Renderer}}\ \_renderer\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{bool}\ \_show\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ std::vector<float>\ button\_area\ ;\ \ \ }
+\DoxyCodeLine{00134\ \ \ GLuint\ \ texture;\ \ }
+\DoxyCodeLine{00135\ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{CanvasDriver}}(wxWindow\ \ *\ mainframe\_parent);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}{\string~CanvasDriver}}()\ ;\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3}{CanvasDriver\_init}}(\textcolor{keywordtype}{void});\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}{apply\_rotation}}(\textcolor{keywordtype}{float}\ rotation\_angle)\ ;\ }
+\DoxyCodeLine{00156\ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}{apply\_scaling}}(\textcolor{keywordtype}{float}\ \ \ scale)\ ;\ \ }
+\DoxyCodeLine{00162\ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_aaf772d52ae181146d59c5c503f6786f6}{increase\_or\_decrease\_scaling}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ )\ ;\ \ \ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}{renderer}}(\textcolor{keywordtype}{int}\ forms\_bit\_mask)\ ;\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}{toggle\_renderer}}(\textcolor{keywordtype}{void})\ ;\ }
+\DoxyCodeLine{00180\ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}{get\_renderer\_state}}(\textcolor{keywordtype}{void})\ \ ;\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}{set\_renderer\_state}}(\textcolor{keywordtype}{bool}\ state)\ ;}
+\DoxyCodeLine{00191\ \ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a1b9a61e46cc6d817c136e53af560a7f0}{sketch\_map}}(\textcolor{keywordtype}{int}\ where\ =\ TOP\_LEFT\ \textcolor{comment}{/*\ TOP\_LEFT\ as\ default\ value\ */})\ \ ;\ }
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00207\ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{classCanvasDriver_a5b5ff400c0d06551109f998265b55dcc}{mouse\_motion\_action\_on}}(\textcolor{keywordtype}{void}\ (*what)(wxMouseEvent*,\ \textcolor{keywordtype}{void}\ *\ extradata)\ ,\ wxMouseEvent*\ \ )\ ;\ }
+\DoxyCodeLine{00208\ \ \ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a4b19024f560a93149aee49db7ada1276}{overlay\_button}}(\ \ wxMouseEvent\ *\ evt\ \ ,\ \textcolor{keywordtype}{void}\ *\ \ metadata\ )\ ;\ \ }
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCanvasDriver_a48d9651696b1f66a6675bfb6bb7b28e7}{apply\_texture\_button}}(\textcolor{keyword}{const}\ wxString\ \ \&\ image)\ ;}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \};\ }
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#endif\ \ }}
 
 \end{DoxyCode}

@@ -24,9 +24,15 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
@@ -60,6 +66,8 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
       <node id="11">
         <label>GL/gl.h</label>
@@ -78,6 +86,9 @@
       </node>
       <node id="2">
         <label>string</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
       </node>
       <node id="4">
         <label>wx/aboutdlg.h</label>
@@ -161,11 +172,10 @@
 <codeline lineno="100" refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1a84b2c7aa31e7161950f78b669df18b0c" kindref="member">define_layout</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;<sp/></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
 <codeline lineno="106" refid="classMainFrame_1adaaef5e8a34f6fe81d7eabef75b33fb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMainFrame_1adaaef5e8a34f6fe81d7eabef75b33fb7" kindref="member">dispatch_layout</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><sp/>;<sp/><sp/></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="108"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
     </programlisting>
     <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/mainframe.H"/>
   </compounddef>

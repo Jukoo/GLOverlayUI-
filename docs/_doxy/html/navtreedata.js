@@ -35,14 +35,15 @@ var NAVTREE =
       [ "🚀 Run the Application", "index.html#autotoc_md5", null ],
       [ "📦 Dependencies", "index.html#autotoc_md6", null ],
       [ "🏛️ Architecture Overview", "index.html#autotoc_md7", null ],
-      [ "📸 Screenshots", "index.html#autotoc_md8", null ],
-      [ "🙋‍♂️ Author", "index.html#autotoc_md9", null ],
+      [ "📸 Screenshots   & Demo", "index.html#autotoc_md8", null ],
+      [ "Author", "index.html#autotoc_md9", null ],
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [

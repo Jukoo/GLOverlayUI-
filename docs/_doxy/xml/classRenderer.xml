@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="77" column="7" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="77" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="80" column="7" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRenderer_1aca021e8884df45198a70b589537e7997" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="78" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="78" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="81" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRenderer_1ae41404a827d788a10a152f9820a12d01" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -47,10 +47,52 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="79" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="79" bodyend="-1"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="82" column="9" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRenderer_1a54927d9eee326d68c329bf3192212ca1" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Renderer::_texture</definition>
+        <argsstring></argsstring>
+        <name>_texture</name>
+        <qualifiedname>Renderer::_texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="84" column="10" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="84" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRenderer_1a4c4bf3e9d04f39a068154a05a7deeb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Renderer::create_texture</definition>
+        <argsstring>(GLuint &amp;, int witdh, int height, GLvoid *)</argsstring>
+        <name>create_texture</name>
+        <qualifiedname>Renderer::create_texture</qualifiedname>
+        <param>
+          <type>GLuint &amp;</type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>witdh</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>GLvoid *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="172" column="8"/>
+      </memberdef>
       <memberdef kind="function" id="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Renderer::display</definition>
@@ -68,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="149" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="159" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1aad725f02dbf870d6b24079769713aa1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -83,12 +125,45 @@
 <para>decrease the scale produce zoom out effect </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>improve the scale precision </para>
+<para><xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>improve the scale precision </para>
 </xrefdescription></xrefsect></para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="143" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="148" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classRenderer_1aa02d6e112f1d509984975f24288ae243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Renderer::draw</definition>
+        <argsstring>(std::vector&lt; float &gt; points, GLuint &amp;)</argsstring>
+        <name>draw</name>
+        <qualifiedname>Renderer::draw</qualifiedname>
+        <param>
+          <type>std::vector&lt; float &gt;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>GLuint &amp;</type>
+        </param>
+        <briefdescription>
+<para>draw form on given lists of coordinates </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a list of points <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="154" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -111,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="112" column="7"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="117" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1a5e1627b264f10486af827a09e5837edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -129,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="101" column="9"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="106" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1aa12beb68d3ec044b3445d32b2b25afdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="119" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="124" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1a4dddd75ab18573a3686f90225f3f03d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -178,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="85" column="3"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="90" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1a55482d49aa42d8e2d13ebed007a25052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -196,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="90" column="3"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="95" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1a693ac5762e3d9b3317038ab111d1ef9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -214,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="125" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="130" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1ac7b99d2aa500e76f6d4ca0b76c4bc725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -232,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="131" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="136" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1afc711f32933d61863420f8443cb4a632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="106" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="111" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1a276415b914eebfe9f6874b40382ec34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -266,12 +341,12 @@
 <para>increase the scale produce zoom in effect </para>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>improve the scale precision </para>
+<para><xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>improve the scale precision </para>
 </xrefdescription></xrefsect></para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="137" column="8"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="142" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classRenderer_1add2012f269f157754034e7b5475a8927" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -286,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="95" column="12"/>
+        <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="100" column="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -300,13 +375,16 @@
         <link refid="classRenderer"/>
       </node>
     </collaborationgraph>
-    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="74" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="75" bodyend="151"/>
+    <location file="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" line="77" column="1" bodyfile="/home/umar/Desktop/workstation/CGui/WxWidget/include/renderer.H" bodystart="78" bodyend="174"/>
     <listofallmembers>
       <member refid="classRenderer_1a72a1c4233981f9faafb889953417d8f8" prot="private" virt="non-virtual"><scope>Renderer</scope><name>_form_options</name></member>
       <member refid="classRenderer_1aca021e8884df45198a70b589537e7997" prot="private" virt="non-virtual"><scope>Renderer</scope><name>_rot</name></member>
       <member refid="classRenderer_1ae41404a827d788a10a152f9820a12d01" prot="private" virt="non-virtual"><scope>Renderer</scope><name>_scl</name></member>
+      <member refid="classRenderer_1a54927d9eee326d68c329bf3192212ca1" prot="private" virt="non-virtual"><scope>Renderer</scope><name>_texture</name></member>
+      <member refid="classRenderer_1a4c4bf3e9d04f39a068154a05a7deeb81" prot="public" virt="non-virtual"><scope>Renderer</scope><name>create_texture</name></member>
       <member refid="classRenderer_1a54c2f582951c35c16f6bba2c4e5be9f8" prot="public" virt="non-virtual"><scope>Renderer</scope><name>display</name></member>
       <member refid="classRenderer_1aad725f02dbf870d6b24079769713aa1e" prot="public" virt="non-virtual"><scope>Renderer</scope><name>downscale</name></member>
+      <member refid="classRenderer_1aa02d6e112f1d509984975f24288ae243" prot="public" virt="non-virtual"><scope>Renderer</scope><name>draw</name></member>
       <member refid="classRenderer_1ab45b83dcdf09d55ca17ff6fde5db14f7" prot="public" virt="non-virtual"><scope>Renderer</scope><name>getforms</name></member>
       <member refid="classRenderer_1a5e1627b264f10486af827a09e5837edb" prot="public" virt="non-virtual"><scope>Renderer</scope><name>init</name></member>
       <member refid="classRenderer_1aa12beb68d3ec044b3445d32b2b25afdd" prot="public" virt="non-virtual"><scope>Renderer</scope><name>projection</name></member>

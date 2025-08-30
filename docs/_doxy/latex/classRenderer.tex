@@ -12,11 +12,15 @@ Dedicated for Rendering 2D Object using Open\+GL logic.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{classRenderer_a4c4bf3e9d04f39a068154a05a7deeb81}{create\+\_\+texture}} (GLuint \&, int witdh, int height, GLvoid \texorpdfstring{$\ast$}{*})
+\item 
 void \mbox{\hyperlink{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8}{display}} (void)
 \begin{DoxyCompactList}\small\item\em display Open\+GL forms in Canvas Area ~\newline
  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRenderer_aad725f02dbf870d6b24079769713aa1e}{downscale}} (void)
 \begin{DoxyCompactList}\small\item\em decrease the scale produce zoom out effect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_aa02d6e112f1d509984975f24288ae243}{draw}} (std\+::vector$<$ float $>$ points, GLuint \&)
+\begin{DoxyCompactList}\small\item\em draw form on given lists of coordinates \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7}{getforms}} (void) const
 \begin{DoxyCompactList}\small\item\em retrieve bit mask for current enabling forms ~\newline
  \end{DoxyCompactList}\item 
@@ -78,6 +82,12 @@ Default dtor.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classRenderer_a4c4bf3e9d04f39a068154a05a7deeb81}\label{classRenderer_a4c4bf3e9d04f39a068154a05a7deeb81} 
+\index{Renderer@{Renderer}!create\_texture@{create\_texture}}
+\index{create\_texture@{create\_texture}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{create\_texture()}{create\_texture()}}
+{\footnotesize\ttfamily void Renderer\+::create\+\_\+texture (\begin{DoxyParamCaption}\item[{GLuint \&}]{,  }\item[{int}]{witdh,  }\item[{int}]{height,  }\item[{GLvoid \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})}
+
 \Hypertarget{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8}\label{classRenderer_a54c2f582951c35c16f6bba2c4e5be9f8} 
 \index{Renderer@{Renderer}!display@{display}}
 \index{display@{display}!Renderer@{Renderer}}
@@ -100,7 +110,23 @@ display Open\+GL forms in Canvas Area ~\newline
 decrease the scale produce zoom out effect 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]improve the scale precision \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]improve the scale precision \end{DoxyRefDesc}
+\Hypertarget{classRenderer_aa02d6e112f1d509984975f24288ae243}\label{classRenderer_aa02d6e112f1d509984975f24288ae243} 
+\index{Renderer@{Renderer}!draw@{draw}}
+\index{draw@{draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Renderer\+::draw (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{points,  }\item[{GLuint \&}]{ }\end{DoxyParamCaption})}
+
+
+
+draw form on given lists of coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & -\/ a list of points ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7}\label{classRenderer_ab45b83dcdf09d55ca17ff6fde5db14f7} 
 \index{Renderer@{Renderer}!getforms@{getforms}}
 \index{getforms@{getforms}!Renderer@{Renderer}}
@@ -175,7 +201,7 @@ enable forms by specifying the apropriate flags Multiple Forms can be enable or 
 increase the scale produce zoom in effect 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]improve the scale precision \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]improve the scale precision \end{DoxyRefDesc}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

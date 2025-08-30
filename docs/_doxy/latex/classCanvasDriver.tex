@@ -23,25 +23,36 @@ void \mbox{\hyperlink{classCanvasDriver_a47f9f434ea2d275d2779825176f23585}{apply
 \begin{DoxyCompactList}\small\item\em apply rotation angle on all form \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_aa99ed92d57e3cdc8e13596f9f42d5041}{apply\+\_\+scaling}} (float scale)
 \begin{DoxyCompactList}\small\item\em apply scaling form \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanvasDriver_a48d9651696b1f66a6675bfb6bb7b28e7}{apply\+\_\+texture\+\_\+button}} (const wx\+String \&image)
+\begin{DoxyCompactList}\small\item\em load image for texture \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCanvasDriver_a00d082182dd62773e59b9b9ba59849c6}{Canvas\+Driver}} (wx\+Window \texorpdfstring{$\ast$}{*}mainframe\+\_\+parent)
-\begin{DoxyCompactList}\small\item\em The rendere state ~\newline
- \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3}{Canvas\+Driver\+\_\+init}} (void)
 \begin{DoxyCompactList}\small\item\em Initialize Open\+GL stuff. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCanvasDriver_a9fa09da05f675d9f10cd945a9965dc50}{get\+\_\+renderer\+\_\+state}} (void)
 \begin{DoxyCompactList}\small\item\em get the renderer state \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_aaf772d52ae181146d59c5c503f6786f6}{increase\+\_\+or\+\_\+decrease\+\_\+scaling}} (unsigned char)
 \begin{DoxyCompactList}\small\item\em increase or decrease scaling \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCanvasDriver_a5b5ff400c0d06551109f998265b55dcc}{mouse\+\_\+motion\+\_\+action\+\_\+on}} (void(\texorpdfstring{$\ast$}{*}what)(wx\+Mouse\+Event \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}extradata), wx\+Mouse\+Event \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Generic function to track mouse motion on canvas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}{renderer}} (int forms\+\_\+bit\+\_\+mask)
 \begin{DoxyCompactList}\small\item\em \doxylink{classRenderer}{Renderer} Open\+GL frame. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_ab3396951fd4de41f87d5a79e93d6e1c6}{set\+\_\+renderer\+\_\+state}} (bool state)
 \begin{DoxyCompactList}\small\item\em set the renderer state ~\newline
  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanvasDriver_a1b9a61e46cc6d817c136e53af560a7f0}{sketch\+\_\+map}} (int where=TOP\+\_\+\+LEFT)
+\begin{DoxyCompactList}\small\item\em make kind of sketch mappin\textquotesingle{} point to place the coordinate of each point ~\newline
+ depending where the form should be appear \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}{toggle\+\_\+renderer}} (void)
 \begin{DoxyCompactList}\small\item\em enable/disable the canvas renderering forms ~\newline
  \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}{\texorpdfstring{$\sim$}{\string~}\+Canvas\+Driver}} ()
 \begin{DoxyCompactList}\small\item\em \doxylink{classCanvasDriver}{Canvas\+Driver} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classCanvasDriver_a4b19024f560a93149aee49db7ada1276}{overlay\+\_\+button}} (wx\+Mouse\+Event \texorpdfstring{$\ast$}{*}evt, void \texorpdfstring{$\ast$}{*}metadata)
+\begin{DoxyCompactList}\small\item\em a specialized function to detecte mouse action on "{}button"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -57,10 +68,9 @@ Responsable to render Open\+GL stuff on Canvas Frame layout ~\newline
 
 
 
-The rendere state ~\newline
- 
+\doxylink{classCanvasDriver}{Canvas\+Driver} constructor. 
 
-\doxylink{classCanvasDriver}{Canvas\+Driver} constructor \Hypertarget{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}\label{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66} 
+\Hypertarget{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66}\label{classCanvasDriver_a3abaefa4fe6991a71ab7ac1a662e8f66} 
 \index{CanvasDriver@{CanvasDriver}!````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}}
 \index{````~CanvasDriver@{\texorpdfstring{$\sim$}{\string~}CanvasDriver}!CanvasDriver@{CanvasDriver}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CanvasDriver()}{\string~CanvasDriver()}}
@@ -103,6 +113,24 @@ apply scaling form
 {\em scale} & -\/ float \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classCanvasDriver_a48d9651696b1f66a6675bfb6bb7b28e7}\label{classCanvasDriver_a48d9651696b1f66a6675bfb6bb7b28e7} 
+\index{CanvasDriver@{CanvasDriver}!apply\_texture\_button@{apply\_texture\_button}}
+\index{apply\_texture\_button@{apply\_texture\_button}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{apply\_texture\_button()}{apply\_texture\_button()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::apply\+\_\+texture\+\_\+button (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{image }\end{DoxyParamCaption})}
+
+
+
+load image for texture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image filename (PNG) format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]\+: investigate why the texture fail ~\newline
+ related bug \+: at renderer.\+h (FIXME) \end{DoxyRefDesc}
 \Hypertarget{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3}\label{classCanvasDriver_abc701ae83ad51030115ba6490730f5b3} 
 \index{CanvasDriver@{CanvasDriver}!CanvasDriver\_init@{CanvasDriver\_init}}
 \index{CanvasDriver\_init@{CanvasDriver\_init}!CanvasDriver@{CanvasDriver}}
@@ -138,6 +166,43 @@ increase or decrease scaling
 {\em symbole} & -\/ unsigned char should be "{}+"{} or "{}-\/"{} \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classCanvasDriver_a5b5ff400c0d06551109f998265b55dcc}\label{classCanvasDriver_a5b5ff400c0d06551109f998265b55dcc} 
+\index{CanvasDriver@{CanvasDriver}!mouse\_motion\_action\_on@{mouse\_motion\_action\_on}}
+\index{mouse\_motion\_action\_on@{mouse\_motion\_action\_on}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{mouse\_motion\_action\_on()}{mouse\_motion\_action\_on()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} Canvas\+Driver\+::mouse\+\_\+motion\+\_\+action\+\_\+on (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(wx\+Mouse\+Event \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}extradata)}]{what,  }\item[{wx\+Mouse\+Event \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})}
+
+
+
+Generic function to track mouse motion on canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em what} & -\/ A callback function that define the behavior it takes the mouse event and generic data \\
+\hline
+{\em mouse} & event object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+generic pointer 
+\end{DoxyReturn}
+\Hypertarget{classCanvasDriver_a4b19024f560a93149aee49db7ada1276}\label{classCanvasDriver_a4b19024f560a93149aee49db7ada1276} 
+\index{CanvasDriver@{CanvasDriver}!overlay\_button@{overlay\_button}}
+\index{overlay\_button@{overlay\_button}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{overlay\_button()}{overlay\_button()}}
+{\footnotesize\ttfamily static void Canvas\+Driver\+::overlay\+\_\+button (\begin{DoxyParamCaption}\item[{wx\+Mouse\+Event \texorpdfstring{$\ast$}{*}}]{evt,  }\item[{void \texorpdfstring{$\ast$}{*}}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+a specialized function to detecte mouse action on "{}button"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & -\/ event mouse \\
+\hline
+{\em metadata} & -\/ passed data to the function (it can be anything ) \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002}\label{classCanvasDriver_af9ca95586488aaca0f8c73a0ab7c5002} 
 \index{CanvasDriver@{CanvasDriver}!renderer@{renderer}}
 \index{renderer@{renderer}!CanvasDriver@{CanvasDriver}}
@@ -168,6 +233,22 @@ set the renderer state ~\newline
 
 \begin{DoxyParams}{Parameters}
 {\em state} & -\/ (true or false) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCanvasDriver_a1b9a61e46cc6d817c136e53af560a7f0}\label{classCanvasDriver_a1b9a61e46cc6d817c136e53af560a7f0} 
+\index{CanvasDriver@{CanvasDriver}!sketch\_map@{sketch\_map}}
+\index{sketch\_map@{sketch\_map}!CanvasDriver@{CanvasDriver}}
+\doxysubsubsection{\texorpdfstring{sketch\_map()}{sketch\_map()}}
+{\footnotesize\ttfamily void Canvas\+Driver\+::sketch\+\_\+map (\begin{DoxyParamCaption}\item[{int}]{where = {\ttfamily TOP\+\_\+LEFT} }\end{DoxyParamCaption})}
+
+
+
+make kind of sketch mappin\textquotesingle{} point to place the coordinate of each point ~\newline
+ depending where the form should be appear 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & -\/ the location ( TOP\+\_\+\+LEFT , TOP\+\_\+\+RIGHT ,BOTTOM\+\_\+\+LEFT ,BOTTOM\+\_\+\+RIGHT ) \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672}\label{classCanvasDriver_a4807bc38743f9f93b276a82d8afd0672} 

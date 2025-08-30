@@ -7,11 +7,15 @@
     </briefdescription>
     <detaileddescription>
 <para><variablelist>
+<varlistentry><term>Global <ref refid="classCanvasDriver_1a48d9651696b1f66a6675bfb6bb7b28e7" kindref="member">CanvasDriver::apply_texture_button</ref>  (const wxString &amp;image)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>: investigate why the texture fail <linebreak/>
+ related bug : at renderer.h (FIXME)  </para>
+</listitem>
 <varlistentry><term>Global <ref refid="classRenderer_1aad725f02dbf870d6b24079769713aa1e" kindref="member">Renderer::downscale</ref>  (void)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000002"/>improve the scale precision  </para>
+<listitem><para><anchor id="todo_1_todo000003"/>improve the scale precision  </para>
 </listitem>
 <varlistentry><term>Global <ref refid="classRenderer_1a276415b914eebfe9f6874b40382ec34c" kindref="member">Renderer::upscale</ref>  (void)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000001"/>improve the scale precision </para>
+<listitem><para><anchor id="todo_1_todo000002"/>improve the scale precision </para>
 </listitem>
 </variablelist>
 </para>
