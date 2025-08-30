@@ -104,11 +104,6 @@ class  MainFrame : public wxFrame
       * @return  int - (canvaspanel size | control panel size) 
       */
      virtual int dispatch_layout (void)  ;  
-
-
-
-    void on_canvas_overlay_btn(wxMouseEvent & evt )  ; 
-  
 }; 
 
 

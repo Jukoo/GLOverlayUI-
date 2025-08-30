@@ -19,8 +19,6 @@
 #define  GLOverlayUI_canvasdriver_h 
 
 #include <wx/wx.h> 
-#include <wx/window.h>
-#include <wx/gdicmn.h>
 #include <wx/glcanvas.h>
 #include <GL/gl.h>
 #include <string> 
@@ -97,6 +95,11 @@ enum __button_overlay_position_t{
 
 /** \endcond  */
 
+/**
+ * @brief specialized mouse motion data structure 
+ *        that embedded  some needed data  to draw and locate 
+ *        the frame  button  sketched on the canvas  
+ */
 struct motion_metadata { 
   wxSize _size;                             /**  Hold the area size of   the canvas  */
   std::vector<float> _reference_coords ;    /**  coords reference you want to lookup */
@@ -113,7 +116,6 @@ class CanvasDriver : public  wxGLCanvas
 
   /** \cond  */
   uniq_allocator(wxGLContext) _ctx  ; 
-
   
 
   /* --  Canvas  Event --  */
@@ -121,13 +123,13 @@ class CanvasDriver : public  wxGLCanvas
   void on_resizing(wxSizeEvent&) ; 
   void on_mouse(wxMouseEvent&) ; 
   void on_mouse_release(wxMouseEvent&); 
+  void on_mouse_grab(wxMouseEvent&) ; 
   /** \endcond  */
   
   bool _mouse_grab_state = false ;   /**  Detecte the mouse grab to trigger  rotation on mouse motion  */
   Renderer _renderer ;               /**  Renderer instance  */ 
   bool _show ;                       /**  The rendere state  */
   std::vector<float> button_area ;   /**  Hold the coords of "Button"*/ 
-  wxSize canvas_surface  ; 
 
   GLuint  texture;  
   public: 
@@ -187,35 +189,39 @@ class CanvasDriver : public  wxGLCanvas
      */
     void set_renderer_state(bool state) ;
    
-
-   /*
-    * @brief  specialized function to trac mouse motion on canvas 
-    * @param  custom function that define the behavior   
-    * @param  cursor_position - cursor position
-    */
-
-   void *mouse_motion_action_on(void (*what)(wxMouseEvent*, void * extradata) , wxMouseEvent*  ) ; 
-  
    /** 
-     * @brief make kind of sketch mappin point 
+     * @brief make kind of sketch mappin' point 
      *        to place the coordinate of each point  
-     *        depending where the form should be appear  
+     *        depending where the form should be appear 
      * @param  where  - the location   ( TOP_LEFT , TOP_RIGHT ,BOTTOM_LEFT ,BOTTOM_RIGHT )
      */
     void sketch_map(int where = TOP_LEFT /* TOP_LEFT as default value */)  ; 
 
+   /**
+    * @brief  Generic  function to track mouse motion on canvas 
+    * @param  what  - A callback function  that define the behavior 
+    *         it takes the mouse event and generic data 
+    * @param  mouse event  object 
+    * @return generic  pointer 
+    */
+   void *mouse_motion_action_on(void (*what)(wxMouseEvent*, void * extradata) , wxMouseEvent*  ) ; 
+  
     /**
-     * @brief  a specialized  function to detecte  mouse action on "button"
-     * @param  mouse coords  as reference  
+     * @brief  a specialized  function to detecte  mouse action on "button" 
+     * @param   evt - event mouse 
+     * @param   metadata - passed data  to the function (it can be anything )
      */
+    static void overlay_button(  wxMouseEvent * evt  , void *  metadata ) ;  
 
-    static void overlay_button(  wxMouseEvent * , void * ) ;  
-
-
+    /** 
+     * @brief load image for texture
+     * @param image -  image filename  (PNG) format
+     *
+     * @todo : investigate  why the texture  fail  
+     *       related bug : at renderer.h  (FIXME) 
+     */
     void apply_texture_button(const wxString  & image) ;
 
-
-    void on_mouse_grab(wxMouseEvent&) ; 
 
 }; 
 

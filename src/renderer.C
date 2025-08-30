@@ -117,16 +117,16 @@ void Renderer::downscale(void)
   _scl-- ;  
 }
 
+
+//!FIXME  
 void  Renderer::draw(std::vector<float> points, GLuint &texture)  
 {
    //!For this moment this routine is just static  
    //!@todo : need to be improve in near future 
 
    if (!texture) 
-   {
-     std::fprintf(stderr , " fail to  load texture \n") ; 
      return ; 
-   }
+
    glEnable(GL_TEXTURE_2D);
    glBindTexture(GL_TEXTURE_2D, texture);
    glColor3f(RENDERER_BG_COLOR);
@@ -142,21 +142,17 @@ void  Renderer::draw(std::vector<float> points, GLuint &texture)
 
 }
 
-
+//!FIXME  
 void Renderer::create_texture(GLuint &  texture , int width , int height , GLvoid * data)  
 {
-   //_texture  = texture ; 
-   glGenTextures(1 , &texture) ; 
-   glBindTexture(GL_TEXTURE_2D , texture) ; 
-  
+   
+  glGenTextures(1 , &texture) ; 
+  glBindTexture(GL_TEXTURE_2D , texture) ; 
 
-   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 
        0, GL_RGB, GL_UNSIGNED_BYTE, data) ; 
 
-   //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-   //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);  
-   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 }

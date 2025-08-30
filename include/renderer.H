@@ -157,9 +157,19 @@ class  Renderer
    * @brief  display OpenGL  forms  in Canvas Area   
    */
   void display(void) ; 
- 
 
-  void create_texture(GLuint  & , int , int , GLvoid *)  ; 
+
+  /*
+   * @brief create or load texture 
+   * @param  GLuint    
+   * @param  width  - image width 
+   * @param  height - image height 
+   * @param  data   - image data 
+   *
+   * @bug  doesn't apply the texture yet  :FIXME 
+   */
+
+  void create_texture(GLuint  & , int witdh , int height , GLvoid *)  ; 
 
 }; 
 

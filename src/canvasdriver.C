@@ -72,10 +72,11 @@ void CanvasDriver::renderer(int forms)
   sketch_map() ;  
   SwapBuffers() ; 
 
-
-  dc.SetTextForeground(*wxBLACK);
-  //dc.DrawText("⚙️ ", 40,50);
-  
+  /**
+   * NOTE: Load the icon in the same area  where the invisible “overlay button” frame
+   *     | is drawn. This frame is loaded in the background.
+   *     | This means that the icon and the  “button” share the same location.
+   */ 
   wxIcon  icon = wxIcon(GLOverlayUI_IMG_OVBTN_ICO, wxBITMAP_TYPE_ICO  ,-2, -10) ; 
   dc.DrawIcon(icon, 30,30) ; 
 }
@@ -258,16 +259,17 @@ void CanvasDriver::overlay_button(wxMouseEvent * mouse ,  void *  extradata)
 
 }
 
-
+/**  FIXME : Why the texture fail */ 
 void CanvasDriver::apply_texture_button(const wxString& image) 
 {
    wxImage img(image ,wxBITMAP_TYPE_PNG) ;  
    
    if(!img.IsOk())  
    {
-     std::fprintf(stderr , " <%s> Fail to load texture image \n" , __func__) ; 
+     //std::fprintf(stderr , " <%s> Fail to load texture image \n" , __func__) ; 
      return ; 
    } 
 
+   /** TODO: Need to investigate more in this function */ 
    _renderer.create_texture(texture ,  img.GetWidth(),img.GetHeight(),img.GetData()) ; 
 }
